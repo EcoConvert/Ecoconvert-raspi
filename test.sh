@@ -10,6 +10,8 @@ if [ -d "$DIR_NAME" ]; then
   echo "Directory $DIR_NAME already exists. Fetching updates from branch '$BRANCH_NAME'..."
   cd "$DIR_NAME" || exit
   git pull origin "$BRANCH_NAME:$BRANCH_NAME"  # Fetch the specific branch
+
+  
   source env/bin/activate
   pip install -r requirements.txt
 else
@@ -21,4 +23,4 @@ fi
 # Ensure the branch is checked out
 git checkout "$BRANCH_NAME"
 
-echo "Fetch completed for branch '$BRANCH_NAME'."
+echo "Pull completed for branch '$BRANCH_NAME'."
