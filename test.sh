@@ -10,6 +10,8 @@ if [ -d "$DIR_NAME" ]; then
   echo "Directory $DIR_NAME already exists. Fetching updates from branch '$BRANCH_NAME'..."
   cd "$DIR_NAME" || exit
   git pull origin "$BRANCH_NAME:$BRANCH_NAME"  # Fetch the specific branch
+  source env/bin/activate
+  pip install -r requirements.txt
 else
   echo "Cloning the repository..."
   git clone -b "$BRANCH_NAME" "$REPO_URL" "$DIR_NAME"
