@@ -1,9 +1,12 @@
 import cv2
 import numpy as np
 import tensorflow as tf
+from dotenv import load_dotenv, dotenv_values
+
+load_dotenv()
 
 # Load the TFLite model
-interpreter = tf.lite.Interpreter(model_path="/home/capstone/app/Models/mobilenet_fpn_640/mobilefpn640.tflite")
+interpreter = tf.lite.Interpreter(model_path=os.getenv("MODEL_PATH"))
 interpreter.allocate_tensors()
 
 # Get input and output tensors
@@ -14,7 +17,7 @@ print("Input Details:", input_details)
 print("Output Details:", output_details)
 
 # Load labels
-with open("/home/capstone/app/Models/mobilenet_fpn_640/label_map.pbtxt", "r") as f:
+with open(os.getenv("LABEL_PATH"), "r") as f:
     labels = {}
     for line in f:
         if "id" in line:
