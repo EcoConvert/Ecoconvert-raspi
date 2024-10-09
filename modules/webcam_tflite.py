@@ -3,7 +3,7 @@ import numpy as np
 import tensorflow as tf
 
 # Load the TFLite model
-interpreter = tf.lite.Interpreter(model_path="C:/Users/Juno/docus not onedrive/Python/Ecoconvert-raspi/Models/mobilenet_fpn_640/mobilefpn640.tflite")
+interpreter = tf.lite.Interpreter(model_path="/home/capstone/app/Models/mobilenet_fpn_640/mobilefpn640.tflite")
 interpreter.allocate_tensors()
 
 # Get input and output tensors
@@ -14,7 +14,7 @@ print("Input Details:", input_details)
 print("Output Details:", output_details)
 
 # Load labels
-with open("C:/Users/Juno/docus not onedrive/Python/Ecoconvert-raspi/Models/mobilenet_fpn_640/label_map.pbtxt", "r") as f:
+with open("/home/capstone/app/Models/mobilenet_fpn_640/label_map.pbtxt", "r") as f:
     labels = {}
     for line in f:
         if "id" in line:
