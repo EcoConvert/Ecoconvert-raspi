@@ -2,7 +2,7 @@ absl-py==2.1.0
 astunparse==1.6.3
 certifi==2024.8.30
 charset-normalizer==3.3.2
-flatbuffers==20181003210633
+flatbuffers==24.3.25 
 gast==0.6.0
 google-pasta==0.2.0
 grpcio==1.66.2
