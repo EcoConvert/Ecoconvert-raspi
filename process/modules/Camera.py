@@ -24,20 +24,21 @@ class Camera:
         # Get input and output tensors
         self.input_details = self.interpreter.get_input_details()
         self.output_details = self.interpreter.get_output_details()
-
+        self.labels = {}
+        self.detection_result = []
+        
     def load_labels(self):
         """
         Load label map from a file.
         """
         with open(os.getenv("LABEL_PATH"), 'r') as f:
-            labels = {}
             for line in f:
                 if "id" in line:
                     class_id = int(line.split(":")[1].strip())
                 if "name" in line:
                     class_name = line.split("'")[1]
-                    labels[class_id] = class_name
-            return labels
+                    self.labels[class_id] = class_name
+            return self.labels
 
     def init_camera(self):
         """Initialize the camera this needs to happen at the very beginning of the program"""
@@ -71,20 +72,19 @@ class Camera:
         self.interpreter.set_tensor(self.input_details[0]['index'], input_data)
         self.interpreter.invoke()
         
-        boxes = self.interpreter.get_tensor(self.output_details[0]['index'])
-        classes = self.interpreter.get_tensor(self.output_details[3]['index'])[0]
-        scores = self.interpreter.get_tensor(self.output_details[2]['index'])
+        scores = self.interpreter.get_tensor(self.output_details[0]['index'])[0]
+        boxes = self.interpreter.get_tensor(self.output_details[1]['index'])[0]
         num_detections = int(self.interpreter.get_tensor(self.output_details[2]['index'])[0])
-
+        classes = self.interpreter.get_tensor(self.output_details[3]['index'])[0]
 
         for i in range(num_detections):
             if scores[i] > 0.5:  # Confidence threshold
                 class_id = int(classes[i])
                 class_name = self.labels.get(class_id, f"Class {class_id}")
                 confidence = scores[i]
-                self.detection_result.append(f"Object: {self.label}, Confidence: {confidence:.2f}")
+                self.detection_result.append(f"Object: {class_name}, Confidence: {confidence:.2f}")
         
-        return '\n'.join(detection_result) if detection_result else "No high confidence objects detected."
+        return '\n'.join(self.detection_result) if self.detection_result else "No high confidence objects detected."
 
     def capture_and_infer(self):
         """This is the only method that should be called. Capture a photo and make inference."""
