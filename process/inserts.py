@@ -1,6 +1,7 @@
-from modules.Camera import Camera
+from modules import Camera
 
 def test_capture():
+    print("run inserts")
     cam = Camera(0)
     cam.init_camera()
     
@@ -9,5 +10,3 @@ def test_capture():
 
     inference = cam.capture_and_infer()
     print(inference)
-if __name__ == "__main__":
-    test_capture()
