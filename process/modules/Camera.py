@@ -79,12 +79,13 @@ class Camera:
 
         for i in range(num_detections):
             if scores[i] > 0.5:  # Confidence threshold
-                class_id = int(classes[i])
+                class_id = int(classes[i]) +1
                 class_name = self.labels.get(class_id, f"Class {class_id}")
                 confidence = scores[i]
-                self.detection_result.append(f"Object: {class_name}, Confidence: {confidence:.2f}")
-        
-        return '\n'.join(self.detection_result) if self.detection_result else "No high confidence objects detected."
+                self.detection_result.append(f"Object: {class_name}")
+                self.detection_result.append(f"Confidence: {confidence:.2f}")
+        # print('\n'.join(self.detection_result) if self.detection_result else "No high confidence objects detected.")
+        return self.detection_result[0]
 
     def capture_and_infer(self):
         """This is the only method that should be called. Capture a photo and make inference."""
@@ -98,3 +99,4 @@ class Camera:
             self.camera.release()
             self.camera_ready = False
             print("Camera released.")
+    
