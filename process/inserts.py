@@ -1,4 +1,4 @@
-from process.modules import Camera 
+from process.modules import Camera # from main 
 
 def test_capture():
     print("run inserts")
