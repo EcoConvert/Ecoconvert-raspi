@@ -1,4 +1,4 @@
-from modules import Camera
+from process.modules import Camera 
 
 def test_capture():
     print("run inserts")
@@ -10,3 +10,6 @@ def test_capture():
 
     inference = cam.capture_and_infer()
     print(inference)
+
+if __name__ == "main":
+    test_capture()

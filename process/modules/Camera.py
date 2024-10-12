@@ -85,7 +85,7 @@ class Camera:
                 self.detection_result.append(f"Object: {class_name}")
                 self.detection_result.append(f"Confidence: {confidence:.2f}")
         # print('\n'.join(self.detection_result) if self.detection_result else "No high confidence objects detected.")
-        return self.detection_result[0]
+        return self.detection_result[0] if self.detection_result else  "No High Confidence object detected"
 
     def capture_and_infer(self):
         """This is the only method that should be called. Capture a photo and make inference."""
