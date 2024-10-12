@@ -30,6 +30,15 @@ with open(os.getenv("LABEL_PATH"), "r") as f:
 # Initialize webcam
 cap = cv2.VideoCapture(0)
 
+
+"""create a camera object 
+that
+initialize state (ready.. ganyan)
+opens on command
+ttake photo
+make inference
+send result as string
+"""
 while True:
     ret, frame = cap.read()
     if not ret:
@@ -47,7 +56,7 @@ while True:
     # Run inference
     interpreter.invoke()
 
-    # Get the output tensors
+    # Get the output tensors 
     scores = interpreter.get_tensor(output_details[0]['index'])[0]
     boxes = interpreter.get_tensor(output_details[1]['index'])[0]
     num_detections = int(interpreter.get_tensor(output_details[2]['index'])[0])
