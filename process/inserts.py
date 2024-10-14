@@ -14,7 +14,7 @@ def set_servo_angle(angle):
 	servo_value = (angle - 90) / 90
 	servo.value = servo_value
 	print (f"Servo moved to {angle} degrees")
-	sleep(1)                                                                          
+	sleep(1)                                                                       
 
 
 def test_capture():
