@@ -33,8 +33,20 @@ def test_capture():
     labels = cam.load_labels()
     print(labels)   
 
+    # First capture
     inference = cam.capture_and_infer()
     print(inference)
+    runMotor(5)
+    
+    # Second capture
+    inference = cam.capture_and_infer()
+    print(inference)
+    runMotor(5)
+
+    # Third capture
+    inference = cam.capture_and_infer()
+    print(inference)
+    runMotor(5)
     
     # Clean accepted bottle
     if inference == "Object: PET bottle 1.5L":
