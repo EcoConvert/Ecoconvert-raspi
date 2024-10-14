@@ -4,13 +4,13 @@ import logging
 from modules.Led import Led
 from gpiozero import LED 
 
-led = LED(14)
+led = LED(21)
 def blink() -> None: 
 	
 	#led.On()
 	led.on()
 	logging.info("LED on")
-	time.sleep(1)
+	time.sleep(8)
 
 	#led.Off()
 	led.off()
