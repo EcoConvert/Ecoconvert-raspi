@@ -52,7 +52,7 @@ def test_capture():
         set_servo_angle(leftServo, 90)
         sleep(2)
     elif inference == "Object: Not 1.5L":
-        set_servo_angle(0)
+        set_servo_angle(leftServo, 90)
         sleep(2)
     elif inference == "Object: Crumpled":
         set_servo_angle(0)
