@@ -29,6 +29,45 @@ def test_capture():
 
     inference = cam.capture_and_infer()
     print(inference)
+	
+    if inference == "Object: plastic":
+        set_servo_angle(0)
+        sleep(2)
+    elif inference == "Object: glass":
+        set_servo_angle(0)
+        sleep(2)
+    elif inference == "Object: metal":
+        set_servo_angle(0)
+        sleep(2)
+    elif inference == "Object: cardboard_paper":
+        set_servo_angle(0)
+        sleep(2)
+    elif inference == "Object: rock":
+        set_servo_angle(0)
+        sleep(2)
+    elif inference == "Object: trash":
+        set_servo_angle(0)
+        sleep(2)
+    elif inference == "Object: PET bottle 1.5L":
+        set_servo_angle(leftServo, 90)
+        sleep(2)
+    elif inference == "Object: Not 1.5L":
+        set_servo_angle(0)
+        sleep(2)
+    elif inference == "Object: Crumpled":
+        set_servo_angle(0)
+        sleep(2)
+    elif inference == "Object: Capped":
+        set_servo_angle(0)
+        sleep(2)
+    elif inference == "Object: Unclean":
+        set_servo_angle(0)
+        sleep(2)
+    elif inference == "Object: leaf":
+        set_servo_angle(0)
+        sleep(2)
+        
+		
     
 #-------------------------RUN
 try:
@@ -37,10 +76,10 @@ try:
 		print(reading)
 		
 		
-		set_servo_angle(leftServo1, 0)
+		set_servo_angle(leftServo, 0)
 		sleep(2)
 		
-		set_servo_angle(leftServo1, 90)
+		set_servo_angle(leftServo, 90)
 		sleep(2)
 		
 		set_servo_angle(leftServo, 180)
