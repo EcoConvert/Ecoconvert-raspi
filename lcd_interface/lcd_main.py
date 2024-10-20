@@ -233,10 +233,10 @@ class RVMInterface(QWidget):
 
     def simulate_processing(self):
         """Simulate the processing with a chance of error."""
-        for i in range(101):
+        for i in range(500000):
             self.progress_bar.setValue(i)
             QApplication.processEvents()
-            QTimer.singleShot(500, lambda: None)  # Short delay for visual effect
+            QTimer.singleShot(1000, lambda: None)  # Short delay for visual effect
 
         # Simulate a 20% chance of error
         if random.random() < 0.2:
