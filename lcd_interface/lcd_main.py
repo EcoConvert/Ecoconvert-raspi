@@ -16,15 +16,18 @@ from PyQt5.QtWidgets import (
     QWidget,
 )
 
+# Add the parent directory to system path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from modules.Camera import Camera
+
 # Load environment variables from .env file
 load_dotenv()
 
 
-# TODO: Try to implement a loop that switches between welcome screen and reminder screen
 # TODO: Add some details on what's happening with the processing screen
 # TODO: Add a QR code image to the completion screen
 # TODO: Add .env
-# TODO: The application should be scalable and easy to maintain
+# TODO: The application should be scalable and easy to maintain (Dimension)
 # FIXME: Fix spacing issue
 # FIXME: Fix the error display issue and show the error (what's causing the error)
 
@@ -35,34 +38,61 @@ class RVMInterface(QWidget):
         self.setWindowTitle("RVM LCD Interface")
         self.setGeometry(100, 100, 480, 320)
 
+        # Initialize camera
+        try:
+            self.camera = Camera(camera_id=0)  # Laptop camera: 0, USB camera: 1 or 2
+            self.camera.load_labels()
+        except Exception as e:
+            self.camera = None
+            self.show_error_popup(f"Camera initializtion failed: {str(e)}")
+
         # Load constants from .env file
-        self.welcome_message = os.getenv("WELCOME_MESSAGE", "Welcome to the RVM!")
-        self.instruction_text = os.getenv("INSTRUCTION_TEXT", "How to use the system:")
-        self.processing_status = os.getenv("PROCESSING_STATUS", "Processing")
-        self.completed_status = os.getenv("COMPLETED_STATUS", "Completed")
-        self.qr_code_message = os.getenv(
-            "QR_CODE_MESSAGE", "Take a picture of this QR Code"
-        )
+        self.welcome_message = os.getenv("WELCOME_MESSAGE")
+        self.instruction_text = os.getenv("INSTRUCTION_TEXT")
+        self.processing_status = os.getenv("PROCESSING_STATUS")
+        self.completed_status = os.getenv("COMPLETED_STATUS")
+        self.qr_code_message = os.getenv("QR_CODE_MESSAGE")
 
         # Main layout
         self.layout = QVBoxLayout()
 
         # Stacked widget for different screens
-        self.stacked_widget = QStackedWidget()
+        self.stacked_widget = QStackedWidget()  # Single page at a time
         self.layout.addWidget(self.stacked_widget)
 
         # Create screens
-        self.create_welcome_screen()
-        self.create_reminder_screen()
-        self.create_processing_screen()
-        self.create_completion_screen()
+        self.create_welcome_screen()  # Index: 0
+        self.create_reminder_screen()  # Index: 1
+        self.create_processing_screen()  # Index: 2
+        self.create_detection_result_screen()  # Index: 3
+        self.create_completion_screen()  # Index: 4
 
         # Set layout
-        self.setLayout(self.layout)
+        self.setLayout(
+            self.layout
+        )  # setLayout handles the layout of the widget automatically
 
         # Show the welcome screen initially
         self.stacked_widget.setCurrentIndex(0)
 
+        # Store detected results
+        self.detection_result = None
+
+        # Define error condtions
+        self.error_items = {
+            "glass": "Glass materials are not allowed",
+            "metal": "Metal materials are not allowed",
+            "plastic": "Please use PET bottles only",
+            "rock": "Rock/stone materials are not allowed",
+            "trash": "General trash is not allowed",
+            "Not_1.5": "Please use 1.5L PET bottles only",
+            "Crumpled": "Please do not use crumpled bottles",
+            "Capped": "Please remove the bottle cap",
+            "unclean": "Please clean the bottle first",
+            "leaf": "Please remove any leaves or organic materials",
+        }
+
+    # ========================== WELCOME SCREEN ========================== #
     def create_welcome_screen(self):
         """Create the initial welcome screen with basic instructions."""
         welcome_widget = QWidget()
@@ -88,10 +118,8 @@ class RVMInterface(QWidget):
         instruction_label.setStyleSheet(
             "font-size: 18px; font-weight: bold ; margin-bottom: 50px;"
         )  # Light green background
-        # instruction_label.setFixedHeight(100)
         welcome_layout.addWidget(instruction_label)
 
-        # Instructions list (each instruction could also have a different color if needed)
         instructions = [
             "1. Prepare a clean 1.5L PET Bottle and Single-Use Plastic",
             "2. Take off the bottle cap",
@@ -102,22 +130,20 @@ class RVMInterface(QWidget):
         for instruction in instructions:
             label = QLabel(instruction, self)
             label.setAlignment(Qt.AlignLeft)
-            label.setStyleSheet(
-                "font-size: 16px; margin-left: 5px;"
-            )  # Light yellow background for each instruction
+            label.setStyleSheet("font-size: 16px; margin-left: 5px;")
             welcome_layout.addWidget(label)
 
-        # Start button with a different color
         start_button = QPushButton("Next", self)
         start_button.clicked.connect(self.show_instruction_screen)
-        start_button.setStyleSheet(
-            "font-size: 18px; margin-top: 50px;"
-        )  # Light gray background for the button
+        start_button.setStyleSheet("font-size: 18px; margin-top: 50px;")
         welcome_layout.addWidget(start_button)
 
         welcome_widget.setLayout(welcome_layout)
         self.stacked_widget.addWidget(welcome_widget)
 
+    # ========================== WELCOME SCREEN ========================== #
+
+    # ========================== REMINDER SCREEN ========================== #
     def create_reminder_screen(self):
         """Create the detailed instruction screen."""
         reminder_widget = QWidget()
@@ -148,27 +174,9 @@ class RVMInterface(QWidget):
         reminder_widget.setLayout(reminder_layout)
         self.stacked_widget.addWidget(reminder_widget)
 
-    ### BETA
+    # ========================== REMINDER SCREEN ========================== #
 
-    # def start_screen_loop(self):
-    # """Start the loop to swtich between welcome screen and reminder screen every 2 seconds."""
-    # self.current_screen_index = 0
-
-    # # Timer to trigger screen switch every 2 seconds
-    # self.timer = QTimer(self)
-    # self.timer.timeout.connect(self.switch_screen)
-    # self.timer.start(2000)
-
-    # def switch_screen(self):
-    # """Switch between the welcome screen and reminder screen."""
-
-    # # Alternate between the welcome screen and reminder screen
-    # self.current_screen_index = 1 - self.current_screen_index
-
-    # self.stacked_widget.setCurrentIndex(self.current_screen_index)
-
-    ### BETA
-
+    # ========================== PROCESSING SCREEN ========================== #
     def create_processing_screen(self):
         """Create the processing screen."""
         processing_widget = QWidget()
@@ -188,6 +196,78 @@ class RVMInterface(QWidget):
         processing_widget.setLayout(processing_layout)
         self.stacked_widget.addWidget(processing_widget)
 
+    # ========================== PROCESSING SCREEN ========================== #
+
+    # ========================== DETECTION SCREEN ========================== #
+
+    def check_detection_result(self, result):
+        """Check if the detected item is allowed or not.
+        Return (is_error, error_message)
+        """
+        if result is None:
+            return True, "No detection results"
+
+        result = str(result).lower()
+
+        # Check if the detected item is in the error items
+        for item, error_message in self.error_items.items():
+            if item.lower() in result:
+                return True, error_message
+
+        # If 1.5L and not crumpled, return False (SUBJECT TO CHANGE)
+        if "pet_bottle_1.5l" in result:
+            return False, "Valid item"
+
+        # If nothing
+        return True, "Unknown item detected"
+
+    def create_detection_result_screen(self):
+        """Create a new screen to display detection results."""
+        result_widget = QWidget()
+        result_layout = QVBoxLayout()
+
+        # Ttile
+        result_title = QLabel("Detection Results", self)
+        result_title.setAlignment(Qt.AlignCenter)
+        result_title.setStyleSheet(
+            "font-size: 20px; font-weight: bold; margin-bottom: 15px;"
+        )
+        result_layout.addWidget(result_title)
+
+        # Result Label (to be updated with detection results)
+        self.result_label = QLabel("", self)
+        self.result_label.setAlignment(Qt.AlignCenter)
+        self.result_label.setStyleSheet("font-size: 18px; margin-bottom: 20px;")
+        result_layout.addWidget(self.result_label)
+
+        # Continue button
+        continue_button = QPushButton("Continue", self)
+        continue_button.clicked.connect(self.show_completion_screen)
+        continue_button.setStyleSheet("font-size: 18px; margin-top: 20px;")
+        result_layout.addWidget(continue_button)
+
+        result_widget.setLayout(result_layout)
+        self.stacked_widget.addWidget(result_widget)
+
+    def show_detection_results(self, message=None):
+        """Show the detection results on the screen."""
+        if not message:
+            message = "No detection results"
+
+        # set the result text
+        self.result_label.setText(message)
+
+        # Set status style
+        status_color = "green" if "Valid" in message else "red"
+        self.result_label.setStyleSheet(
+            f"font-size: 18px; color: {status_color}; margin-bottom: 20px;"
+        )
+        # Show the detection result screen
+        self.stacked_widget.setCurrentIndex(3)
+
+    # ========================== DETECTION SCREEN ========================== #
+
+    # ========================== COMPLETION SCREEN ========================== #
     def create_completion_screen(self):
         """Create the completion screen with QR code."""
         completion_widget = QWidget()
@@ -221,35 +301,74 @@ class RVMInterface(QWidget):
         completion_widget.setLayout(completion_layout)
         self.stacked_widget.addWidget(completion_widget)
 
+    # ========================== COMPLETION SCREEN ========================== #
+
+    # FLOW CONTROL METHODS
     def show_instruction_screen(self):
         """Show the detailed instruction screen."""
         self.stacked_widget.setCurrentIndex(1)
 
     def start_processing(self):
-        """Start the processing simulation."""
+        """Start the processing and detection sequence."""
+        if not self.camera:
+            self.show_error_popup("Camera not initialized.")
+            return
+
         self.stacked_widget.setCurrentIndex(2)
         self.progress_bar.setValue(0)
-        self.simulate_processing()
 
-    def simulate_processing(self):
-        """Simulate the processing with a chance of error."""
-        for i in range(500000):
-            self.progress_bar.setValue(i)
+        # initialize camera
+        try:
+            self.camera.init_camera()
+        except Exception as e:
+            self.show_error_popup(f"Error initializing camera: {str(e)}")
+            return
+
+        # Start the processing simulation
+        self.simulate_processing_with_detection()
+
+    def simulate_processing_with_detection(self):
+        """Simulate the processing with detection."""
+        self.progress_bar.setValue(0)
+
+        # Update the processing status
+        self.progress_bar.setValue(50)
+        self.processing_label.setText("Detecting...")
+        QApplication.processEvents()
+
+        try:
+            # perform detection
+            self.detection_result = self.camera.capture_and_infer()
+
+            # Check if detection was successful
+            if self.detection_result is None:
+                raise Exception("Detection failed")
+
+            # Check if result is an error condition
+            is_error, error_message = self.check_detection_result(self.detection_result)
+
+            # Update the processing status
+            self.progress_bar.setValue(100)
+            self.processing_label.setText("Scan Completed")
             QApplication.processEvents()
-            QTimer.singleShot(1000, lambda: None)  # Short delay for visual effect
 
-        # Simulate a 20% chance of error
-        if random.random() < 0.2:
-            self.show_error_popup()
-        else:
-            self.show_completion_screen()
+            if is_error:
+                self.show_error_popup(error_message)
+            else:
+                self.show_detection_results(error_message)
 
-    def show_error_popup(self):
+        except Exception as e:
+            self.show_error_popup(f"Error during detection: {str(e)}")
+            self.stacked_widget.setCurrentIndex(1)  # Return to instruction screen
+        finally:
+            self.camera.release_camera()
+
+    def show_error_popup(self, message):
         """Show an error popup and return to the instruction screen."""
         error_msg = QMessageBox()
         error_msg.setIcon(QMessageBox.Warning)
-        error_msg.setText("An error occurred during processing.")
-        error_msg.setInformativeText("Please check your bottles and try again.")
+        error_msg.setText("An error occurred")
+        error_msg.setInformativeText(message)
         error_msg.setWindowTitle("Error")
         error_msg.setStandardButtons(QMessageBox.Ok)
         error_msg.exec_()
@@ -257,12 +376,12 @@ class RVMInterface(QWidget):
 
     def show_completion_screen(self):
         """Show the completion screen with QR code."""
-        self.stacked_widget.setCurrentIndex(3)
+        self.stacked_widget.setCurrentIndex(4)
 
     def reset_machine(self):
         """Reset the machine state and return to the welcome screen."""
+        self.detection_result = None
         self.stacked_widget.setCurrentIndex(0)
-        # self.start_screen_loop()
 
 
 def main():
