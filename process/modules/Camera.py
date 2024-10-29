@@ -1,6 +1,5 @@
 import logging
 import os
-
 import cv2
 import numpy as np
 import tensorflow as tf
@@ -92,7 +91,6 @@ class Camera:
         """
         Preprocess the captured frame for the model.
         """
-
         input_shape = self.input_details[0]["shape"]
         input_tensor = cv2.resize(frame, (input_shape[1], input_shape[2]))
         input_tensor = np.expand_dims(input_tensor, axis=0)

@@ -1,7 +1,9 @@
 import logging
+import sys
 
 from modules.Camera import Camera
-
+from modules.lcd_main import RVMInterface
+from PyQt5.QtWidgets import QApplication
 
 def test_capture():
     try:
@@ -22,6 +24,15 @@ def test_capture():
     finally:
         cam.release_camera()
 
+def main(): 
+    app = QApplication(sys.argv)
+    lcd = RVMInterface()
+    lcd.show()
+    # lcd.welcome_screen()
+    # lcd.processing_screen()
+    # lcd.detection_screen()
+    # lcd.rewards_screen()
+    sys.exit(app.exec_())
 
 if __name__ == "__main__":
-    test_capture()
+    main() 
