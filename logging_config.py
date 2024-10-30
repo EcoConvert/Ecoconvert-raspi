@@ -42,7 +42,7 @@ config = {
 	},
 	'loggers': {
 		"" : {
-            'level': 'DEBUG',
+            'level': 'INFO',
             'handlers': ['default', 'file'],  
             'propagate': False, },
 		"a" : {

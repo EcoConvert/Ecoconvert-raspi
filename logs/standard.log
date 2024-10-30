@@ -1,12 +1,70 @@
-2024-09-26 21:33:31,635 ~ INFO ~ LED on
-2024-09-26 21:33:32,636 ~ INFO ~ LED off
-2024-09-26 21:34:15,236 ~ INFO ~ LED on
-2024-09-26 21:34:16,236 ~ INFO ~ LED off
-2024-09-26 21:36:05,897 ~ INFO ~ LED on
-2024-09-26 21:36:06,898 ~ INFO ~ LED off
-2024-09-26 21:37:44,043 ~ INFO ~ LED on
-2024-09-26 21:37:45,044 ~ INFO ~ LED off
-2024-09-27 19:37:19,136 ~ INFO ~ LED on
-2024-09-27 19:37:20,137 ~ INFO ~ LED off
-2024-09-27 20:44:48,511 ~ INFO ~ LED on
-2024-09-27 20:44:49,511 ~ INFO ~ LED off
+2024-10-30 18:30:59,624 ~ INFO ~ Camera initialized successfully
+2024-10-30 18:30:59,835 ~ INFO ~ RVM LCD initialized successfully
+2024-10-30 18:31:03,871 ~ INFO ~ Initializing camera #0
+2024-10-30 18:31:06,136 ~ INFO ~ Camera initialized.
+2024-10-30 18:31:10,281 ~ ERROR ~ Error: Glass materials are not allowed
+2024-10-30 18:31:12,752 ~ INFO ~ Initializing camera #0
+2024-10-30 18:31:14,879 ~ INFO ~ Camera initialized.
+2024-10-30 18:31:18,131 ~ ERROR ~ Error: Glass materials are not allowed
+2024-10-30 18:31:38,920 ~ INFO ~ Initializing camera #0
+2024-10-30 18:31:41,027 ~ INFO ~ Camera initialized.
+2024-10-30 18:31:43,052 ~ ERROR ~ Error: Glass materials are not allowed
+2024-10-30 18:31:50,624 ~ INFO ~ Camera initialized successfully
+2024-10-30 18:31:50,825 ~ INFO ~ RVM LCD initialized successfully
+2024-10-30 18:31:54,161 ~ INFO ~ Initializing camera #0
+2024-10-30 18:31:56,357 ~ INFO ~ Camera initialized.
+2024-10-30 18:31:58,379 ~ INFO ~ Processing completed
+2024-10-30 18:31:58,379 ~ INFO ~ QR Code displayed
+2024-10-30 18:32:01,483 ~ WARNING ~ Machine reset
+2024-10-30 18:33:51,803 ~ INFO ~ Camera initialized successfully
+2024-10-30 18:33:52,009 ~ INFO ~ RVM LCD initialized successfully
+2024-10-30 18:33:54,599 ~ INFO ~ Initializing camera #0
+2024-10-30 18:33:56,856 ~ INFO ~ Camera initialized.
+2024-10-30 18:33:56,858 ~ INFO ~ Detection result: PET_bottle_1.5L
+2024-10-30 18:33:59,581 ~ INFO ~ Processing completed
+2024-10-30 18:33:59,581 ~ INFO ~ QR Code displayed
+2024-10-30 18:34:00,659 ~ WARNING ~ Machine reset
+2024-10-30 18:34:23,681 ~ INFO ~ Camera initialized successfully
+2024-10-30 18:34:23,888 ~ INFO ~ RVM LCD initialized successfully
+2024-10-30 18:34:27,031 ~ INFO ~ Initializing camera #0
+2024-10-30 18:34:29,301 ~ INFO ~ Camera initialized.
+2024-10-30 18:34:32,856 ~ INFO ~ Processing completed
+2024-10-30 18:34:32,856 ~ INFO ~ QR Code displayed
+2024-10-30 18:34:35,074 ~ WARNING ~ Machine reset
+2024-10-30 18:36:19,839 ~ INFO ~ Camera initialized successfully
+2024-10-30 18:36:20,041 ~ INFO ~ RVM LCD initialized successfully
+2024-10-30 18:36:22,690 ~ INFO ~ Initializing camera #0
+2024-10-30 18:36:24,964 ~ INFO ~ Camera initialized.
+2024-10-30 18:36:36,433 ~ INFO ~ Processing completed
+2024-10-30 18:36:36,434 ~ INFO ~ QR Code displayed
+2024-10-30 18:36:40,117 ~ WARNING ~ Machine reset
+2024-10-30 19:06:02,344 ~ INFO ~ Camera initialized successfully
+2024-10-30 19:06:02,583 ~ INFO ~ RVM LCD initialized successfully
+2024-10-30 19:06:05,826 ~ INFO ~ Initializing camera #0
+2024-10-30 19:06:08,099 ~ INFO ~ Camera initialized.
+2024-10-30 19:06:08,101 ~ INFO ~ Detection result: PET_bottle_1.5L
+2024-10-30 19:06:12,816 ~ INFO ~ Processing completed
+2024-10-30 19:06:12,817 ~ INFO ~ QR Code displayed
+2024-10-30 19:06:31,747 ~ WARNING ~ Machine reset
+2024-10-30 19:12:34,761 ~ INFO ~ Camera initialized successfully
+2024-10-30 19:12:34,973 ~ INFO ~ RVM LCD initialized successfully
+2024-10-30 19:12:43,312 ~ INFO ~ Initializing camera #0
+2024-10-30 19:12:45,583 ~ INFO ~ Camera initialized.
+2024-10-30 19:12:45,585 ~ INFO ~ Detection result: PET_bottle_1.5L
+2024-10-30 19:12:49,980 ~ INFO ~ Processing completed
+2024-10-30 19:12:49,981 ~ INFO ~ QR Code displayed
+2024-10-30 19:14:47,218 ~ INFO ~ Camera initialized successfully
+2024-10-30 19:14:47,428 ~ INFO ~ RVM LCD initialized successfully
+2024-10-30 19:14:49,058 ~ INFO ~ Initializing camera #0
+2024-10-30 19:14:51,365 ~ INFO ~ Camera initialized.
+2024-10-30 19:14:51,636 ~ INFO ~ Detection result: cardboard_paper
+2024-10-30 19:14:57,476 ~ ERROR ~ Error: Unknown item detected
+2024-10-30 19:15:02,350 ~ INFO ~ Initializing camera #0
+2024-10-30 19:15:04,452 ~ INFO ~ Camera initialized.
+2024-10-30 19:15:04,748 ~ INFO ~ No high confidence object detected.
+2024-10-30 19:15:04,749 ~ INFO ~ Detection result: No high confidence object detected.
+2024-10-30 19:15:08,516 ~ ERROR ~ Error: Unknown item detected
+2024-10-30 19:16:25,335 ~ INFO ~ Initializing camera #0
+2024-10-30 19:16:27,506 ~ INFO ~ Camera initialized.
+2024-10-30 19:16:27,795 ~ INFO ~ Detection result: cardboard_paper
+2024-10-30 19:16:30,102 ~ ERROR ~ Error: Unknown item detected

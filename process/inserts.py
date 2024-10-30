@@ -1,13 +1,19 @@
 import logging
 import sys
+import os
 
 from modules.Camera import Camera
 from modules.lcd_main import RVMInterface
 from PyQt5.QtWidgets import QApplication
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from logging_config import setup_logging
+
+setup_logging()
+
 def test_capture():
     try:
-        cam = Camera(2)
+        cam = Camera(0)
         cam.init_camera()
 
         labels = cam.load_labels()
@@ -28,11 +34,8 @@ def main():
     app = QApplication(sys.argv)
     lcd = RVMInterface()
     lcd.show()
-    # lcd.welcome_screen()
-    # lcd.processing_screen()
-    # lcd.detection_screen()
-    # lcd.rewards_screen()
-    sys.exit(app.exec_())
+    sys.exit(app.exec_())   
+
 
 if __name__ == "__main__":
     main() 

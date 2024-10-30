@@ -56,7 +56,7 @@ class Camera:
         if self.camera_ready:
             return
 
-        logging.info("Initializing camera... {self.camera_id}")
+        logging.info(f"Initializing camera #{self.camera_id}")
         self.camera = cv2.VideoCapture(self.camera_id)
 
         if not self.camera.isOpened():

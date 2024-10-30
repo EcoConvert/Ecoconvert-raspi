@@ -1,6 +1,7 @@
 import os
 import random
 import sys
+import logging
 
 from dotenv import load_dotenv
 from PyQt5.QtCore import Qt, QTimer
@@ -20,10 +21,11 @@ from PyQt5.QtWidgets import (
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from modules.Camera import Camera
 
+
 # Load environment variables from .env file
 load_dotenv()
 
-
+# YOU ARE PROBABLY LOOKING FOR LINE 350, THAT IS WHERE TO CHANGE THE DETECTION RESULT
 # TODO: Add some details on what's happening with the processing screen
 # TODO: Add a QR code image to the completion screen
 # TODO: Add .env
@@ -42,9 +44,11 @@ class RVMInterface(QWidget):
         try:
             self.camera = Camera(camera_id=0)  # Laptop camera: 0, USB camera: 1 or 2
             self.camera.load_labels()
+            logging.info("Camera initialized successfully")
         except Exception as e:
             self.camera = None
             self.show_error_popup(f"Camera initializtion failed: {str(e)}")
+            logging.error(f"Camera initializtion failed")
 
         self.instruction_text = "How to use the system:"
         self.processing_status = "Processing"
@@ -89,6 +93,7 @@ class RVMInterface(QWidget):
             "unclean": "Please clean the bottle first",
             "leaf": "Please remove any leaves or organic materials",
         }
+        logging.info("RVM LCD initialized successfully")
 
     # ========================== WELCOME SCREEN ========================== #
     # index 0
@@ -139,7 +144,6 @@ class RVMInterface(QWidget):
 
         welcome_widget.setLayout(welcome_layout)
         self.stacked_widget.addWidget(welcome_widget)
-
     # ========================== WELCOME SCREEN ========================== #
 
     # ========================== REMINDER SCREEN ========================== #
@@ -227,7 +231,7 @@ class RVMInterface(QWidget):
         result_widget = QWidget()
         result_layout = QVBoxLayout()
 
-        # Ttile
+        # Title
         result_title = QLabel("Detection Results", self)
         result_title.setAlignment(Qt.AlignCenter)
         result_title.setStyleSheet(
@@ -314,16 +318,18 @@ class RVMInterface(QWidget):
         """Start the processing and detection sequence."""
         if not self.camera:
             self.show_error_popup("Camera not initialized.")
+            logging.info("Camera not initialized")
             return
 
         self.stacked_widget.setCurrentIndex(2)
         self.progress_bar.setValue(0)
-
+      
         # initialize camera
         try:
             self.camera.init_camera()
         except Exception as e:
             self.show_error_popup(f"Error initializing camera: {str(e)}")
+            logging.error(f"Error initializing camera: {str(e)}")
             return
 
         # Start the processing simulation
@@ -334,14 +340,15 @@ class RVMInterface(QWidget):
         self.progress_bar.setValue(0)
 
         # Update the processing status
-        self.progress_bar.setValue(90)
+        self.progress_bar.setValue(75)
         self.processing_label.setText("Detecting...")
         QApplication.processEvents()
 
         try:
             # perform detection
             self.detection_result = self.camera.capture_and_infer()
-
+            # self.detection_result = "PET_bottle_1.5L"
+            logging.info(f"Detection result: {self.detection_result}")
             # Check if detection was successful
             if self.detection_result is None:
                 raise Exception("Detection failed")
@@ -362,6 +369,7 @@ class RVMInterface(QWidget):
         except Exception as e:
             self.show_error_popup(f"Error during detection: {str(e)}")
             self.stacked_widget.setCurrentIndex(1)  # Return to instruction screen
+            logging.error(f"Error during detection: try again... {str(e)}")
         finally:
             self.camera.release_camera()
 
@@ -375,18 +383,20 @@ class RVMInterface(QWidget):
         error_msg.setStandardButtons(QMessageBox.Ok)
         error_msg.exec_()
         self.stacked_widget.setCurrentIndex(1)  # Return to instruction screen
+        logging.error(f"Error: {message}")
 
     def show_completion_screen(self):
         """Show the completion screen with QR code."""
         self.stacked_widget.setCurrentIndex(4)
+        logging.info("Processing completed")
+        logging.info("QR Code displayed")
 
     def reset_machine(self):
         """Reset the machine state and return to the welcome screen."""
         self.detection_result = None
         self.stacked_widget.setCurrentIndex(0)
-
-#-----------------from  here on out. this is maintained by naypes -------------#
-    # I commented the stack index above to make it available when refactored
+        logging.warning("Machine reset")
+#-----------------maintained by naypes -------------#
     def welcome_screen(self):
         # as if the moment no timer switch, bacause that is sync. Looking for async solution
         self.stacked_widget.setCurrentIndex(0)
