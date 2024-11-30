@@ -7,11 +7,12 @@ An application that decodes JWT tokens embedded within QR Codes. It displays the
 lib/
 ├── constants/         # For global constants (currently unused).
 ├── screens/           # Contains app screens.
-│   └── scanner_view.dart
+│   └── scanner_screen.dart
 ├── services/          # Encapsulates reusable logic.
 │   └── jwt_service.dart
 ├── utils/             # Helper functions (currently unused).
-├── widgets/           # Reusable UI components (currently unused).
+├── widgets/           # Reusable UI components.
+│   └── jwt_dialog.dart
 ├── main.dart          # App entry point.
 ├── .env               # Environment variables (e.g., secret key).
 ```
