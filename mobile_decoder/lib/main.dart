@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget { // Constructor
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
             useMaterial3: true,
         ),
-        home: const ScannerView() // Scanner View is the main interface of scanning QR
+        home: const ScannerScreen() // Scanner View is the main interface of scanning QR
     );
   }
 }
