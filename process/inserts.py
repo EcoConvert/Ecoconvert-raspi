@@ -2,8 +2,8 @@ import logging
 import sys
 import os
 
-from modules.Camera import Camera
-from modules.lcd_main import RVMInterface
+from process.modules.Camera import Camera
+from process.modules.lcd_main import RVMInterface
 from PyQt5.QtWidgets import QApplication
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))

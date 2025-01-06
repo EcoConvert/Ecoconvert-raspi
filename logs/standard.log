@@ -68,3 +68,5 @@
 2024-10-30 19:16:27,506 ~ INFO ~ Camera initialized.
 2024-10-30 19:16:27,795 ~ INFO ~ Detection result: cardboard_paper
 2024-10-30 19:16:30,102 ~ ERROR ~ Error: Unknown item detected
+2025-01-06 15:09:32,144 ~ INFO ~ Initializing camera #0
+2025-01-06 15:09:34,351 ~ INFO ~ Camera initialized.
