@@ -1,6 +1,6 @@
 # as annoying as it is, please run it as a module from main.py in the root directory
 import json
-from ..util.global_state import load_global_state
+from util.global_state import load_global_state
 
 def machine_reset():
     print ("Machine reset")
