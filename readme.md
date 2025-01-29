@@ -15,4 +15,6 @@
    SECRET_KEY="JUST YOUR SECRET KEY FOR THE QR GENERATION"
    SERIAL_PORT = "Just where your arduino is plugged in"
 3. If you have questions reach out to me
-4. The main file is contains high number of comments. Most of it are for me, for the future me if I forgot what I am doing, -Naypes
+4. The main file is contains high number of comments. Most of it are for me, for the future me if I forgot what I am doing, -Naypes\
+5. ignore all other python files on the main directory, the main.py is what will be going inside the deployment branch later.
+6. I provide an arduino_codes folder, but if you want to create separate folder for arduino codes, its fine too.
