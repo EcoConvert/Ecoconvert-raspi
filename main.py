@@ -1,14 +1,26 @@
 # from process.inserts import test_capture
-from process.initialize import init_sequence 
-from util.global_state import load_global_state, save_global_state
+import os
+import time
+import serial
 
-data  = init_sequence()
-bottle_exist = data["bottle_exist"]
-storage = data["eco_brick_stored"]
-weight = data["weight"]  
+from process.initialize import init_sequence 
+from util.state import *
+from dotenv import dotenv_values, load_dotenv
+
+load_dotenv()
+
+port_number= os.getenv("SERIAL_PORT")
+ser = serial.Serial(port_number, 9600, timeout=0)
+
+# state variables here. They say how the RVM is doing.
+state_variables  = init_sequence()
+bottle_exist = state_variables["bottle_exist"]
+storage = state_variables["eco_brick_stored"]
+weight = state_variables["weight"]  
+state = load_state()
 session_end = False
 
-state_flags = [0,0,0]
+state_flags = [0,0,0] # I will change this state flag array here, It seems to lost its purpose because of state.json. 
  
 """
 if button_pressed: 
@@ -21,41 +33,33 @@ if button_pressed:
     make QR 
     session_end = True 
 """
+# do some initializing here 
+while True: 
+    if state == 0: # Standby Mode
+        # Show Welcome Screen    
+        # make the serial state writing only happen once. 
+        ser.write(b'0') # serial write to arduino to change the state 
+        # functionalize anything that follows on process folder
+    elif state == 1:# Insert Mode
+        # make the serial state writing only happen once. 
+        ser.write(b'1')
+        # functionalize anything that follows on process folder
+        if bottle_exist: 
+            print("Bottle exist do not accept more")
 
+        if weight > 529:  #529 can be changed, 529 = 23 * 23
+            print("Storage is full get the plastic SUP")
 
-if bottle_exist & session_end: 
-    print("Bottle exist do not accept more")
-    state_flags[0] = 1
-
-if weight > 529 & session_end: #529 can be changed, 529 = 23 * 23
-    print("Storage is full get the plastic SUP")
-    # call the function to empty the storage
-    # empty_storage()
-    # reset the storage
-    state_flags[1] = 1
-
-if storage > 3:  
-    print("Storage is full get the finished ecobrick")
-    # call the function to empty the storage
-    # empty_storage()
-    # reset the storage
-    # call the function to empty the storage
-    # empty_storage()
-    # reset the storage
-    state_flags[2] = 1
-
-if state_flags == [1,1,0]:
-    print("Start the machine")
-    # disable start session 
-    # synchronous code until finished. 
-    # enable start session
-    save_global_state(False, storage+1, weight)
-    state_flags = [0,0,0]
-    load_global_state()
-    
-
-if state_flags == [0,0,1]:
-    print("Collect finished ecobrick")
-    #disable start session
-    # reset the flags 
-    state_flags = [0,0,0]
+    elif state == 2: # Processing Mode 
+        # make the serial state writing only happen once. 
+        ser.write(b'2')
+        # functionalize anything that follows on process folder
+        if bottle_exist & weight > 529: 
+            print("Bottle exist and SUP is full")         
+        
+    elif state == 3: # Retrieve Mode
+        # make the serial state writing only happen once. 
+        ser.write(b'3')
+        # functionalize anything that follows on process folder
+        if storage > 3:  
+            print("Storage is full get the finished ecobrick")
