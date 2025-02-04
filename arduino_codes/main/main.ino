@@ -7,12 +7,13 @@
 // globalVars.h
 // ...
 // etc.
+#include "globalVars.h"
 
 int incomingByte = 0; // for incoming serial data
 
 void setup()
 {
-    pinMode(LED_BUILTIN, OUTPUT);
+    initPinmode();      // from globalVars.h
     Serial.begin(9600); // opens serial port, sets data rate to 9600 bps
 }
 
@@ -30,28 +31,45 @@ void loop()
         {
         case '0':
             // Standby Mode
-            Serial.write("off");
-            digitalWrite(LED_BUILTIN, LOW);
+            showState(led1, "Standby Mode");
             break;
 
         case '1':
-            // Insert Mode
-            Serial.write("on");
-            digitalWrite(LED_BUILTIN, HIGH);
+            // Insert Mode'
+            showState(led2, "Insert Mode");
             break;
 
         case '2':
             // Processing Mode
+            showState(led3, "Processing Mode");
             break;
 
         case '3':
             // Retrieve Mode
+            showState(led4, "Retrieve Mode");
             break;
 
         default:
             // Error case: Handle unexpected input
-            Serial.println("Invalid input received.");
+            // Serial.println("");
+            // Serial.println(incomingByte);
             break;
         }
     }
+}
+
+void offAllPin()
+{
+    digitalWrite(led1, LOW);
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, LOW);
+    digitalWrite(led4, LOW);
+}
+
+void showState(int pin, String message) 
+{
+    Serial.write(message.c_str());
+    Serial.println("");
+    offAllPin();
+    digitalWrite(pin, HIGH);
 }

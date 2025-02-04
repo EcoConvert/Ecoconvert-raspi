@@ -1,0 +1,138 @@
+2025-02-04 15:21:23,763 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QStackedWidget' object has no attribute '_state'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 69, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 24, in __init__
+    print(self.parent()._state)
+AttributeError: 'QStackedWidget' object has no attribute '_state'
+2025-02-04 18:32:49,219 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: could not open port 'COM4': PermissionError(13, 'Access is denied.', None, 5)
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 77, in _setup_screens
+    processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\processing_screen.py", line 18, in __init__
+    self.update_state(1)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 44, in update_state
+    ser = serial.Serial(port_number, 9600, timeout=0)
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM4': PermissionError(13, 'Access is denied.', None, 5)
+2025-02-04 18:36:14,640 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: unicode strings are not supported, please encode to bytes: '0b1'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 77, in _setup_screens
+    processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\processing_screen.py", line 18, in __init__
+    self.update_state(1)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 47, in update_state
+    ser.write(bin(i))
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialwin32.py", line 310, in write
+    data = to_bytes(data)
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialutil.py", line 65, in to_bytes
+    raise TypeError('unicode strings are not supported, please encode to bytes: {!r}'.format(seq))
+TypeError: unicode strings are not supported, please encode to bytes: '0b1'
+2025-02-04 18:39:22,872 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: unicode strings are not supported, please encode to bytes: '0b0'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 88, in _on_next_clicked
+    self.update_state(0)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 47, in update_state
+    ser.write(bin(i))
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialwin32.py", line 310, in write
+    data = to_bytes(data)
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialutil.py", line 65, in to_bytes
+    raise TypeError('unicode strings are not supported, please encode to bytes: {!r}'.format(seq))
+TypeError: unicode strings are not supported, please encode to bytes: '0b0'
+2025-02-04 18:39:32,676 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: unicode strings are not supported, please encode to bytes: '0b0'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 88, in _on_next_clicked
+    self.update_state(0)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 47, in update_state
+    ser.write(bin(i))
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialwin32.py", line 310, in write
+    data = to_bytes(data)
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialutil.py", line 65, in to_bytes
+    raise TypeError('unicode strings are not supported, please encode to bytes: {!r}'.format(seq))
+TypeError: unicode strings are not supported, please encode to bytes: '0b0'
+2025-02-04 18:39:33,632 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: unicode strings are not supported, please encode to bytes: '0b0'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 88, in _on_next_clicked
+    self.update_state(0)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 47, in update_state
+    ser.write(bin(i))
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialwin32.py", line 310, in write
+    data = to_bytes(data)
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialutil.py", line 65, in to_bytes
+    raise TypeError('unicode strings are not supported, please encode to bytes: {!r}'.format(seq))
+TypeError: unicode strings are not supported, please encode to bytes: '0b0'
+2025-02-04 18:39:34,507 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: unicode strings are not supported, please encode to bytes: '0b0'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 88, in _on_next_clicked
+    self.update_state(0)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 47, in update_state
+    ser.write(bin(i))
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialwin32.py", line 310, in write
+    data = to_bytes(data)
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialutil.py", line 65, in to_bytes
+    raise TypeError('unicode strings are not supported, please encode to bytes: {!r}'.format(seq))
+TypeError: unicode strings are not supported, please encode to bytes: '0b0'
+2025-02-04 18:39:44,656 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: unicode strings are not supported, please encode to bytes: '0b0'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 88, in _on_next_clicked
+    self.update_state(0)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 47, in update_state
+    ser.write(bin(i))
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialwin32.py", line 310, in write
+    data = to_bytes(data)
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialutil.py", line 65, in to_bytes
+    raise TypeError('unicode strings are not supported, please encode to bytes: {!r}'.format(seq))
+TypeError: unicode strings are not supported, please encode to bytes: '0b0'
+2025-02-04 18:42:41,607 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: unicode strings are not supported, please encode to bytes: '$0'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 88, in _on_next_clicked
+    self.update_state(0)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 47, in update_state
+    ser.write(f'${i}')
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialwin32.py", line 310, in write
+    data = to_bytes(data)
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialutil.py", line 65, in to_bytes
+    raise TypeError('unicode strings are not supported, please encode to bytes: {!r}'.format(seq))
+TypeError: unicode strings are not supported, please encode to bytes: '$0'
+2025-02-04 19:23:20,408 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: could not open port 'COM4': PermissionError(13, 'Access is denied.', None, 5)
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 73, in _setup_screens
+    reminder_screen = ReminderScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\reminder_screen.py", line 21, in __init__
+    super().__init__(config, parent)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 41, in __init__
+    self.ser = serial.Serial(port_number, 9600, timeout=0)
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM4': PermissionError(13, 'Access is denied.', None, 5)
+2025-02-04 19:23:29,398 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: could not open port 'COM4': PermissionError(13, 'Access is denied.', None, 5)
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 73, in _setup_screens
+    reminder_screen = ReminderScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\reminder_screen.py", line 21, in __init__
+    super().__init__(config, parent)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 41, in __init__
+    self.ser = serial.Serial(port_number, 9600, timeout=0)
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "C:\Users\Juno\anaconda3\envs\cc\lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM4': PermissionError(13, 'Access is denied.', None, 5)
+2025-02-04 19:57:06,590 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: name 'start_serial' is not defined
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 88, in _on_next_clicked
+    self.update_state(0)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 42, in update_state
+    start_serial(i)
+NameError: name 'start_serial' is not defined

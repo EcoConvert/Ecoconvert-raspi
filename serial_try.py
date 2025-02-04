@@ -20,5 +20,4 @@ def write():
         ser.write(b'0')
         read()
         time.sleep(1)
-        
 write()
