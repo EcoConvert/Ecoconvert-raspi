@@ -612,3 +612,4 @@ NameError: name 'start_serial' is not defined
 2025-02-04 20:53:10,471 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
 2025-02-04 20:53:10,923 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
 2025-02-04 20:53:10,923 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-04 20:53:14,929 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Metal materials are not allowed
