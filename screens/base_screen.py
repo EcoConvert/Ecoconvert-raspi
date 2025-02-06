@@ -37,6 +37,8 @@ class BaseScreen(QWidget):
         # Common debug log
         self.logger.debug(f"Initialized {self.__class__.__name__}")
 
+    # every screen has the ability to update state. 
+    # not that it is needed on all screen, but its much easier this way. 
     def update_state(self, i): 
         try:
             serial_manager.write(i) 

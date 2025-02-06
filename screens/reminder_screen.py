@@ -1,10 +1,6 @@
 # src/lcd_interface/screens/reminder_screen.py
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QLabel, QPushButton, QVBoxLayout
-
 from .base_screen import BaseScreen
-
-
+from .views.reminder_view import setup_ui
 class ReminderScreen(BaseScreen):
     """
     Reminder screen for the RVM LCD Interface.
@@ -19,45 +15,9 @@ class ReminderScreen(BaseScreen):
             parent (QStackedWidget, optional): Parent stacked widget for navigation.
         """
         super().__init__(config, parent)
-        self._setup_ui()
+        setup_ui(self)
 
-    def _setup_ui(self):
-        """
-        Set up the user interface for the Reminder Screen.
-        """
-        layout = QVBoxLayout()
-
-        # Title
-        title = QLabel("Reminders")
-        title.setAlignment(Qt.AlignCenter)
-        title.setStyleSheet("font-size: 20px; font-weight: bold; margin-bottom: 15px;")
-        layout.addWidget(title)
-
-        # Reminder instructions
-        reminders = self.config.get(
-            "reminder_text",
-            [
-                "• Only insert clean and dry bottles and SUP.",
-                "• Remove caps from bottles.",
-                "• Do not insert glass, bottles, or cans.",
-                "• Do not insert contaminated or wet plastic.",
-            ],
-        )
-        for reminder in reminders:
-            label = QLabel(reminder)
-            label.setAlignment(Qt.AlignLeft)
-            label.setStyleSheet("font-size: 16px; margin-left: 20px;")
-            layout.addWidget(label)
-
-        # Start button
-        start_button = QPushButton("Start Processing")
-        start_button.setStyleSheet("font-size: 18px; margin-top: 20px;")
-        start_button.clicked.connect(self._navigate_to_processing)
-        layout.addWidget(start_button)
-
-        self.setLayout(layout)
-
-    def _navigate_to_processing(self):
+    def _on_click(self):
         """
         Handle the navigation to the Processing Screen and start processing.
         """

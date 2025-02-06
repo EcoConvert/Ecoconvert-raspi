@@ -8,7 +8,8 @@ from .dummy_detection import DetectionResultScreen
 from .processing_screen import ProcessingScreen
 from .reminder_screen import ReminderScreen
 from .welcome_screen import WelcomeScreen
-
+from .insert_screen import InsertScreen
+from .error_screen import ErrorScreen 
 
 class RVMInterface(QWidget):
     """
@@ -64,6 +65,21 @@ class RVMInterface(QWidget):
         Create and add screens to the stacked widget.
         """
         try:
+            # ----------------------------------------------------------------------
+            processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
+            self.stacked_widget.addWidget(processing_screen)
+
+            error_screen = ErrorScreen(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(error_screen)
+
+            completion_screen = CompletionScreen(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(completion_screen)
+
+            insert_screen = InsertScreen(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(insert_screen)
+
+            # ------------------------------------------------------------------------
+
             # Welcome Screen (index 0)
             welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
             self.stacked_widget.addWidget(welcome_screen)

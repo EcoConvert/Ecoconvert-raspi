@@ -2,10 +2,9 @@
 import random
 
 from PyQt5.QtCore import Qt, QTimer
-from PyQt5.QtWidgets import QApplication, QLabel, QProgressBar, QVBoxLayout
 
 from .base_screen import BaseScreen
-
+from .views.processing_view import setup_ui
 
 class ProcessingScreen(BaseScreen):
     """
@@ -14,34 +13,10 @@ class ProcessingScreen(BaseScreen):
 
     def __init__(self, config, parent=None, camera=None):
         super().__init__(config, parent, camera)
-        self._setup_ui()
         self.timer = QTimer()  # Timer to simulate progress
         self.timer.timeout.connect(self._simulate_progress)
         self.progress_value = 0  # Current progress value
-
-    def _setup_ui(self):
-        """
-        Set up the user interface for the processing screen.
-        """
-        layout = QVBoxLayout()
-
-        # Processing label
-        self.processing_label = QLabel(
-            self.config.get("Insert the bottle and P", "Processing, please wait...")
-        )
-        self.processing_label.setAlignment(Qt.AlignCenter)
-        self.processing_label.setStyleSheet(
-            "font-size: 24px; font-weight: bold; margin-bottom: 20px;"
-        )
-        layout.addWidget(self.processing_label)
-
-        # Progress bar
-        self.progress_bar = QProgressBar()
-        self.progress_bar.setValue(0)
-        self.progress_bar.setStyleSheet("font-size: 16px;")
-        layout.addWidget(self.progress_bar)
-
-        self.setLayout(layout)
+        setup_ui(self)
 
     def start_processing(self):
         """
@@ -53,7 +28,7 @@ class ProcessingScreen(BaseScreen):
         self.processing_label.setText("Processing, please wait...")
 
         # Start the timer to simulate progress updates
-        self.timer.start(500)  # Update every 500ms
+        self.timer.start(25)  # Update every 500ms
 
     def _simulate_progress(self):
         """

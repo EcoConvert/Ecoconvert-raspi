@@ -27,7 +27,9 @@ void loop()
         // incoming bytes get replaced by the new bytes
         // if there is more than one,
         // The last one will be the incomingBytes.
-        switch (incomingByte)
+        Serial.write(incomingByte);
+        
+        switch (incomingByte) 
         {
         case '0':
             // Standby Mode

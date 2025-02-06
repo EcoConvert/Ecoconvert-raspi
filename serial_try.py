@@ -13,11 +13,22 @@ def read():
     print(res)
 
 def write():
+    isSerialInit = True
     while True:
-        ser.write(b'1')
-        read()
-        time.sleep(1)
+        if (isSerialInit):
+            # nah bro this is unecessary, it needs handshake rather than a 2 second delay. But this is what I can only implment, might change this later 
+            time.sleep(2)    
+            isSerialInit = False 
         ser.write(b'0')
         read()
-        time.sleep(1)
+        time.sleep(.2)
+        ser.write(b'1')
+        read()
+        time.sleep(.2)
+        ser.write(b'2')
+        read()
+        time.sleep(.2)
+        ser.write(b'3')
+        read()
+        time.sleep(.2)
 write()

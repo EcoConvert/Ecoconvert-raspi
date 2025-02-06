@@ -136,3 +136,163 @@ Traceback (most recent call last):
   File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 42, in update_state
     start_serial(i)
 NameError: name 'start_serial' is not defined
+2025-02-06 08:10:38,106 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name '_on_next_clicked' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 68, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(_on_next_clicked)
+             ^^^^^^^^^^^^^^^^
+NameError: name '_on_next_clicked' is not defined. Did you mean: 'self._on_next_clicked'?
+2025-02-06 08:11:00,257 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name '_on_next_clicked' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 68, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(_on_next_clicked)
+             ^^^^^^^^^^^^^^^^
+NameError: name '_on_next_clicked' is not defined. Did you mean: 'self._on_next_clicked'?
+2025-02-06 08:11:21,248 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'on_next_clicked' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 68, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(on_next_clicked)
+             ^^^^^^^^^^^^^^^
+NameError: name 'on_next_clicked' is not defined. Did you mean: 'self.on_next_clicked'?
+2025-02-06 08:11:42,199 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'on_next_clicked' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 68, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(on_next_clicked)
+             ^^^^^^^^^^^^^^^
+NameError: name 'on_next_clicked' is not defined. Did you mean: 'self.on_next_clicked'?
+2025-02-06 08:12:19,990 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setup_ui() missing 1 required positional argument: 'on_next_clicked'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 68, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self._on_next_clicked)
+TypeError: setup_ui() missing 1 required positional argument: 'on_next_clicked'
+2025-02-06 08:12:41,089 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'QVBoxLayout' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 68, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self, self._on_next_clicked)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 2, in setup_ui
+    layout = QVBoxLayout()
+             ^^^^^^^^^^^
+NameError: name 'QVBoxLayout' is not defined
+2025-02-06 08:12:58,610 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'Qt' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 68, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self, self._on_next_clicked)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 9, in setup_ui
+    welcome_label.setAlignment(Qt.AlignCenter)
+                               ^^
+NameError: name 'Qt' is not defined
+2025-02-06 08:13:28,905 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'WelcomeScreen' object has no attribute 'on_next_clicked'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 68, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self, self._on_next_clicked)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 48, in setup_ui
+    start_button.clicked.connect(self.on_next_clicked)
+                                 ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WelcomeScreen' object has no attribute 'on_next_clicked'. Did you mean: '_on_next_clicked'?
+2025-02-06 08:18:45,934 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'setup_ui' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 72, in _setup_screens
+    reminder_screen = ReminderScreen(self.config, self.stacked_widget)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/reminder_screen.py", line 18, in __init__
+    setup_ui(self)
+    ^^^^^^^^
+NameError: name 'setup_ui' is not defined
+2025-02-06 08:43:36,498 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'InsertScreen' object has no attribute '_on_click'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 68, in _setup_screens
+    insert_screen = InsertScreen(self.config, self.stacked_widget)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/insert_screen.py", line 7, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/insert_view.py", line 13, in setup_ui
+    start_button.clicked.connect(self._on_click)
+                                 ^^^^^^^^^^^^^^
+AttributeError: 'InsertScreen' object has no attribute '_on_click'. Did you mean: 'on_click'?
+2025-02-06 08:56:23,607 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'CompletionScreen' object has no attribute '_on_finish_clicked'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 69, in _setup_screens
+    completion_screen = CompletionScreen(self.config, self.stacked_widget)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/completion_screen.py", line 24, in __init__
+    self._setup_ui()
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/completion_screen.py", line 58, in _setup_ui
+    finish_button.clicked.connect(self._on_finish_clicked)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CompletionScreen' object has no attribute '_on_finish_clicked'
+2025-02-06 08:56:58,077 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'CompletionScreen' object has no attribute 'setup_ui'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 69, in _setup_screens
+    completion_screen = CompletionScreen(self.config, self.stacked_widget)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/completion_screen.py", line 24, in __init__
+    self.setup_ui()
+    ^^^^^^^^^^^^^
+AttributeError: 'CompletionScreen' object has no attribute 'setup_ui'
+2025-02-06 08:57:07,194 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setup_ui() missing 1 required positional argument: 'self'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 69, in _setup_screens
+    completion_screen = CompletionScreen(self.config, self.stacked_widget)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/completion_screen.py", line 24, in __init__
+    setup_ui()
+TypeError: setup_ui() missing 1 required positional argument: 'self'
+2025-02-06 09:12:07,981 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'stacked_widget' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 70, in _setup_screens
+    stacked_widget.addWidget(error_screen)
+    ^^^^^^^^^^^^^^
+NameError: name 'stacked_widget' is not defined. Did you mean: 'self.stacked_widget'?
+2025-02-06 09:41:03,326 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'QTimer' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 69, in _setup_screens
+    processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/processing_screen.py", line 14, in __init__
+    self.timer = QTimer()  # Timer to simulate progress
+                 ^^^^^^
+NameError: name 'QTimer' is not defined
+2025-02-06 09:42:12,760 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'QTimer' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 69, in _setup_screens
+    processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/processing_screen.py", line 16, in __init__
+    self.timer = QTimer()  # Timer to simulate progress
+                 ^^^^^^
+NameError: name 'QTimer' is not defined
+2025-02-06 09:43:17,545 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'QProgressBar' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 69, in _setup_screens
+    processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/processing_screen.py", line 19, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/processing_view.py", line 19, in setup_ui
+    self.progress_bar = QProgressBar()
+                        ^^^^^^^^^^^^
+NameError: name 'QProgressBar' is not defined
