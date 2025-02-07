@@ -30,6 +30,6 @@ class CompletionScreen(BaseScreen):
         Resets the application to the welcome screen.
         """
         if self.parent():
-            self.parent().setCurrentIndex(1)  # Welcome Screen Index
+            self.parent().setCurrentIndex(0)  # Welcome Screen Index
             self.logger.info("Reset to Welcome Screen.")
             self.update_state(3)

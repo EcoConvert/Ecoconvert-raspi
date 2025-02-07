@@ -30,7 +30,6 @@ class RVMInterface(QWidget):
         self.managed_index = None
         # Logger
         self.logger = lcd_logger(__name__)
-
         # Configuration
         self.config = config
         # Setup main window
@@ -66,18 +65,17 @@ class RVMInterface(QWidget):
         """
         try:
             # ----------------------------------------------------------------------
-            processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
-            self.stacked_widget.addWidget(processing_screen)
+            # processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
+            # self.stacked_widget.addWidget(processing_screen)
 
-            error_screen = ErrorScreen(self.config, self.stacked_widget)
-            self.stacked_widget.addWidget(error_screen)
+            # error_screen = ErrorScreen(self.config, self.stacked_widget)
+            # self.stacked_widget.addWidget(error_screen)
 
-            completion_screen = CompletionScreen(self.config, self.stacked_widget)
-            self.stacked_widget.addWidget(completion_screen)
+            # completion_screen = CompletionScreen(self.config, self.stacked_widget)
+            # self.stacked_widget.addWidget(completion_screen)
 
-            insert_screen = InsertScreen(self.config, self.stacked_widget)
-            self.stacked_widget.addWidget(insert_screen)
-
+            # insert_screen = InsertScreen(self.config, self.stacked_widget)
+            # self.stacked_widget.addWidget(insert_screen)
             # ------------------------------------------------------------------------
 
             # Welcome Screen (index 0)

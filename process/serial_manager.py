@@ -12,20 +12,25 @@ class SerialManager:
         return cls._instance
 
     def init_serial(self):
-        load_dotenv()
-        port_number = os.getenv("SERIAL_PORT")
+        try:
+            load_dotenv()
+            port_number = os.getenv("SERIAL_PORT")
 
-        if not port_number:
-            raise ValueError("SERIAL_PORT not set in .env file")
+            if not port_number:
+                raise ValueError("SERIAL_PORT not set in .env file")
 
-        self.ser = serial.Serial(port_number, 9600, timeout=0)
-        if not self.ser.is_open:
-            raise IOError("Serial port failed to open")
+            self.ser = serial.Serial(port_number, 9600, timeout=0)
+            if not self.ser.is_open:
+                raise IOError("Serial port failed to open")
+        except IOError as e: 
+            print("failed daw to open beh")
+        except ValueError as e:
+            print(e)
 
     def write(self, data):
         """Write data to the serial port"""
         try:
-            self.ser.write(str(str(data)).encode()) # this double string declaration, idk why but it works. Do not remove or state 2 and 3 will not work.
+            self.ser.write(str(str(data)).encode()) # this double string conversion, idk why but it works. Do not remove or state 2 and 3 will not work.
             save_state(data)
             print(f"Sent: {str(data).encode()}")
         except Exception as e:

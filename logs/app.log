@@ -951,3 +951,185 @@ Traceback (most recent call last):
                         ^^^^^^^^^^^^
 NameError: name 'QProgressBar' is not defined
 2025-02-06 09:43:48,482 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 11:12:21,770 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 11:13:15,997 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:24:06,496 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:24:36,742 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:24:39,040 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:24:40,861 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:26:30,275 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:26:32,753 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:26:33,136 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:29:21,012 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:29:22,807 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:29:23,166 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:29:23,167 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:33:00,755 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:33:03,089 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:33:03,536 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:33:03,537 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:34:09,897 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:34:12,965 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:34:13,540 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:34:13,540 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:34:13,757 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Glass materials are not allowed
+2025-02-06 12:34:15,580 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:36:10,752 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:36:13,675 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:36:15,851 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:36:15,852 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:36:16,056 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Valid Item: 1.5L PET Bottle
+2025-02-06 12:37:07,744 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:37:08,946 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:37:09,506 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:37:09,507 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:37:09,705 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Metal materials are not allowed
+2025-02-06 12:37:10,434 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:37:10,818 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:37:11,489 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:37:11,490 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:37:11,706 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Valid Item: 1.5L PET Bottle
+2025-02-06 12:37:11,874 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:37:12,091 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:37:12,298 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:37:12,299 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:37:12,481 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Glass materials are not allowed
+2025-02-06 12:37:12,714 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:37:12,906 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:37:13,122 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:37:13,123 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:37:13,330 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Metal materials are not allowed
+2025-02-06 12:37:13,538 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:37:13,738 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:37:13,946 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:37:13,947 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:37:14,155 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Glass materials are not allowed
+2025-02-06 12:37:14,330 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:37:14,522 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:37:14,866 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:37:14,867 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:37:15,075 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Metal materials are not allowed
+2025-02-06 12:37:15,274 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:37:15,474 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:37:15,698 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:37:15,699 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:37:15,881 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Glass materials are not allowed
+2025-02-06 12:37:16,042 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:38:09,550 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:38:11,728 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:38:13,079 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:38:13,080 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:38:13,280 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Metal materials are not allowed
+2025-02-06 12:38:14,271 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:38:15,432 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:38:17,487 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:38:17,488 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:38:17,680 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Valid Item: 1.5L PET Bottle
+2025-02-06 12:38:18,296 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:38:18,944 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:38:19,839 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:38:19,840 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:38:20,032 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Valid Item: SUP Plastic Detected
+2025-02-06 12:38:21,440 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:38:26,784 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:39:18,525 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:39:20,094 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:39:20,629 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:39:20,630 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:39:20,831 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Valid Item: 1.5L PET Bottle
+2025-02-06 12:39:21,070 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:39:22,189 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:39:29,825 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:39:40,782 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:39:42,544 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:39:44,575 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:39:44,576 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:39:44,806 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Metal materials are not allowed
+2025-02-06 12:40:06,476 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:40:18,842 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:40:27,978 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:40:29,761 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:40:29,762 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:40:29,956 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Metal materials are not allowed
+2025-02-06 12:40:30,881 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:40:31,882 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:40:40,587 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:40:42,050 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:40:44,186 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:40:44,187 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:40:44,381 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Metal materials are not allowed
+2025-02-06 12:41:00,506 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:41:01,666 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:41:02,442 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:41:03,003 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:41:03,004 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:41:03,180 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Glass materials are not allowed
+2025-02-06 12:41:04,355 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:41:04,994 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:41:05,610 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:41:06,083 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:41:06,083 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:41:06,256 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Metal materials are not allowed
+2025-02-06 12:41:55,380 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:41:56,782 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:41:57,845 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:41:57,846 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:41:58,655 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Metal materials are not allowed
+2025-02-06 12:42:01,142 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:42:02,085 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:42:03,373 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:42:04,710 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:42:04,711 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:42:05,446 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Valid Item: SUP Plastic Detected
+2025-02-06 12:44:50,623 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:44:52,174 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:44:54,853 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:44:54,855 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:44:55,655 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Metal materials are not allowed
+2025-02-06 12:44:56,126 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:44:57,341 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:44:57,957 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:44:58,581 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:44:58,582 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:44:59,255 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Valid Item: 1.5L PET Bottle
+2025-02-06 12:45:03,980 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 12:45:06,501 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:45:07,604 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 12:45:07,605 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 12:45:08,550 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Valid Item: 1.5L PET Bottle
+2025-02-06 12:45:09,037 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 12:45:10,068 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 12:45:11,541 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 12:53:08,467 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 14:04:20,842 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 14:05:13,367 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 14:05:30,508 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 14:05:50,161 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 14:08:55,101 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 14:08:57,378 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 14:09:08,225 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 14:09:08,226 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 14:09:09,050 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Please clean the bottle first
+2025-02-06 14:09:14,130 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 14:09:15,665 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 14:09:21,425 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 14:09:28,838 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 14:09:28,839 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 14:09:29,849 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Valid Item: 1.5L PET Bottle
+2025-02-06 14:10:02,430 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 14:10:03,134 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 14:10:05,751 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 14:10:20,866 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 14:10:20,867 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 14:10:21,649 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Valid Item: 1.5L PET Bottle
+2025-02-06 14:24:54,020 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 14:24:57,892 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 14:25:12,818 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 14:25:18,727 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-06 14:26:06,721 - RVMInterface.ProcessingScreen - INFO - Starting simulated processing...
+2025-02-06 14:26:06,722 - RVMInterface.ReminderScreen - INFO - Navigated from Reminder Screen to Processing Screen
+2025-02-06 14:26:07,650 - RVMInterface.ProcessingScreen - INFO - Simulated detection result: Error: Glass materials are not allowed
+2025-02-06 14:26:10,378 - RVMInterface.DetectionResultScreen - INFO - Navigated from Detection Result Screen to Completion Screen.
+2025-02-06 14:26:12,146 - RVMInterface.CompletionScreen - INFO - Reset to Welcome Screen.
+2025-02-06 14:31:47,384 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-06 14:31:56,486 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.

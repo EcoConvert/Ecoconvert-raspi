@@ -2,6 +2,7 @@
 import random
 
 from PyQt5.QtCore import Qt, QTimer
+from PyQt5.QtWidgets import QApplication
 
 from .base_screen import BaseScreen
 from .views.processing_view import setup_ui
@@ -25,10 +26,10 @@ class ProcessingScreen(BaseScreen):
         self.logger.info("Starting simulated processing...")
         self.progress_value = 0
         self.progress_bar.setValue(0)
-        self.processing_label.setText("Processing, please wait...")
+        self.processing_label.setText("Making Eco BRink cutie pokiee")
 
         # Start the timer to simulate progress updates
-        self.timer.start(25)  # Update every 500ms
+        self.timer.start(100)  # Update every 500ms
 
     def _simulate_progress(self):
         """
