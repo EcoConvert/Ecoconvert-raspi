@@ -17,7 +17,10 @@ class StandbyScreen(BaseScreen):
         super().__init__(config, parent)
         setup_ui(self)
 
-    def _on_click(self):
+    def _on_click_pet(self):
+
+
+    def _on_click_sup(self):
         """
         Handle the navigation to the Processing Screen and start processing.
         """

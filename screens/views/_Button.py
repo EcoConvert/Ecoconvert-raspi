@@ -7,7 +7,7 @@ class Btn(QPushButton):
     """
     Creates the generic Button
     """
-    def __init__(self, text="click", bt_w = 642, bt_h = 202, padding_size = 10, parent=None):
+    def __init__(self, text="click", bt_w = 642, bt_h = 202, padding_size = 10, disabled = False, parent=None):
         super().__init__(parent)
         self.setText("")
 
@@ -15,12 +15,16 @@ class Btn(QPushButton):
         self.label.setWordWrap(True)
         self.label.setAlignment(Qt.AlignCenter)
         self.label.setFont(parent.font_inter)
-        self.label.setStyleSheet(f"padding: {str(padding_size)}px;  background-color:#F9FF89; border: none;")
+        self.label.setStyleSheet(f"padding: {str(padding_size)}px; border: none;")
         shadow = Drop_Shadow()
         self.setGraphicsEffect(shadow)
         
         # change color based on disable
-        self.setStyleSheet(f"margin-bottom:30px; background-color:#F9FF89; border: 3px solid black; border-radius: 20%")
+        if disabled: 
+            self.setStyleSheet(f"margin-bottom:30px; background-color:#D9D9D9; border: 3px solid #50000000; border-radius: 20%")
+            self.setEnabled(False)
+        else:
+            self.setStyleSheet(f"margin-bottom:30px; background-color:#F9FF89; border: 3px solid black; border-radius: 20%")
         self.setFixedSize(bt_w, bt_h)
 
 

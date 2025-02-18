@@ -833,3 +833,17 @@ Traceback (most recent call last):
   File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 21, in setup_ui
     layout.addWidget(center_div, alignment=Qt.AlignCenter)
 TypeError: addWidget(self, a0: Optional[QWidget], stretch: int = 0, alignment: Union[Qt.Alignment, Qt.AlignmentFlag] = Qt.Alignment()): argument 1 has unexpected type 'QVBoxLayout'
+2025-02-19 05:38:26,347 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'disabled' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", bt_w = 642 , bt_h = 202, padding_size=0, parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 23, in __init__
+    if disabled:
+      ^^^^^^^^
+NameError: name 'disabled' is not defined. Did you mean: 'disbled'?

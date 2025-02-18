@@ -20,8 +20,7 @@ def setup_ui(self):
 
 
         div = QHBoxLayout()
-        
-        bot_btn = Btn("1.5 Plastic <br> Bottle", bt_w = 298, bt_h = 202, padding_size = 0, parent=self)
+        bot_btn = Btn("1.5 Plastic <br> Bottle", bt_w = 298, bt_h = 202, padding_size = 0, disabled = True, parent=self)
         div.addWidget(bot_btn)
 
         sup_btn = Btn("Single Use <br> Plastic", bt_w = 298, bt_h = 202, padding_size = 0, parent=self)
