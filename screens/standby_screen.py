@@ -1,7 +1,7 @@
 # src/lcd_interface/screens/reminder_screen.py
 from .base_screen import BaseScreen
-from .views.reminder_view import setup_ui
-class ReminderScreen(BaseScreen):
+from .views.standby_view import setup_ui
+class StandbyScreen(BaseScreen):
     """
     Reminder screen for the RVM LCD Interface.
     """

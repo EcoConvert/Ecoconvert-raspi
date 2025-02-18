@@ -23,7 +23,7 @@ class WelcomeScreen(BaseScreen):
         # then hook it up on the views.   
         setup_ui(self)
         self.update_state(0) # update to standby mode
-
+    
     def _on_click(self):
         """
         Handle the 'Next' button click event.

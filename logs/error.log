@@ -296,3 +296,540 @@ Traceback (most recent call last):
     self.progress_bar = QProgressBar()
                         ^^^^^^^^^^^^
 NameError: name 'QProgressBar' is not defined
+2025-02-18 21:47:59,952 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: arguments did not match any overloaded call:
+  QFont(): too many arguments
+  QFont(family: Optional[str], pointSize: int = -1, weight: int = -1, italic: bool = False): argument 1 has unexpected type 'int'
+  QFont(a0: QFont, pd: Optional[QPaintDevice]): argument 1 has unexpected type 'int'
+  QFont(a0: QFont): argument 1 has unexpected type 'int'
+  QFont(variant: Any): too many arguments
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 18, in __init__
+    super().__init__(config, parent)  # Inherit from BaseScreen
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/base_screen.py", line 41, in __init__
+    self.font_poppins = QFont(poppins, 16)
+                        ^^^^^^^^^^^^^^^^^^
+TypeError: arguments did not match any overloaded call:
+  QFont(): too many arguments
+  QFont(family: Optional[str], pointSize: int = -1, weight: int = -1, italic: bool = False): argument 1 has unexpected type 'int'
+  QFont(a0: QFont, pd: Optional[QPaintDevice]): argument 1 has unexpected type 'int'
+  QFont(a0: QFont): argument 1 has unexpected type 'int'
+  QFont(variant: Any): too many arguments
+2025-02-18 21:50:41,931 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: list index out of range
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 18, in __init__
+    super().__init__(config, parent)  # Inherit from BaseScreen
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/base_screen.py", line 41, in __init__
+    ff_poppins = QFontDatabase.applicationFontFamilies(poppins)[0]
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+2025-02-18 21:51:36,254 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: arguments did not match any overloaded call:
+  QFont(): too many arguments
+  QFont(family: Optional[str], pointSize: int = -1, weight: int = -1, italic: bool = False): argument 1 has unexpected type 'list'
+  QFont(a0: QFont, pd: Optional[QPaintDevice]): argument 1 has unexpected type 'list'
+  QFont(a0: QFont): argument 1 has unexpected type 'list'
+  QFont(variant: Any): too many arguments
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 18, in __init__
+    super().__init__(config, parent)  # Inherit from BaseScreen
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/base_screen.py", line 42, in __init__
+    self.font_poppins = QFont(ff_poppins, 16)
+                        ^^^^^^^^^^^^^^^^^^^^^
+TypeError: arguments did not match any overloaded call:
+  QFont(): too many arguments
+  QFont(family: Optional[str], pointSize: int = -1, weight: int = -1, italic: bool = False): argument 1 has unexpected type 'list'
+  QFont(a0: QFont, pd: Optional[QPaintDevice]): argument 1 has unexpected type 'list'
+  QFont(a0: QFont): argument 1 has unexpected type 'list'
+  QFont(variant: Any): too many arguments
+2025-02-18 21:52:00,562 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: list index out of range
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 18, in __init__
+    super().__init__(config, parent)  # Inherit from BaseScreen
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/base_screen.py", line 41, in __init__
+    ff_poppins = QFontDatabase.applicationFontFamilies(poppins)[0]
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+2025-02-18 21:54:08,945 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'Qfont' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 18, in __init__
+    super().__init__(config, parent)  # Inherit from BaseScreen
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/base_screen.py", line 45, in __init__
+    self.font_inter = Qfont(ff_inter, 16)
+                      ^^^^^
+NameError: name 'Qfont' is not defined. Did you mean: 'QFont'?
+2025-02-18 21:54:35,011 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'welcome' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 9, in setup_ui
+    welcome.setFont(self.font_poppins)
+    ^^^^^^^
+NameError: name 'welcome' is not defined
+2025-02-18 22:26:53,728 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QFont' object has no attribute 'setGraphicsEffect'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 18, in __init__
+    super().__init__(config, parent)  # Inherit from BaseScreen
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/base_screen.py", line 50, in __init__
+    self.font_poppins.setGraphicsEffect(shadow)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QFont' object has no attribute 'setGraphicsEffect'
+2025-02-18 22:32:48,799 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'shadow_effect' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 15, in setup_ui
+    shadow_effect.setOffset(0, 7)
+    ^^^^^^^^^^^^^
+NameError: name 'shadow_effect' is not defined
+2025-02-18 22:37:03,553 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'shadow_effect' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 19, in setup_ui
+    shadow_effect.setColor(QColor("#25000000"))
+    ^^^^^^^^^^^^^
+NameError: name 'shadow_effect' is not defined
+2025-02-18 23:22:00,011 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'Btn' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 19, in setup_ui
+    start_button = Btn("Start The Machine")
+                   ^^^
+NameError: name 'Btn' is not defined
+2025-02-18 23:23:36,627 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'Btn' object has no attribute 'font_inter'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 20, in setup_ui
+    start_button = Btn("Start The Machine")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 12, in __init__
+    self.setFont(self.font_inter)
+                 ^^^^^^^^^^^^^^^
+AttributeError: 'Btn' object has no attribute 'font_inter'
+2025-02-18 23:27:23,669 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'NoneType' object has no attribute 'font_inter'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 20, in setup_ui
+    start_button = Btn("Start The Machine")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 12, in __init__
+    self.setFont(parent.font_inter)
+                 ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'font_inter'
+2025-02-18 23:29:22,554 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'NoneType' object has no attribute 'font_inter'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 20, in setup_ui
+    self.start_button = Btn("Start The Machine")
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 12, in __init__
+    self.setFont(parent.font_inter)
+                 ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'font_inter'
+2025-02-18 23:32:01,211 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'start' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 21, in setup_ui
+    start.button.clicked.connect(self._on_click)
+    ^^^^^
+NameError: name 'start' is not defined
+2025-02-18 23:35:24,395 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'ReminderScreen' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 86, in _setup_screens
+    reminder_screen = ReminderScreen(self.config, self.stacked_widget)
+                      ^^^^^^^^^^^^^^
+NameError: name 'ReminderScreen' is not defined
+2025-02-18 23:43:14,498 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'NoneType' object has no attribute 'font_inter'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 86, in _setup_screens
+    standby_screen = StandbyScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/standby_screen.py", line 18, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/standby_view.py", line 21, in setup_ui
+    bot_btn = Btn("1.5 Plastic Bottle")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 12, in __init__
+    self.setFont(parent.font_inter)
+                 ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'font_inter'
+2025-02-18 23:49:50,760 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'QHBoxLayout' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 86, in _setup_screens
+    standby_screen = StandbyScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/standby_screen.py", line 18, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/standby_view.py", line 22, in setup_ui
+    div = QHBoxLayout()
+          ^^^^^^^^^^^
+NameError: name 'QHBoxLayout' is not defined. Did you mean: 'QVBoxLayout'?
+2025-02-18 23:50:03,236 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'QHBoxLayout' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 86, in _setup_screens
+    standby_screen = StandbyScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/standby_screen.py", line 18, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/standby_view.py", line 22, in setup_ui
+    div = QHBoxLayout()
+          ^^^^^^^^^^^
+NameError: name 'QHBoxLayout' is not defined. Did you mean: 'QVBoxLayout'?
+2025-02-18 23:59:03,142 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setMaximumWidth(self, maxw: int): argument 1 has unexpected type 'str'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 20, in setup_ui
+    start_button = Btn("Start The Machine", self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 16, in __init__
+    self.setMaximumWidth("250px")
+TypeError: setMaximumWidth(self, maxw: int): argument 1 has unexpected type 'str'
+2025-02-19 00:03:32,888 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'NoneType' object has no attribute 'font_inter'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 20, in setup_ui
+    start_button = Btn("Start The Machine", self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 12, in __init__
+    self.setFont(parent.font_inter)
+                 ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'font_inter'
+2025-02-19 00:04:12,194 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'NoneType' object has no attribute 'font_inter'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 86, in _setup_screens
+    standby_screen = StandbyScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/standby_screen.py", line 18, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/standby_view.py", line 24, in setup_ui
+    bot_btn = Btn("1.5 Plastic Bottle",self)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 12, in __init__
+    self.setFont(parent.font_inter)
+                 ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'font_inter'
+2025-02-19 00:11:18,413 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setFont(self, a0: QFont): too many arguments
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 12, in __init__
+    self.setFont(parent.font_inter, 35)
+TypeError: setFont(self, a0: QFont): too many arguments
+2025-02-19 00:12:00,270 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'Btn' object has no attribute 'setWeight'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 13, in __init__
+    self.setWeight(25)
+    ^^^^^^^^^^^^^^
+AttributeError: 'Btn' object has no attribute 'setWeight'
+2025-02-19 00:12:14,655 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'WelcomeScreen' object has no attribute 'setWeight'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 13, in __init__
+    parent.setWeight(25)
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'WelcomeScreen' object has no attribute 'setWeight'
+2025-02-19 00:12:31,398 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'WelcomeScreen' object has no attribute 'setWeight'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 12, in __init__
+    parent.setWeight(25)
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'WelcomeScreen' object has no attribute 'setWeight'
+2025-02-19 00:32:19,698 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'Btn' object has no attribute 'setWordWrap'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 13, in __init__
+    self.setWordWrap(True)
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'Btn' object has no attribute 'setWordWrap'
+2025-02-19 00:37:05,186 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'Qlabel' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 11, in __init__
+    self.label = Qlabel(text)
+                 ^^^^^^
+NameError: name 'Qlabel' is not defined
+2025-02-19 00:37:35,063 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'Qt' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 13, in __init__
+    self.label.setAlignment(Qt.AlignCenter)  # Center the text
+                            ^^
+NameError: name 'Qt' is not defined
+2025-02-19 00:38:15,878 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'Btn' object has no attribute 'setWordWrap'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 17, in __init__
+    self.setWordWrap(True)
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'Btn' object has no attribute 'setWordWrap'
+2025-02-19 00:38:33,836 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'Btn' object has no attribute 'setWordWrap'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 17, in __init__
+    self.setWordWrap(True)
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'Btn' object has no attribute 'setWordWrap'
+2025-02-19 00:38:52,519 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'QVBoxLayout' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 21, in __init__
+    layout = QVBoxLayout(self)
+             ^^^^^^^^^^^
+NameError: name 'QVBoxLayout' is not defined
+2025-02-19 00:39:37,888 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'font_inter' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 13, in __init__
+    self.label.setFont(font_inter)
+                       ^^^^^^^^^^
+NameError: name 'font_inter' is not defined
+2025-02-19 04:28:18,264 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setFont(self, a0: QFont): too many arguments
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 13, in __init__
+    self.label.setFont(parent.font_inter, 35)
+TypeError: setFont(self, a0: QFont): too many arguments
+2025-02-19 04:31:42,951 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'Btn' object has no attribute 'label'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 19, in __init__
+    layout.addWidget(self.label)
+                     ^^^^^^^^^^
+AttributeError: 'Btn' object has no attribute 'label'
+2025-02-19 04:42:15,203 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'Btn' object has no attribute 'setTextFormat'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 86, in _setup_screens
+    standby_screen = StandbyScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/standby_screen.py", line 18, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/standby_view.py", line 25, in setup_ui
+    bot_btn.setTextFormat(Qt.RichText)
+    ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Btn' object has no attribute 'setTextFormat'
+2025-02-19 04:44:52,113 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'QLabel' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 13, in __init__
+    self.label = QLabel(text, self)
+                 ^^^^^^
+NameError: name 'QLabel' is not defined
+2025-02-19 04:45:03,957 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'Qt' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 15, in __init__
+    self.label.setAlignment(Qt.AlignCenter)
+                            ^^
+NameError: name 'Qt' is not defined
+2025-02-19 04:46:15,874 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'QVBoxLayout' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", parent=self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/_Button.py", line 27, in __init__
+    layout = QVBoxLayout(self)
+             ^^^^^^^^^^^
+NameError: name 'QVBoxLayout' is not defined
+2025-02-19 04:46:28,801 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'Btn' object has no attribute 'setTextFormat'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 86, in _setup_screens
+    standby_screen = StandbyScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/standby_screen.py", line 18, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/standby_view.py", line 25, in setup_ui
+    bot_btn.setTextFormat(Qt.RichText)
+    ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Btn' object has no attribute 'setTextFormat'
+2025-02-19 05:01:43,809 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'Btn' object has no attribute 'setAlignment'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 19, in setup_ui
+    start_button.setAlignment(Qt.AlignCenter)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Btn' object has no attribute 'setAlignment'
+2025-02-19 05:16:09,444 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: addWidget(self, a0: Optional[QWidget], stretch: int = 0, alignment: Union[Qt.Alignment, Qt.AlignmentFlag] = Qt.Alignment()): argument 1 has unexpected type 'QVBoxLayout'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 82, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/welcome_view.py", line 21, in setup_ui
+    layout.addWidget(center_div, alignment=Qt.AlignCenter)
+TypeError: addWidget(self, a0: Optional[QWidget], stretch: int = 0, alignment: Union[Qt.Alignment, Qt.AlignmentFlag] = Qt.Alignment()): argument 1 has unexpected type 'QVBoxLayout'

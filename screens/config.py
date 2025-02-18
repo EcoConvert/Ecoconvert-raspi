@@ -10,14 +10,13 @@ load_dotenv()
 def load_config():
     """
     Load application configuration from environment variables with defaults.
-
     Returns:
         dict: Configuration dictionary containing app settings.
     """
     return {
         "window_title": os.getenv("WINDOW_TITLE", "RVM LCD Interface"),
-        "window_width": int(os.getenv("WINDOW_WIDTH", 480)),
-        "window_height": int(os.getenv("WINDOW_HEIGHT", 320)),
+        "window_width": int(os.getenv("WINDOW_WIDTH", 800)),
+        "window_height": int(os.getenv("WINDOW_HEIGHT", 480)),
         "welcome_message": os.getenv("WELCOME_MESSAGE", "Let's make an Ecobrick!"),
         "instruction_text": os.getenv(
             "INSTRUCTION_TEXT", "Follow the instructions to proceed."

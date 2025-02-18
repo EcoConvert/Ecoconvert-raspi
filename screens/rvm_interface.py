@@ -6,7 +6,7 @@ from logging_config import lcd_logger
 from .completion_screen import CompletionScreen
 from .dummy_detection import DetectionResultScreen
 from .processing_screen import ProcessingScreen
-from .reminder_screen import ReminderScreen
+from .standby_screen import StandbyScreen
 from .welcome_screen import WelcomeScreen
 from .insert_screen import InsertScreen
 from .error_screen import ErrorScreen 
@@ -83,8 +83,8 @@ class RVMInterface(QWidget):
             self.stacked_widget.addWidget(welcome_screen)
 
             # Reminder Screen (index 1)
-            reminder_screen = ReminderScreen(self.config, self.stacked_widget)
-            self.stacked_widget.addWidget(reminder_screen)
+            standby_screen = StandbyScreen(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(standby_screen)
 
             # Processing Screen (index 2) - Pass the Camera instance
             processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)

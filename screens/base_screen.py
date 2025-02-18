@@ -10,6 +10,8 @@ from process.serial_manager import serial_manager
 from util.state import * #load_state, save_state, load_state_variables, save_state_variables
 from process.initialize import init_sequence 
 from logging_config import lcd_logger
+from PyQt5.QtGui import QFontDatabase, QFont
+
 
 class BaseScreen(QWidget):
     """
@@ -36,6 +38,20 @@ class BaseScreen(QWidget):
 
         # Common debug log
         self.logger.debug(f"Initialized {self.__class__.__name__}")
+
+        # create fonts here
+        # Poppins
+        poppins = QFontDatabase.addApplicationFont("screens/fonts/Poppins-Regular.ttf")
+        ff_poppins = QFontDatabase.applicationFontFamilies(poppins)[0]
+        self.font_poppins = QFont(ff_poppins, 50)
+        self.font_poppins.setLetterSpacing(QFont.AbsoluteSpacing, 10)
+        
+
+        # Inter
+        inter = QFontDatabase.addApplicationFont("screens/fonts/Inter-VariableFont_opsz,wght.ttf")
+        ff_inter = QFontDatabase.applicationFontFamilies(inter)[0]
+        self.font_inter = QFont(ff_inter, 25)
+        self.font_inter.setLetterSpacing(QFont.AbsoluteSpacing, 10)
 
     # every screen has the ability to update state. 
     # not that it is needed on all screen, but its much easier this way. 
