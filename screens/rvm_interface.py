@@ -8,8 +8,10 @@ from .dummy_detection import DetectionResultScreen
 from .processing_screen import ProcessingScreen
 from .standby_screen import StandbyScreen
 from .welcome_screen import WelcomeScreen
-from .insert_screen import InsertScreen
+from .is_bottle import InsertScreenBottle
+from .is_sup import InsertScreenSup
 from .error_screen import ErrorScreen 
+from .ss_done import StandbyScreenDone
 
 class RVMInterface(QWidget):
     """
@@ -65,24 +67,21 @@ class RVMInterface(QWidget):
         """
         try:
             # ----------------------------------------------------------------------
-            # processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
-            # self.stacked_widget.addWidget(processing_screen)
+            is_sup = InsertScreenSup(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(is_sup)
 
-            # error_screen = ErrorScreen(self.config, self.stacked_widget)
-            # self.stacked_widget.addWidget(error_screen)
-
-            # completion_screen = CompletionScreen(self.config, self.stacked_widget)
-            # self.stacked_widget.addWidget(completion_screen)
-
-            # insert_screen = InsertScreen(self.config, self.stacked_widget)
-            # self.stacked_widget.addWidget(insert_screen)
+            # is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+            # self.stacked_widget.addWidget(is_bottle)
+            
+            # ss_done = StandbyScreenDone(self.config, self.stacked_widget)
+            # self.stacked_widget.addWidget(ss_done)
             # ------------------------------------------------------------------------
 
             # Welcome Screen (index 0)
             welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
             self.stacked_widget.addWidget(welcome_screen)
 
-            # Reminder Screen (index 1)
+            # Reminder Screen (index )
             standby_screen = StandbyScreen(self.config, self.stacked_widget)
             self.stacked_widget.addWidget(standby_screen)
 

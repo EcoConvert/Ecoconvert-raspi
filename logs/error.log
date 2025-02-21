@@ -847,3 +847,105 @@ Traceback (most recent call last):
     if disabled:
       ^^^^^^^^
 NameError: name 'disabled' is not defined. Did you mean: 'disbled'?
+2025-02-19 20:06:07,794 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: local variable 'sup_btn' referenced before assignment
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 86, in _setup_screens
+    standby_screen = StandbyScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 18, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\standby_view.py", line 24, in setup_ui
+    sup_btn.clicked.connect(self._on_click_sup)
+UnboundLocalError: local variable 'sup_btn' referenced before assignment
+2025-02-20 20:04:00,856 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setFont(self, a0: QFont): too many arguments
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 70, in _setup_screens
+    ss_done = StandbyScreenDone(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\ss_done.py", line 25, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\sv_done.py", line 11, in setup_ui
+    welcome_label.setFont(self.font_poppins, 50)
+TypeError: setFont(self, a0: QFont): too many arguments
+2025-02-20 20:04:26,399 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setFont(self, a0: QFont): too many arguments
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 70, in _setup_screens
+    ss_done = StandbyScreenDone(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\ss_done.py", line 25, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\sv_done.py", line 11, in setup_ui
+    welcome_label.setFont(self.font_poppins, 50)
+TypeError: setFont(self, a0: QFont): too many arguments
+2025-02-20 21:05:29,474 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'StandbyScreenDone' object has no attribute 'ff_poppins'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 72, in _setup_screens
+    ss_done = StandbyScreenDone(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\ss_done.py", line 25, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\sv_done.py", line 12, in setup_ui
+    smaller_poppins = QFont(self.ff_poppins, 25)
+AttributeError: 'StandbyScreenDone' object has no attribute 'ff_poppins'
+2025-02-20 21:09:12,300 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'ff_poppins' is not defined
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 69, in _setup_screens
+    is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\is_bottle.py", line 18, in __init__
+    super().__init__(config, parent)  # Inherit from BaseScreen
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 46, in __init__
+    self.font_poppins = QFont(ff_poppins, 50)
+NameError: name 'ff_poppins' is not defined
+2025-02-20 21:09:31,033 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'ff_poppins' is not defined
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 69, in _setup_screens
+    is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\is_bottle.py", line 18, in __init__
+    super().__init__(config, parent)  # Inherit from BaseScreen
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 46, in __init__
+    self.font_poppins = QFont(ff_poppins, 50)
+NameError: name 'ff_poppins' is not defined
+2025-02-20 21:15:22,844 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'InsertScreenBottle' object has no attribute 'inter'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 69, in _setup_screens
+    is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\is_bottle.py", line 24, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\iv_bottle.py", line 12, in setup_ui
+    welcome_label.setFont(QFont(self.inter, 35))
+AttributeError: 'InsertScreenBottle' object has no attribute 'inter'
+2025-02-20 22:13:54,897 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: arguments did not match any overloaded call:
+  QLabel(parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+  QLabel(text: Optional[str], parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 69, in _setup_screens
+    is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\is_bottle.py", line 24, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\iv_bottle.py", line 36, in setup_ui
+    label = QLabel(i)
+TypeError: arguments did not match any overloaded call:
+  QLabel(parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+  QLabel(text: Optional[str], parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+2025-02-20 22:18:07,638 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: arguments did not match any overloaded call:
+  QLabel(parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+  QLabel(text: Optional[str], parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 69, in _setup_screens
+    is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\is_bottle.py", line 24, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\iv_bottle.py", line 36, in setup_ui
+    label = QLabel(i)
+TypeError: arguments did not match any overloaded call:
+  QLabel(parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+  QLabel(text: Optional[str], parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+2025-02-20 22:18:51,823 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: arguments did not match any overloaded call:
+  QLabel(parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+  QLabel(text: Optional[str], parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 69, in _setup_screens
+    is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\is_bottle.py", line 24, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\iv_bottle.py", line 36, in setup_ui
+    bottomText = QLabel(i)
+TypeError: arguments did not match any overloaded call:
+  QLabel(parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+  QLabel(text: Optional[str], parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'

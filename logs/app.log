@@ -1867,3 +1867,215 @@ NameError: name 'disabled' is not defined. Did you mean: 'disbled'?
 2025-02-19 05:40:01,218 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
 2025-02-19 05:40:10,585 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-02-19 05:40:11,762 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-19 20:04:33,001 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:04:33,967 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-19 20:05:23,516 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:05:24,569 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-19 20:06:07,794 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: local variable 'sup_btn' referenced before assignment
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 86, in _setup_screens
+    standby_screen = StandbyScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 18, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\standby_view.py", line 24, in setup_ui
+    sup_btn.clicked.connect(self._on_click_sup)
+UnboundLocalError: local variable 'sup_btn' referenced before assignment
+2025-02-19 20:06:22,490 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:06:23,275 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-19 20:07:11,417 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:07:13,893 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-19 20:07:40,490 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:07:41,548 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-19 20:17:04,979 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:17:10,723 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-19 20:17:40,003 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:23:13,441 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:24:02,842 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:25:23,198 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:25:31,074 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:26:50,658 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:27:29,804 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:28:02,573 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:28:26,403 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:28:33,478 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:28:54,109 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:28:55,415 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-19 20:29:27,839 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-19 20:29:28,753 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-20 19:31:55,566 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 19:31:56,723 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-20 19:32:39,009 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 19:32:40,140 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-20 19:32:53,556 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 19:32:55,380 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-20 19:33:10,764 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 19:33:17,063 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-20 19:33:57,399 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 19:33:58,390 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-20 19:34:28,485 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 19:34:29,890 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-20 19:44:21,788 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 19:44:24,045 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-20 19:44:46,476 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 19:46:35,349 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 19:46:37,401 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-20 19:47:31,905 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 19:47:32,682 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-20 19:49:05,589 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 19:52:31,624 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 20:03:13,889 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 20:03:35,392 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 20:04:00,856 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setFont(self, a0: QFont): too many arguments
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 70, in _setup_screens
+    ss_done = StandbyScreenDone(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\ss_done.py", line 25, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\sv_done.py", line 11, in setup_ui
+    welcome_label.setFont(self.font_poppins, 50)
+TypeError: setFont(self, a0: QFont): too many arguments
+2025-02-20 20:04:26,399 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setFont(self, a0: QFont): too many arguments
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 70, in _setup_screens
+    ss_done = StandbyScreenDone(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\ss_done.py", line 25, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\sv_done.py", line 11, in setup_ui
+    welcome_label.setFont(self.font_poppins, 50)
+TypeError: setFont(self, a0: QFont): too many arguments
+2025-02-20 20:04:35,621 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 20:05:17,308 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 20:05:25,747 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 20:05:49,779 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 20:41:51,662 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:03:05,866 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:05:29,474 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'StandbyScreenDone' object has no attribute 'ff_poppins'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 72, in _setup_screens
+    ss_done = StandbyScreenDone(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\ss_done.py", line 25, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\sv_done.py", line 12, in setup_ui
+    smaller_poppins = QFont(self.ff_poppins, 25)
+AttributeError: 'StandbyScreenDone' object has no attribute 'ff_poppins'
+2025-02-20 21:09:12,300 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'ff_poppins' is not defined
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 69, in _setup_screens
+    is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\is_bottle.py", line 18, in __init__
+    super().__init__(config, parent)  # Inherit from BaseScreen
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 46, in __init__
+    self.font_poppins = QFont(ff_poppins, 50)
+NameError: name 'ff_poppins' is not defined
+2025-02-20 21:09:31,033 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'ff_poppins' is not defined
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 69, in _setup_screens
+    is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\is_bottle.py", line 18, in __init__
+    super().__init__(config, parent)  # Inherit from BaseScreen
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\base_screen.py", line 46, in __init__
+    self.font_poppins = QFont(ff_poppins, 50)
+NameError: name 'ff_poppins' is not defined
+2025-02-20 21:09:50,567 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:13:49,858 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:13:56,295 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:14:28,913 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:15:22,844 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'InsertScreenBottle' object has no attribute 'inter'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 69, in _setup_screens
+    is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\is_bottle.py", line 24, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\iv_bottle.py", line 12, in setup_ui
+    welcome_label.setFont(QFont(self.inter, 35))
+AttributeError: 'InsertScreenBottle' object has no attribute 'inter'
+2025-02-20 21:15:30,670 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:17:22,967 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:18:18,981 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:18:52,610 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:19:16,190 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:19:45,606 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:19:47,111 - RVMInterface.InsertScreenBottle - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-20 21:20:26,969 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:20:28,364 - RVMInterface.InsertScreenBottle - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-20 21:21:38,311 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:23:10,639 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:27:53,004 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:28:04,821 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:28:28,918 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:28:41,866 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:28:56,855 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:29:09,922 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:29:53,134 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:29:56,170 - RVMInterface.InsertScreenBottle - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-20 21:30:26,734 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:31:18,222 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:31:36,051 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 21:31:46,118 - RVMInterface.InsertScreenBottle - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-20 22:10:30,091 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:13:54,897 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: arguments did not match any overloaded call:
+  QLabel(parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+  QLabel(text: Optional[str], parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 69, in _setup_screens
+    is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\is_bottle.py", line 24, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\iv_bottle.py", line 36, in setup_ui
+    label = QLabel(i)
+TypeError: arguments did not match any overloaded call:
+  QLabel(parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+  QLabel(text: Optional[str], parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+2025-02-20 22:18:07,638 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: arguments did not match any overloaded call:
+  QLabel(parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+  QLabel(text: Optional[str], parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 69, in _setup_screens
+    is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\is_bottle.py", line 24, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\iv_bottle.py", line 36, in setup_ui
+    label = QLabel(i)
+TypeError: arguments did not match any overloaded call:
+  QLabel(parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+  QLabel(text: Optional[str], parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+2025-02-20 22:18:51,823 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: arguments did not match any overloaded call:
+  QLabel(parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+  QLabel(text: Optional[str], parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 69, in _setup_screens
+    is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\is_bottle.py", line 24, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\iv_bottle.py", line 36, in setup_ui
+    bottomText = QLabel(i)
+TypeError: arguments did not match any overloaded call:
+  QLabel(parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+  QLabel(text: Optional[str], parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'list'
+2025-02-20 22:19:38,682 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:21:20,918 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:21:44,309 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:22:26,576 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:22:41,418 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:23:58,882 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:24:30,482 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:28:22,022 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:28:43,066 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:29:13,655 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:29:30,342 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:32:57,610 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:33:47,260 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:34:01,132 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:34:38,195 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:35:18,007 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:36:23,414 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:36:37,792 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 22:36:48,153 - RVMInterface.InsertScreenBottle - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-02-20 23:07:26,310 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 23:11:39,263 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 23:12:02,582 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 23:12:40,426 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 23:17:22,721 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 23:23:12,830 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 23:23:47,748 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-20 23:34:33,479 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
