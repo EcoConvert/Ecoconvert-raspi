@@ -13,6 +13,7 @@ from .is_sup import InsertScreenSup
 from .error_screen import ErrorScreen 
 from .ss_done import StandbyScreenDone
 from .qr_screen import QrScreen
+from .ecobrick_screen import EcoScreen
 
 class RVMInterface(QWidget):
     """
@@ -68,6 +69,9 @@ class RVMInterface(QWidget):
         """
         try:
             # ----------------------------------------------------------------------
+            ecobrick_screen = EcoScreen(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(ecobrick_screen)
+
             error_screen = ErrorScreen(self.config, self.stacked_widget)
             self.stacked_widget.addWidget(error_screen)
 

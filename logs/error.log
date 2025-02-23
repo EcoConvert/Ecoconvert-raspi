@@ -1073,3 +1073,30 @@ Traceback (most recent call last):
   File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\error_view.py", line 35, in setup_ui
     left.addWidget(self.pointsLabel)
 AttributeError: 'ErrorScreen' object has no attribute 'pointsLabel'
+2025-02-23 22:19:51,535 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'EcoScreen' object has no attribute 'points'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 72, in _setup_screens
+    ecobrick_screen = EcoScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\ecobrick_screen.py", line 20, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\ecobrick_view.py", line 22, in setup_ui
+    if self.points is None:
+AttributeError: 'EcoScreen' object has no attribute 'points'
+2025-02-23 22:20:29,711 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'EcoScreen' object has no attribute 'ecobrick'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 72, in _setup_screens
+    ecobrick_screen = EcoScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\ecobrick_screen.py", line 20, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\ecobrick_view.py", line 22, in setup_ui
+    if self.ecobrick is None:
+AttributeError: 'EcoScreen' object has no attribute 'ecobrick'
+2025-02-23 22:27:59,210 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'subhead' is not defined
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 72, in _setup_screens
+    ecobrick_screen = EcoScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\ecobrick_screen.py", line 20, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\ecobrick_view.py", line 30, in setup_ui
+    left.addWidget(subhead)
+NameError: name 'subhead' is not defined

@@ -1,8 +1,8 @@
 # src/lcd_interface/screens/welcome_screen.py
 
 from .base_screen import BaseScreen
-from .views.qr__view import setup_ui 
-class QrScreen(BaseScreen):
+from .views.ecobrick_view import setup_ui 
+class EcoScreen(BaseScreen):
     """
     Welcome screen for the RVM LCD Interface.
     Displays a welcome message and initial instructions.
@@ -16,7 +16,7 @@ class QrScreen(BaseScreen):
             parent (QStackedWidget, optional): Parent stacked widget for navigation.
         """
         super().__init__(config, parent)  # Inherit from BaseScreen
-        self.points = 0
+        self.ecobrick = 0
         setup_ui(self)
     
     def _on_click(self):
