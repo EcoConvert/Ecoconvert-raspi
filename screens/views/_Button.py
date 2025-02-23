@@ -64,7 +64,8 @@ class BtnBack(QPushButton):
         self.label.setFont(QFont(parent.ff_inter, 9))
         self.label.setStyleSheet(f"font-weight: bold; padding-top: {str(padding_size)}px; border: none;")
         self.label.setAttribute(Qt.WA_TransparentForMouseEvents)  
-        self.setStyleSheet("background-color: transparent;")
+        # self.setStyleSheet("background-color: transparent;") # for windows, 
+        self.setStyleSheet("background-color: none; border: none;") # for linux without proper displays 
         self.setFixedSize(bt_w, bt_h)
         self.label.move(0,0)
         layout = QVBoxLayout(self)

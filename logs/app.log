@@ -2290,3 +2290,8 @@ Traceback (most recent call last):
     left.addWidget(subhead)
 NameError: name 'subhead' is not defined
 2025-02-23 22:28:09,440 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 22:34:01,379 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 22:34:36,593 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 22:35:00,528 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 22:35:16,543 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 22:37:05,319 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
