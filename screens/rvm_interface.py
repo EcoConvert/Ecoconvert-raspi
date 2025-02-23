@@ -12,6 +12,7 @@ from .is_bottle import InsertScreenBottle
 from .is_sup import InsertScreenSup
 from .error_screen import ErrorScreen 
 from .ss_done import StandbyScreenDone
+from .qr_screen import QrScreen
 
 class RVMInterface(QWidget):
     """
@@ -67,8 +68,17 @@ class RVMInterface(QWidget):
         """
         try:
             # ----------------------------------------------------------------------
-            is_sup = InsertScreenSup(self.config, self.stacked_widget)
-            self.stacked_widget.addWidget(is_sup)
+            error_screen = ErrorScreen(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(error_screen)
+
+            processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
+            self.stacked_widget.addWidget(processing_screen)
+
+            qr_screen = QrScreen(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(qr_screen)
+
+            # is_sup = InsertScreenSup(self.config, self.stacked_widget)
+            # self.stacked_widget.addWidget(is_sup)
 
             # is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
             # self.stacked_widget.addWidget(is_bottle)

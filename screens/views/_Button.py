@@ -33,7 +33,7 @@ class Btn(QPushButton):
 
 
 class BtnDone(QPushButton):
-    """s
+    """
     Creates the generic Button
     """
     def __init__(self, text="Done", bt_w = 140, bt_h = 101, padding_size = 20, parent=None):
@@ -51,3 +51,22 @@ class BtnDone(QPushButton):
 
         layout = QVBoxLayout(self)
         layout.addWidget(self.label)
+
+class BtnBack(QPushButton):
+    """
+    Creates the generic Button
+    """
+    def __init__(self, text="⬅️ Return to Home", bt_w = 214, bt_h = 50, padding_size = 10, parent=None):
+        super().__init__(parent)
+        self.label = QLabel(text, self)
+        self.label.setWordWrap(True)
+        self.label.setAlignment(Qt.AlignCenter)
+        self.label.setFont(QFont(parent.ff_inter, 9))
+        self.label.setStyleSheet(f"font-weight: bold; padding-top: {str(padding_size)}px; border: none;")
+        self.label.setAttribute(Qt.WA_TransparentForMouseEvents)  
+        self.setStyleSheet("background-color: transparent;")
+        self.setFixedSize(bt_w, bt_h)
+        self.label.move(0,0)
+        layout = QVBoxLayout(self)
+        layout.addWidget(self.label)
+        

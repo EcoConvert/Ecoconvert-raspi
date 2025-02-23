@@ -2079,3 +2079,182 @@ TypeError: arguments did not match any overloaded call:
 2025-02-20 23:23:12,830 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-02-20 23:23:47,748 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-02-20 23:34:33,479 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-22 17:54:58,602 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: local variable 'QrScreen' referenced before assignment
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 71, in _setup_screens
+    QrScreen = QrScreen(self.config, self.stacked_widget)
+UnboundLocalError: local variable 'QrScreen' referenced before assignment
+2025-02-22 17:55:31,339 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-22 18:03:26,451 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-22 18:03:46,602 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 00:15:39,802 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 00:21:14,494 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 00:21:42,708 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 00:22:02,864 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 00:22:21,970 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 00:23:09,475 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 00:24:57,366 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 00:25:11,002 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 00:25:33,466 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 00:27:43,758 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QrScreen' object has no attribute 'points'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 71, in _setup_screens
+    qr_screen = QrScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\qr_screen.py", line 19, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\qr__view.py", line 18, in setup_ui
+    if self.points is None:
+AttributeError: 'QrScreen' object has no attribute 'points'
+2025-02-23 00:27:48,487 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QrScreen' object has no attribute 'points'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 71, in _setup_screens
+    qr_screen = QrScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\qr_screen.py", line 19, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\qr__view.py", line 18, in setup_ui
+    if self.points is None:
+AttributeError: 'QrScreen' object has no attribute 'points'
+2025-02-23 00:28:20,814 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 00:29:02,954 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 00:29:55,225 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 13:39:12,352 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 14:43:42,035 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'NoneType' object has no attribute 'ff_inter'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 71, in _setup_screens
+    qr_screen = QrScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\qr_screen.py", line 20, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\qr__view.py", line 32, in setup_ui
+    back = BtnBack()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\_Button.py", line 64, in __init__
+    self.label.setFont(QFont(parent.ff_inter, 20))
+AttributeError: 'NoneType' object has no attribute 'ff_inter'
+2025-02-23 14:44:10,110 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: addLayout(self, layout: Optional[QLayout], stretch: int = 0): argument 1 has unexpected type 'BtnBack'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 71, in _setup_screens
+    qr_screen = QrScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\qr_screen.py", line 20, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\qr__view.py", line 36, in setup_ui
+    hDiv.addLayout(back)
+TypeError: addLayout(self, layout: Optional[QLayout], stretch: int = 0): argument 1 has unexpected type 'BtnBack'
+2025-02-23 14:45:12,302 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: addLayout(self, layout: Optional[QLayout], stretch: int = 0): argument 1 has unexpected type 'BtnBack'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 71, in _setup_screens
+    qr_screen = QrScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\qr_screen.py", line 20, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\qr__view.py", line 36, in setup_ui
+    hDiv.addLayout(back)
+TypeError: addLayout(self, layout: Optional[QLayout], stretch: int = 0): argument 1 has unexpected type 'BtnBack'
+2025-02-23 14:45:47,250 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 14:47:00,720 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 14:47:39,890 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:01:25,877 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:08:33,300 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QVBoxLayout' object has no attribute 'move'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 71, in _setup_screens
+    qr_screen = QrScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\qr_screen.py", line 20, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\qr__view.py", line 32, in setup_ui
+    back = BtnBack(parent=self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\_Button.py", line 72, in __init__
+    layout.move(0,0)
+AttributeError: 'QVBoxLayout' object has no attribute 'move'
+2025-02-23 15:09:42,794 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:10:38,921 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:10:49,231 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:12:16,416 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:12:48,781 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:13:42,161 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:14:10,875 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:19:51,632 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:20:07,333 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:20:22,620 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:20:40,750 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:20:58,981 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:22:50,210 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:23:22,780 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:23:36,603 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:23:52,846 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:24:05,460 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:24:26,002 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:24:41,452 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:28:17,434 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:31:32,608 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:43:10,536 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:43:45,437 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:47:34,505 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:48:05,325 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:48:18,325 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:56:27,491 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'ProcessingScreen' object has no attribute '_simulate_progress'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 71, in _setup_screens
+    processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\processing_screen.py", line 18, in __init__
+    self.timer.timeout.connect(self._simulate_progress)
+AttributeError: 'ProcessingScreen' object has no attribute '_simulate_progress'
+2025-02-23 15:56:49,808 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:57:21,054 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:58:01,049 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'ProcessingScreen' object has no attribute 'poppins'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 71, in _setup_screens
+    processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\processing_screen.py", line 18, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\processing_view.py", line 13, in setup_ui
+    self.processing_label.setFont(self.poppins)
+AttributeError: 'ProcessingScreen' object has no attribute 'poppins'
+2025-02-23 15:58:26,462 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 15:59:22,650 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QLabel' object has no attribute 'addEffect'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 71, in _setup_screens
+    processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\processing_screen.py", line 18, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\processing_view.py", line 17, in setup_ui
+    self.processing_label.addEffect(shadow)
+AttributeError: 'QLabel' object has no attribute 'addEffect'
+2025-02-23 16:00:01,136 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QLabel' object has no attribute 'addEffect'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 71, in _setup_screens
+    processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\processing_screen.py", line 18, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\processing_view.py", line 17, in setup_ui
+    self.processing_label.addEffect(shadow)
+AttributeError: 'QLabel' object has no attribute 'addEffect'
+2025-02-23 16:01:08,668 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 16:01:26,825 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 16:02:10,418 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 16:02:57,713 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 16:06:43,050 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-02-23 16:07:15,024 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'ErrorScreen' object has no attribute 'points'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 71, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\error_screen.py", line 7, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\error_view.py", line 23, in setup_ui
+    if self.points is None:
+AttributeError: 'ErrorScreen' object has no attribute 'points'
+2025-02-23 16:08:20,241 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'ErrorScreen' object has no attribute 'error_code'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 71, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\error_screen.py", line 7, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\error_view.py", line 23, in setup_ui
+    if self.error_code is None:
+AttributeError: 'ErrorScreen' object has no attribute 'error_code'
+2025-02-23 16:08:44,698 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'ErrorScreen' object has no attribute 'pointsLabel'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 71, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\error_view.py", line 35, in setup_ui
+    left.addWidget(self.pointsLabel)
+AttributeError: 'ErrorScreen' object has no attribute 'pointsLabel'
+2025-02-23 16:09:30,764 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.

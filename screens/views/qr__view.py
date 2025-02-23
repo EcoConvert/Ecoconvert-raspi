@@ -11,28 +11,27 @@ def setup_ui(self):
     # left side 
     left = QVBoxLayout()
     # heading
-    heading = QLabel("Error!😟")
+    heading = QLabel("Thank you<br>for recycling")
     heading.setAlignment(Qt.AlignCenter)
     heading.setFont(QFont(self.ff_poppins, 50))
     # subhead
-    logs = " Ur fault: Do not insert non plastic item. RETRIEVE IT"
-    self.subhead = QLabel(f"Logs: {logs}")
-    self.subhead.setFont(QFont(self.ff_poppins, 15))
-    self.subhead.setAlignment(Qt.AlignCenter)
+    subhead = QLabel("Take a picture of the QR then show it<br>to the assigned marshal.")
+    subhead.setFont(QFont(self.ff_poppins, 15))
+    subhead.setAlignment(Qt.AlignCenter)
     # points
-    if self.error_code is None:
-        self.error_code = 0
-    self.error_code_label = QLabel(f"error_code: {self.error_code}")
-    self.error_code_label.setFont(QFont(self.ff_poppins, 24))
-    self.error_code_label.setAlignment(Qt.AlignCenter)
+    if self.points is None:
+        self.points = 0
+    self.pointsLabel = QLabel(f"Points: {self.points}")
+    self.pointsLabel.setFont(QFont(self.ff_poppins, 24))
+    self.pointsLabel.setAlignment(Qt.AlignCenter)
     # top back button
     back = BtnBack(parent=self)
     back.clicked.connect(self._on_click)
     
     left.addWidget(back)
     left.addWidget(heading)
-    left.addWidget(self.subhead)
-    left.addWidget(self.error_code_label)
+    left.addWidget(subhead)
+    left.addWidget(self.pointsLabel)
     
 
     # right side
