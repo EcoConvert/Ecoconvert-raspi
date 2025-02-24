@@ -15,7 +15,7 @@ def setup_ui(self):
     heading.setAlignment(Qt.AlignCenter)
     heading.setFont(QFont(self.ff_poppins, 50))
     # subhead
-    logs = " Ur fault: Do not insert non plastic item. RETRIEVE IT"
+    logs = " Ur fault: Do not insert <br> non plastic item.<br> RETRIEVE IT"
     self.subhead = QLabel(f"Logs: {logs}")
     self.subhead.setFont(QFont(self.ff_poppins, 15))
     self.subhead.setAlignment(Qt.AlignCenter)

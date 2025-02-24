@@ -72,14 +72,14 @@ class RVMInterface(QWidget):
             ecobrick_screen = EcoScreen(self.config, self.stacked_widget)
             self.stacked_widget.addWidget(ecobrick_screen)
 
-            error_screen = ErrorScreen(self.config, self.stacked_widget)
-            self.stacked_widget.addWidget(error_screen)
+            # error_screen = ErrorScreen(self.config, self.stacked_widget)
+            # self.stacked_widget.addWidget(error_screen)
 
-            processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
-            self.stacked_widget.addWidget(processing_screen)
+            # processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
+            # self.stacked_widget.addWidget(processing_screen)
 
-            qr_screen = QrScreen(self.config, self.stacked_widget)
-            self.stacked_widget.addWidget(qr_screen)
+            # qr_screen = QrScreen(self.config, self.stacked_widget)
+            # self.stacked_widget.addWidget(qr_screen)
 
             # is_sup = InsertScreenSup(self.config, self.stacked_widget)
             # self.stacked_widget.addWidget(is_sup)
