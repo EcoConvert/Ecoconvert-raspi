@@ -20,7 +20,9 @@ class QrScreen(BaseScreen):
         setup_ui(self)
     
     def _on_click(self):
-        """
-        Handle the 'Next' button click event.
-        """
-        print("back clicking")
+        if self.parent():
+            self.parent().setCurrentIndex(1) # go to SUP Screen  
+            # self.update_state(1) # update to insert
+        else:
+            self.logger.warning("No parent QStackedWidget found.")
+

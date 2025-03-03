@@ -20,13 +20,13 @@ def setup_ui(self):
 
 
         div = QHBoxLayout()
-        bot_btn = Btn("1.5 Plastic <br> Bottle", bt_w = 298, bt_h = 202, padding_size = 0, parent=self)
-        bot_btn.clicked.connect(self._on_click_pet)
-        div.addWidget(bot_btn)
+        self.bot_btn = Btn("1.5 Plastic <br> Bottle", bt_w = 298, bt_h = 202, padding_size = 0, parent=self)
+        self.bot_btn.clicked.connect(self._on_click_pet)
+        div.addWidget(self.bot_btn)
 
-        sup_btn = Btn("Single Use <br> Plastic", bt_w = 298, bt_h = 202, padding_size = 0, parent=self)
-        sup_btn.clicked.connect(self._on_click_sup)
-        div.addWidget(sup_btn)
+        self.sup_btn = Btn("Single Use <br> Plastic", bt_w = 298, bt_h = 202, padding_size = 0, parent=self)
+        self.sup_btn.clicked.connect(self._on_click_sup)
+        div.addWidget(self.sup_btn)
 
         layout.addLayout(div)
         self.setLayout(layout)

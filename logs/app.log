@@ -2301,3 +2301,35 @@ NameError: name 'subhead' is not defined
 2025-02-24 13:16:18,435 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-02-24 13:16:35,339 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-02-24 13:16:55,690 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-02 11:30:36,055 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-02 11:32:47,266 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-02 11:32:49,133 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-02 11:36:40,894 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setFont(self, a0: QFont): too many arguments
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 78, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", bt_w = 642 , bt_h = 202, font_size=50, padding_size=0, parent=self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\_Button.py", line 15, in __init__
+    self.label.setFont(parent.font_inter, font_size)
+TypeError: setFont(self, a0: QFont): too many arguments
+2025-03-02 11:37:39,915 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-02 11:37:42,555 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-02 11:39:00,184 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-02 11:39:01,658 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-03 20:28:22,406 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-03 20:28:24,306 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-03 20:28:56,718 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-03 20:28:57,934 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-03 20:29:11,034 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-03 20:29:15,831 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-03 20:55:59,398 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-03 20:56:00,417 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-03 20:57:18,919 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-03 20:57:20,007 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-03 20:59:43,696 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-03 20:59:44,707 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-03 21:15:31,154 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-03 21:15:32,026 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.

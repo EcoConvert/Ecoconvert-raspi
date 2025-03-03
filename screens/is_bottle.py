@@ -19,7 +19,8 @@ class InsertScreenBottle(BaseScreen):
         setup_ui(self)
     
     def _on_click(self):
-        """
-        Handle the 'Next' button click event.
-        """
-        print("DONE CLICKED")
+        if self.parent():
+            self.parent().setCurrentIndex(4) # go to SUP Screen  
+            # self.update_state(1) # update to insert
+        else:
+            self.logger.warning("No parent QStackedWidget found.")

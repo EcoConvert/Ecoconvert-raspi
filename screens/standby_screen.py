@@ -18,18 +18,19 @@ class StandbyScreen(BaseScreen):
         setup_ui(self)
 
     def _on_click_pet(self):
-        print("PET Button Clicked")
+        if self.parent():
+            self.parent().setCurrentIndex(2) # go to PET Screen  
+            # self.update_state(1) # update to insert
+        else:
+            self.logger.warning("No parent QStackedWidget found.")
+
 
     def _on_click_sup(self):
-        """
-        Handle the navigation to the Processing Screen and start processing.
-        """
-        print("SUP Button Clicked")
-        # if self.parent():
-        #     processing_screen = self.parent().widget(2)  # Access Processing Screen
-        #     processing_screen.start_processing()  # Start processing simulation
-        #     self.parent().setCurrentIndex(2)  # Navigate to Processing Screen
-        #     self.logger.info("Navigated from Reminder Screen to Processing Screen")
-        #     self.update_state(1) # update to insert
-        # else:
-        #     self.logger.warning("No parent QStackedWidget found.")
+        if self.parent():
+            self.parent().setCurrentIndex(3) # go to SUP Screen  
+            # self.update_state(1) # update to insert
+        else:
+            self.logger.warning("No parent QStackedWidget found.")
+    
+    def sup_clickability(self, state = True):
+        self.sup_button.setEnabled(state)

@@ -1100,3 +1100,14 @@ Traceback (most recent call last):
   File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\ecobrick_view.py", line 30, in setup_ui
     left.addWidget(subhead)
 NameError: name 'subhead' is not defined
+2025-03-02 11:36:40,894 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setFont(self, a0: QFont): too many arguments
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 78, in _setup_screens
+    welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 24, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\welcome_view.py", line 17, in setup_ui
+    start_button = Btn("Start The Machine", bt_w = 642 , bt_h = 202, font_size=50, padding_size=0, parent=self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\_Button.py", line 15, in __init__
+    self.label.setFont(parent.font_inter, font_size)
+TypeError: setFont(self, a0: QFont): too many arguments

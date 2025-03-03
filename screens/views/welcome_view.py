@@ -14,7 +14,7 @@ def setup_ui(self):
     layout.addWidget(welcome_label)
 
     # Start button
-    start_button = Btn("Start The Machine", bt_w = 642 , bt_h = 202, padding_size=0, parent=self)
+    start_button = Btn("Start The Machine", bt_w = 642 , bt_h = 202, font_size=50, padding_size=0, parent=self)
     start_button.clicked.connect(self._on_click)
     layout.addWidget(start_button, alignment=Qt.AlignCenter)
 

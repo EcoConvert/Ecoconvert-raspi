@@ -3,8 +3,6 @@ from PyQt5.QtWidgets import QStackedWidget, QVBoxLayout, QWidget
 
 from util.state import * # load_state, save_state, load_state_variables, save_state_variables
 from logging_config import lcd_logger
-from .completion_screen import CompletionScreen
-from .dummy_detection import DetectionResultScreen
 from .processing_screen import ProcessingScreen
 from .standby_screen import StandbyScreen
 from .welcome_screen import WelcomeScreen
@@ -69,48 +67,48 @@ class RVMInterface(QWidget):
         """
         try:
             # ----------------------------------------------------------------------
-            ecobrick_screen = EcoScreen(self.config, self.stacked_widget)
-            self.stacked_widget.addWidget(ecobrick_screen)
+            # ecobrick_screen = EcoScreen(self.config, self.stacked_widget)
+            # self.stacked_widget.addWidget(ecobrick_screen)
 
-            # error_screen = ErrorScreen(self.config, self.stacked_widget)
-            # self.stacked_widget.addWidget(error_screen)
-
-            # processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
-            # self.stacked_widget.addWidget(processing_screen)
-
-            # qr_screen = QrScreen(self.config, self.stacked_widget)
-            # self.stacked_widget.addWidget(qr_screen)
-
-            # is_sup = InsertScreenSup(self.config, self.stacked_widget)
-            # self.stacked_widget.addWidget(is_sup)
-
-            # is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
-            # self.stacked_widget.addWidget(is_bottle)
-            
-            # ss_done = StandbyScreenDone(self.config, self.stacked_widget)
-            # self.stacked_widget.addWidget(ss_done)
             # ------------------------------------------------------------------------
 
             # Welcome Screen (index 0)
             welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
             self.stacked_widget.addWidget(welcome_screen)
 
-            # Reminder Screen (index )
+            # Standby Screen (index 1)
             standby_screen = StandbyScreen(self.config, self.stacked_widget)
             self.stacked_widget.addWidget(standby_screen)
 
-            # Processing Screen (index 2) - Pass the Camera instance
+            # Insert Screen bottle (index 2)
+            is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(is_bottle)
+
+            # Insert Screen sup (index 3)
+            is_sup = InsertScreenSup(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(is_sup)
+
+            # QR Screen (index 4)
+            qr_screen = QrScreen(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(qr_screen)
+
+            # Standby Screen Done (index 5)
+            ss_done = StandbyScreenDone(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(ss_done)
+
+            # Processing Screen (index 6) - Pass the Camera instance
             processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
             self.stacked_widget.addWidget(processing_screen)
 
-            # Detection Result Screen (index 3)
-            detection_screen = DetectionResultScreen(self.config, self.stacked_widget)
-            self.stacked_widget.addWidget(detection_screen)
+            # Error Screen (index 7)
+            error_screen = ErrorScreen(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(error_screen)
 
-            # Completion Screen (index 4)
-            completion_screen = CompletionScreen(self.config, self.stacked_widget)
-            self.stacked_widget.addWidget(completion_screen)
+            # Ecobrick Retrieve Mode Result Screen (index 8)
+            ecobrick_screen = EcoScreen(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(ecobrick_screen)
 
+            
             # Set the initial screen
             self.stacked_widget.setCurrentIndex(0)
 

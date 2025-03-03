@@ -7,12 +7,12 @@ class Btn(QPushButton):
     """
     Creates the generic Button
     """
-    def __init__(self, text="click", bt_w = 642, bt_h = 202, padding_size = 10, disabled = False, parent=None):
+    def __init__(self, text="click", bt_w = 642, bt_h = 202, padding_size = 10, font_size = 35, disabled = False, parent=None):
         super().__init__(parent)
         self.label = QLabel(text, self)
         self.label.setWordWrap(True)
         self.label.setAlignment(Qt.AlignCenter)
-        self.label.setFont(parent.font_inter)
+        self.label.setFont(QFont(parent.ff_inter, font_size)) 
         self.label.setStyleSheet(f"padding: {str(padding_size)}px; border: none;")
         self.label.setAttribute(Qt.WA_TransparentForMouseEvents)  
         shadow = Drop_Shadow()
