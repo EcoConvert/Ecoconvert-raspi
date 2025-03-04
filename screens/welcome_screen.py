@@ -31,9 +31,10 @@ class WelcomeScreen(BaseScreen):
         try:
             if self.parent():
                 # Navigate to the next screen (index 1 assumed)
-                self.parent().setCurrentIndex(1)
+                standby_screen = self.parent().widget(1)
+                standby_screen.global_state_checker()
+               
                 self.logger.info("Navigated from Welcome Screen to Reminder Screen.")
-                self.update_state(0)
             else:
                 self.logger.warning("No parent QStackedWidget found for navigation.")
         except Exception as e:

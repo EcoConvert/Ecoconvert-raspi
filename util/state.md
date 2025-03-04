@@ -15,16 +15,20 @@ Initialize Everytime
 - Disable all button
 - Enable VButton ONLY
 
-  1: insert mode
+1: insert mode bottle
 
-- Enable Vbutton
-- Enable Relay to the lights
-- Enable Camera
-- Enable Load Cell SUP
-  when ending session
-- disable pins
+- Enable Relay to the lights above
+- Enable Camera bottle
+-
 
-  2: processing mode
+2: insert mode SUP
+
+- enable load cell sa ilalim
+- enable lights sa ilalim
+- enable camera sa ilalim
+-
+
+3: processing mode
 
 - Enable Vbutton
 - Enable Motor stepper
@@ -32,7 +36,7 @@ Initialize Everytime
 - Enable load cell
 - Enable Shredder
 
-3: retrieve mode
+4: retrieve mode
 
 - disable all pins
 - counter reset

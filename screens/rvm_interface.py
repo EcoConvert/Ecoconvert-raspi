@@ -118,9 +118,3 @@ class RVMInterface(QWidget):
             raise
     
     # from here on, we manage the state based on what is the index number
-
-    def manage_state(self):
-        
-        self.state = load_state()
-
-        pass 

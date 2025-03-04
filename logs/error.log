@@ -1111,3 +1111,213 @@ Traceback (most recent call last):
   File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\_Button.py", line 15, in __init__
     self.label.setFont(parent.font_inter, font_size)
 TypeError: setFont(self, a0: QFont): too many arguments
+2025-03-03 22:34:24,916 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'QStackedWidget' object has no attribute 'standby_screen'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 36, in _on_click
+    self.parent().standby_screen.runThread()
+AttributeError: 'QStackedWidget' object has no attribute 'standby_screen'
+2025-03-03 22:35:31,127 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'standby_screen'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 36, in _on_click
+    self.standby_screen.runThread()
+AttributeError: 'WelcomeScreen' object has no attribute 'standby_screen'
+2025-03-03 22:38:08,492 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: setCurrentIndex(self, index: int): argument 1 has unexpected type 'StandbyScreen'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 36, in _on_click
+    self.parent().setCurrentIndex(standby_screen)
+TypeError: setCurrentIndex(self, index: int): argument 1 has unexpected type 'StandbyScreen'
+2025-03-04 19:45:59,573 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'StandbyScreen' object has no attribute 'runThread'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.runThread()
+AttributeError: 'StandbyScreen' object has no attribute 'runThread'
+2025-03-04 19:57:37,149 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'StandbyScreen' object has no attribute 'runThread'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.runThread()
+AttributeError: 'StandbyScreen' object has no attribute 'runThread'
+2025-03-04 20:16:41,209 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'Worker' object has no attribute 'finished'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 48, in global_state_checker
+    worker.finished.connect(self.ss_bot_screen)
+AttributeError: 'Worker' object has no attribute 'finished'
+2025-03-04 20:17:11,823 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: Worker cannot be converted to PyQt5.QtCore.QObject in this context
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 48, in global_state_checker
+    worker.finished.connect(self.ss_bot_screen)
+TypeError: Worker cannot be converted to PyQt5.QtCore.QObject in this context
+2025-03-04 20:21:34,062 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 47, in global_state_checker
+    pool.start(worker)
+TypeError: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+2025-03-04 20:21:35,857 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 47, in global_state_checker
+    pool.start(worker)
+TypeError: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+2025-03-04 20:21:36,618 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 47, in global_state_checker
+    pool.start(worker)
+TypeError: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+2025-03-04 20:21:36,957 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 47, in global_state_checker
+    pool.start(worker)
+TypeError: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+2025-03-04 20:21:37,159 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 47, in global_state_checker
+    pool.start(worker)
+TypeError: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+2025-03-04 20:21:37,369 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 47, in global_state_checker
+    pool.start(worker)
+TypeError: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+2025-03-04 20:21:37,564 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 47, in global_state_checker
+    pool.start(worker)
+TypeError: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+2025-03-04 20:21:37,766 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 47, in global_state_checker
+    pool.start(worker)
+TypeError: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+2025-03-04 20:21:37,989 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 47, in global_state_checker
+    pool.start(worker)
+TypeError: arguments did not match any overloaded call:
+  start(self, runnable: Optional[QRunnable], priority: int = 0): argument 1 has unexpected type 'Worker'
+  start(self, functionToRun: Callable[[], None], priority: int = 0): argument 1 has unexpected type 'Worker'
+2025-03-04 21:10:52,070 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: name 'i4' is not defined
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 46, in global_state_checker
+    worker = Worker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 113, in __init__
+    self.i4 = i4()
+NameError: name 'i4' is not defined
+2025-03-04 21:31:09,922 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'StandbyScreen' object has no attribute '_change_screen'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 41, in global_state_checker
+    worker.signal.show.connect(self._change_screen)
+AttributeError: 'StandbyScreen' object has no attribute '_change_screen'
+2025-03-04 21:31:11,553 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'StandbyScreen' object has no attribute '_change_screen'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 41, in global_state_checker
+    worker.signal.show.connect(self._change_screen)
+AttributeError: 'StandbyScreen' object has no attribute '_change_screen'
+2025-03-04 21:31:12,025 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'StandbyScreen' object has no attribute '_change_screen'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 41, in global_state_checker
+    worker.signal.show.connect(self._change_screen)
+AttributeError: 'StandbyScreen' object has no attribute '_change_screen'
+2025-03-04 21:31:12,458 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'StandbyScreen' object has no attribute '_change_screen'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 41, in global_state_checker
+    worker.signal.show.connect(self._change_screen)
+AttributeError: 'StandbyScreen' object has no attribute '_change_screen'
+2025-03-04 21:31:12,669 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'StandbyScreen' object has no attribute '_change_screen'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 41, in global_state_checker
+    worker.signal.show.connect(self._change_screen)
+AttributeError: 'StandbyScreen' object has no attribute '_change_screen'
+2025-03-04 21:31:12,881 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'StandbyScreen' object has no attribute '_change_screen'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 41, in global_state_checker
+    worker.signal.show.connect(self._change_screen)
+AttributeError: 'StandbyScreen' object has no attribute '_change_screen'
+2025-03-04 21:31:13,078 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'StandbyScreen' object has no attribute '_change_screen'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 41, in global_state_checker
+    worker.signal.show.connect(self._change_screen)
+AttributeError: 'StandbyScreen' object has no attribute '_change_screen'
+2025-03-04 21:31:13,285 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'StandbyScreen' object has no attribute '_change_screen'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 41, in global_state_checker
+    worker.signal.show.connect(self._change_screen)
+AttributeError: 'StandbyScreen' object has no attribute '_change_screen'
+2025-03-04 21:31:13,466 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'StandbyScreen' object has no attribute '_change_screen'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\standby_screen.py", line 41, in global_state_checker
+    worker.signal.show.connect(self._change_screen)
+AttributeError: 'StandbyScreen' object has no attribute '_change_screen'

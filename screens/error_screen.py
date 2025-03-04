@@ -8,4 +8,5 @@ class ErrorScreen(BaseScreen):
         setup_ui(self)
         
     def _on_click(self):
-        print("shit may error")
+        if self.parent():
+            self.parent().setCurrentIndex(1)

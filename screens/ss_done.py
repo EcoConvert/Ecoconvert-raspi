@@ -5,8 +5,7 @@ from .views.sv_done import setup_ui
 
 class StandbyScreenDone(BaseScreen):
     """
-    Welcome screen for the RVM LCD Interface.
-    Displays a welcome message and initial instructions.
+    BOTH SUP AND BOTTLE DISABLED. Screen for the RVM LCD Interface. 
     """
 
     def __init__(self, config, parent=None):
@@ -25,9 +24,8 @@ class StandbyScreenDone(BaseScreen):
         setup_ui(self)
     
     def _on_click(self):
-        """
-        Handle the 'Next' button click event.
-        """
-        print("clicakble ")
+        if self.parent():
+            self.parent().setCurrentIndex(6)
+        
        
         
