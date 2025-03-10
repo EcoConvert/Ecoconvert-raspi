@@ -16,16 +16,15 @@ from logging_config import setup_logging, lcd_logger
 # port_number= os.getenv("SERIAL_PORT")
 # ser = serial.Serial(port_number, 9600, timeout=0)
 
-# state variables here. They say how the RVM is doing.
+# this may be not important. 
+# state_variables  = init_sequence()
+# bottle_exist = state_variables["bottle_exist"]
+# storage = state_variables["eco_brick_stored"]
+# weight = state_variables["weight"] 
+# session_end = False
+# state = load_state()
+
 logger = setup_logging()
-
-state_variables  = init_sequence()
-bottle_exist = state_variables["bottle_exist"]
-storage = state_variables["eco_brick_stored"]
-weight = state_variables["weight"] 
-session_end = False
-
-state = load_state()
 config = load_config()
 
 app = QApplication(sys.argv)

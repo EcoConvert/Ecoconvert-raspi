@@ -1,5 +1,4 @@
 # src/lcd_interface/screens/welcome_screen.py
-
 from .base_screen import BaseScreen
 from .views.qr__view import setup_ui 
 class QrScreen(BaseScreen):
@@ -21,8 +20,14 @@ class QrScreen(BaseScreen):
     
     def _on_click(self):
         if self.parent():
-            self.parent().setCurrentIndex(1) # go to SUP Screen  
-            # self.update_state(1) # update to insert
+            self.update_state(0) # update to standby
+            standby_screen = self.parent().widget(1)
+            # implement conditional showing of button
+            standby_screen.global_state_checker() # <-screen changer  is on this one 
         else:
             self.logger.warning("No parent QStackedWidget found.")
+
+    def generate_qr(self, value): 
+        print(value)
+        pass 
 

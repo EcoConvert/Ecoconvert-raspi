@@ -31,10 +31,10 @@ class SerialManager:
         """Write data to the serial port"""
         try:
             self.ser.write(str(str(data)).encode()) # this double string conversion, idk why but it works. Do not remove or state 2 and 3 will not work.
-            save_state(data)
             print(f"Sent: {str(data).encode()}")
         except Exception as e:
             print(f"Serial write error: {e}")
+        save_state(data)
 
 # Global instance
 serial_manager = SerialManager()
