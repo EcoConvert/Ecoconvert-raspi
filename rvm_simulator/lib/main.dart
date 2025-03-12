@@ -14,10 +14,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   SerialPort? port;
   List<String> availablePorts = SerialPort.availablePorts;
-  String processStatus = "Waiting for data...";
+  String processStatus = "Waiting for connection...";
 
-  void connectToPython() {
-    print(availablePorts);
+  void connectToRaspberryPi() {
+    print("Available ports: $availablePorts");
     if (availablePorts.isEmpty) {
       setState(() {
         processStatus = "No serial ports found";
@@ -25,53 +25,41 @@ class _MyAppState extends State<MyApp> {
       return;
     }
 
-    String targetPort = "COM6"; // Make sure this matches Python
+    // Pick the correct port (Adjust if needed)
+    // port = SerialPort(availablePorts[0]); // Adjust if needed
+    port = SerialPort("COM5"); // Adjust if needed
+    print("Connecting to ${port!.name}");
 
-    try {
-      port = SerialPort(targetPort);
-      print("Connecting to $targetPort");
+    if (port!.openReadWrite()) {
+      SerialPortConfig config =
+          SerialPortConfig()
+            ..baudRate = 9600
+            ..bits = 8
+            ..stopBits = 1
+            ..parity = SerialPortParity.none;
 
-      if (port!.openReadWrite()) {
-        SerialPortConfig config =
-            SerialPortConfig()
-              ..baudRate = 9600
-              ..bits = 8
-              ..stopBits = 1
-              ..parity = SerialPortParity.none;
+      port!.config = config;
 
-        port!.config = config;
-        setState(() {
-          processStatus = "Connected to Python on $targetPort";
-        });
-      } else {
-        throw Exception("Failed to open the port");
-      }
-    } catch (e) {
       setState(() {
-        processStatus = "Error: $e";
+        processStatus = "Connected to Raspberry Pi";
       });
-      print("Connection error: $e");
+    } else {
+      setState(() {
+        processStatus = "Failed to connect to Raspberry Pi";
+      });
     }
   }
 
   void sendCommand(String command) {
     if (port != null && port!.isOpen) {
-      String message = command + "\n"; // Ensures Python receives a full line
+      String message = command + "\n"; // Ensures a full line is sent
       port!.write(Uint8List.fromList(message.codeUnits));
-      port!.flush(); // Forces the message to send immediately
+      port!.flush(); // Ensure data is sent immediately
       print("Sent: $command");
     } else {
       print("Serial port not open!");
     }
   }
-
-  // void listenToSerial() {
-  //   SerialPortReader reader = SerialPortReader(port!);
-  //   reader.stream.listen((data) {
-  //     String received = String.fromCharCodes(data);
-  //     print("Received from Python: $received");
-  //   });
-  // }
 
   @override
   void dispose() {
@@ -89,8 +77,8 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
-                onPressed: connectToPython,
-                child: Text("Connect to Python"),
+                onPressed: connectToRaspberryPi,
+                child: Text("Connect to Raspberry Pi"),
               ),
               SizedBox(height: 20),
               ElevatedButton(
