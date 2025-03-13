@@ -24,6 +24,7 @@ class SerialWorker(QRunnable):
         while self.is_running:
             try:
                 data = ser.readline().decode("utf-8").strip()
+                print(f'Ecobrick done?: {data}')
                 if data:
                     self.callback(data)  # Send data to the main thread
                 time.sleep(0.1)  # Add a small delay to avoid overloading
@@ -46,7 +47,7 @@ class ProcessingScreen(BaseScreen, QObject):
     def __init__(self, config, parent=None, camera=None):
         super().__init__(config, parent, camera)
         self.progress_value = 0  # Current progress value
-        self.isDone = False
+        self.isDone = 0
         self.thread_pool = QThreadPool()
         self.worker = None
         setup_ui(self)
@@ -133,7 +134,7 @@ class ProcessingScreen(BaseScreen, QObject):
         # except ValueError:
         #     print("Invalid data received")
         self.isDone = data
-        if (self.isDone == True):
+        if (self.isDone == '1'):
             self.worker.stop()
             self._on_serial_done()
         else:
