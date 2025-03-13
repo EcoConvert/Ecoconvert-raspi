@@ -27,6 +27,9 @@ class SerialWorker(QRunnable):
                 print(f'Ecobrick done?: {data}')
                 if data:
                     self.callback(data)  # Send data to the main thread
+                    print(f'call back: {data}')
+                    self.is_running = False
+                    print(f'is_running bool is set to false')
                 time.sleep(0.1)  # Add a small delay to avoid overloading
             except Exception as e:
                 print(f"Error reading serial: {e}")
@@ -50,7 +53,7 @@ class ProcessingScreen(BaseScreen, QObject):
         self.isDone = 0
         self.thread_pool = QThreadPool()
         self.worker = None
-        self.timer = QTimer()
+        
         setup_ui(self)
     
     
@@ -73,7 +76,13 @@ class ProcessingScreen(BaseScreen, QObject):
 
     #     self.progress_bar.setValue(int(self.progress_value))
     
+    def _ready_to_go_back(self):
+        self.progress_bar.setValue(0)
+        self.parent().setCurrentIndex(1)
+        self.update_state(0)  
+    
     def _on_serial_done(self):
+        # self.timer = QTimer(self)
         self.progress_bar.setValue(100)
         # Store previous value
         bricks = load_state_variables("eco_brick_stored")
@@ -87,12 +96,9 @@ class ProcessingScreen(BaseScreen, QObject):
         standby_screen = self.parent().widget(1)
         standby_screen.pet_clickability(True)
         standby_screen.sup_clickability(True)
-        self.timer.singleShot(1000, self._ready_to_go_back)
-
-    def _ready_to_go_back(self):
-        self.progress_bar.setValue(0)
-        self.parent().setCurrentIndex(1)
-        self.update_state(0)  
+        
+        # self.timer.singleShot(1000, self._ready_to_go_back)
+        self._ready_to_go_back()
 
 
     # def _simulate_serial_reads (self):
