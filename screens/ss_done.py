@@ -2,6 +2,8 @@
 
 from .base_screen import BaseScreen
 from .views.sv_done import setup_ui 
+from serial_try import writeCommand
+
 
 class StandbyScreenDone(BaseScreen):
     """
@@ -25,6 +27,7 @@ class StandbyScreenDone(BaseScreen):
     
     def _on_click(self):
         if self.parent():
+            writeCommand("CE")
             self.parent().setCurrentIndex(6)
             self.update_state(3)
             processing_screen = self.parent().widget(6)

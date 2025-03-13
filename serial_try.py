@@ -5,8 +5,8 @@ from dotenv import dotenv_values, load_dotenv
 import time
 import serial.tools.list_ports
 
-# ser = serial.Serial('/dev/ttyS0', 9600, timeout=1)  
-ser = serial.Serial('COM3', 9600, timeout=1)  
+ser = serial.Serial('/dev/ttyS0', 9600, timeout=1)  
+# ser = serial.Serial('COM3', 9600, timeout=1)  
 time.sleep(2)  # Wait for Arduino to initialize
 
 print("Listening for data from Arduino...")
@@ -23,10 +23,22 @@ print("Listening for data from Arduino...")
 #         else:
 #             print("Invalid bool data from Arduino")
 #             return None
+
+def flushSerial():
+    if ser.isOpen():
+        ser.flushInput()
+        ser.flushOutput()
+        print("Serial buffer flushed")
+    else: 
+        print("Serial port is not open")
         
-def writeSUPWeight(data):
+
+def writeCommand(data):
+    command = data + '\n'
     if ser.open:
-        ser.write(data.encode("utf-8"))
+        ser.write(command.encode("utf-8"))
+        ser.flush()
+        print(f"\nSent to Arduino: {data}\n")
     else:
         print("Serial port is not open")
         
@@ -38,7 +50,8 @@ def readSUPWeight():
             return int(data)
     else:
         print("Invalid SUP weight data from Arduino")
-        return None
+        # return None
+        return 0 # return 0 instead
     
 def readEcoBrickWeight():
     data = ser.readline().decode("utf-8").strip()

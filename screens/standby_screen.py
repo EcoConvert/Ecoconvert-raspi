@@ -4,6 +4,7 @@ from PyQt5.QtCore import QThreadPool
 from .base_screen import BaseScreen
 from .views.standby_view import setup_ui
 from .controller.i0_init import InitThread
+from serial_try import readSUPWeight, writeCommand
 
 class StandbyScreen(BaseScreen):
     """
@@ -29,6 +30,7 @@ class StandbyScreen(BaseScreen):
 
     def _on_click_sup(self):
         if self.parent():
+            # Prepare arduino for weighing SUP
             self.update_state(1)
             self.parent().setCurrentIndex(3) # go to SUP Screen  
             is_sup = self.parent().widget(3)
@@ -78,6 +80,7 @@ class StandbyScreen(BaseScreen):
 
         if (isinstance(sup, (int, float))) and (sup >= 525.00):
             print(f"SUP action triggered: {sup}")
+            writeCommand("SF")
             curIndex = self.parent().currentIndex()
             print(f"Switched to index {curIndex}")
             if curIndex == 1:
@@ -86,4 +89,4 @@ class StandbyScreen(BaseScreen):
         if self.petflag and self.supflag:
             print("Both PET and SUP are being hit")
             parent = self.parent()  
-            parent.setCurrentIndex(5) # go to PET Screen
+            parent.setCurrentIndex(5) # go to ready to create ecobrick Screen

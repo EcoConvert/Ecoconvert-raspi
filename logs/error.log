@@ -1,0 +1,8 @@
+2025-03-13 14:31:14,805 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: writeSUPWeight() missing 1 required positional argument: 'data'
+Traceback (most recent call last):
+  File "/home/ponsadvento08/Documents/Ecoconvert-raspi/screens/rvm_interface.py", line 89, in _setup_screens
+    is_sup = InsertScreenSup(self.config, self.stacked_widget)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ponsadvento08/Documents/Ecoconvert-raspi/screens/is_sup.py", line 27, in __init__
+    writeSUPWeight()
+TypeError: writeSUPWeight() missing 1 required positional argument: 'data'

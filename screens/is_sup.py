@@ -3,7 +3,7 @@ import random
 from .base_screen import BaseScreen
 from .views.iv_sup import setup_ui 
 from util.state import save_state_variables, load_state_variables
-from serial_try import writeSUPWeight, readSUPWeight
+from serial_try import writeCommand, readSUPWeight, flushSerial
 
 class InsertScreenSup(BaseScreen):
     """
@@ -22,12 +22,14 @@ class InsertScreenSup(BaseScreen):
         self.SUP_MULT = 0.2
         self.weight=load_state_variables("weight")
         self.ser_weight = 0
+        self.rWeight = 0
         
-        # Prepare arduino for weighing SUP
-        writeSUPWeight()
+        
         
         setup_ui(self)
-    
+        
+        
+    # This will be triggered if the 'done' button is clicked
     def _on_click(self):
         if self.parent():
             self._last_process()
@@ -47,25 +49,34 @@ class InsertScreenSup(BaseScreen):
 
     def _last_process(self):
         # open the camera here
-    
+        # self.weight = load_state_variables("weight")
+        rWeight = readSUPWeight()
         # some process here to get the weight 
         print("SUPS deposited")
+        self.ser_weight = self.weight + rWeight
         weight_diff = self.ser_weight - self.weight 
-        print("Weight diff " + str(weight_diff))
+        print(f"Weight diff: {weight_diff}")
         self._generate_points(weight_diff) 
         save_state_variables("weight", self.ser_weight)
     
     def process(self):
         self.weight=load_state_variables("weight")
+        print(f"saved weight is: {self.weight}")
         self.ser_weight = 0
+        
         # open the camera here
         print("processing sup")
+        # if sups are valid
+        print("sup is valid")
         valid =  True
         if valid: 
             # some process here to get the weight
-            # self.ser_weight = self.weight + random.randint(1, 100) # simulation lang to ng wieght yung ginagawa ni pons mas accurate yon sa actual. 
-            self.ser_weight = self.weight + readSUPWeight()
-            print("self ", self.weight)
-            print("ser ", self.ser_weight)
+            # self.ser_weight = self.weight + random.randint(1, 100) # simulation lang to ng weight yung ginagawa ni pons mas accurate yon sa actual. 
+            # flushSerial()
+            writeCommand('SW')
+            
+            # self.ser_weight = self.weight + self.rWeight
+            # print("self ", self.weight)
+            # print("ser ", self.ser_weight)
         else:
             pass
