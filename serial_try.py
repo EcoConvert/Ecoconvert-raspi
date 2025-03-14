@@ -5,25 +5,19 @@ from dotenv import dotenv_values, load_dotenv
 import time
 import serial.tools.list_ports
 
-ports = serial.tools.list_ports.comports()
-for port in ports:
-    print(f"port is: {port.device}")
-    
-load_dotenv()
+ser = serial.Serial('COM12', 9600, timeout=1)  
+time.sleep(2)  # Wait for Arduino to initialize
 
-# port_number= os.getenv("SERIAL_PORT")
-# ser = serial.Serial(port_number, 9600, timeout=0)
-
-
-    # Replace 'COM3' with the correct port for Windows or '/dev/ttyUSB0' for Linux/macOS
-ser = serial.Serial('COM6', 9600, timeout=1)
-
-print(f"Listening for data on port {ser.port}...")
+print("Listening for data from Arduino...")
 
 while True:
-    data = ser.readline().decode('utf-8').strip()
+    ser.write(b"Hello Arduino!\n")  # Send data to Arduino
+    time.sleep(1)
+
+    data = ser.readline().decode('utf-8').strip()  # Read response from Arduino
     if data:
-        print(f"Received: {data}")
+        print(f"Received from Arduino: {data}\n")
+
 
 # def read():
 #     res = ser.readline(100).decode("utf-8")
