@@ -20,7 +20,7 @@ class InsertScreenBottle(BaseScreen):
         super().__init__(config, parent)  # Inherit from BaseScreen
         
         setup_ui(self)
-    
+     
     def _on_click(self):
         if self.parent():
             self.parent().setCurrentIndex(4) # go to QR Screen

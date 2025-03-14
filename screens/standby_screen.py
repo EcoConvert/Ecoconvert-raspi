@@ -49,9 +49,9 @@ class StandbyScreen(BaseScreen):
         pool.start(init_worker)
 
         # Connect signal dynamically
-        init_worker.signal.show.connect(lambda index: self._change_screen(screen_index=index))
-        init_worker.signal.pet.connect(lambda pet: self._change_screen(pet=pet))
-        init_worker.signal.sup.connect(lambda sup: self._change_screen(sup=sup))
+        init_worker.signal.show.connect(self._change_screen)
+        init_worker.signal.pet.connect(self._change_screen)
+        init_worker.signal.sup.connect(self._change_screen)
         
         
 
@@ -60,13 +60,11 @@ class StandbyScreen(BaseScreen):
             if self.parent():
                 self.parent().setCurrentIndex(screen_index)
         
-        # for fitire me, this never gets hit
-        if pet is not None:
-            print(f"PET action triggered: {pet}")
+        if pet == True:
             curIndex = self.parent().currentIndex()
             print(f"Switched to index {curIndex}")
             if curIndex == 1:
                 self.pet_clickability(False)
 
-        if sup is not None:
+        if isinstance(sup, (int, float)) and sup >= 525.00:
             print(f"SUP action triggered: {sup}")

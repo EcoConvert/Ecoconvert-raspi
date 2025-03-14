@@ -28,6 +28,6 @@ class QrScreen(BaseScreen):
             self.logger.warning("No parent QStackedWidget found.")
 
     def generate_qr(self, value): 
-        print(value)
+        print("Points " + str(value))
         pass 
 
