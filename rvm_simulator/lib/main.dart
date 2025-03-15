@@ -12,6 +12,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  String currentStatus = "Waiting for connection...";
   SerialPort? port;
   List<String> availablePorts = SerialPort.availablePorts;
   String processStatus = "Waiting for connection...";
@@ -51,7 +52,7 @@ class _MyAppState extends State<MyApp> {
     }
   }
 
-  void sendCommand(String command) {
+  void sendStringCommand(String command) {
     if (port != null && port!.isOpen) {
       String message = command + "\n"; // Ensures Raspberry Pi reads a full line
       port!.write(Uint8List.fromList(message.codeUnits));
@@ -62,12 +63,28 @@ class _MyAppState extends State<MyApp> {
     }
   }
 
-  void listenToSerial() {
+  void sendIntCommand(int command) {
+    if (port != null && port!.isOpen) {
+      Uint8List order = Uint8List(4); // Ensures Raspberry Pi reads a full line
+      ByteData data = ByteData.sublistView(order);
+      data.setInt32(0, command, Endian.little);
+
+      port!.write(order);
+      port!.flush(); // Force send
+      print("Sent: $command");
+    } else {
+      print("Serial port not open!");
+    }
+  }
+
+  String listenToSerial() {
+    String received = "";
     SerialPortReader reader = SerialPortReader(port!);
     reader.stream.listen((data) {
       String received = String.fromCharCodes(data);
       print("Received from Raspberry Pi: $received");
     });
+    return received;
   }
 
   @override
@@ -85,53 +102,141 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Text(
+                "Click to connect to Raspberry Pi",
+                style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 5),
+              ElevatedButton(
+                onPressed:
+                    () => setState(() {
+                      connectToRaspberryPi();
+                    }),
+                style: ButtonStyle(
+                  side: WidgetStateProperty.all(
+                    BorderSide(color: Colors.black, width: 1),
+                  ),
+                ),
+                child: Text(
+                  processStatus,
+                  style: TextStyle(
+                    fontSize: 15,
+                    color:
+                        processStatus == "Connected to Raspberry Pi"
+                            ? Colors.green
+                            : Colors.red,
+                  ),
+                ),
+              ),
+              SizedBox(height: 40),
               Text("Current Status", style: TextStyle(fontSize: 20)),
               SizedBox(height: 10),
               Container(
                 width: 700,
-                height: 100,
+                padding: EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.grey[200],
                 ),
                 child: Center(
                   child: Text(
-                    "Process",
-                    style: TextStyle(fontSize: 70, fontWeight: FontWeight.bold),
+                    currentStatus,
+                    style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
               SizedBox(height: 20),
               Container(
                 width: 300,
-                height: 200,
+                padding: EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(20),
                   color: Color.fromARGB(255, 122, 233, 255),
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("Enter weight of SUP", style: TextStyle(fontSize: 18)),
-                    SizedBox(height: 10),
-                    Slider(
-                      value: supValue,
-                      onChanged: (value) => setState(() => supValue = value),
-                      max: 500,
-                      label: '${supValue.toInt()}',
-                      divisions: 500,
+                    Text(
+                      "Enter weight of SUP",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     SizedBox(height: 10),
+
+                    Column(
+                      children: [
+                        Text("SUP Weight:", style: TextStyle(fontSize: 12)),
+                        Text(
+                          "${supValue.toInt()}g",
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Slider(
+                      value: supValue,
+                      max: 500,
+                      onChanged: (value) => setState(() => supValue = value),
+                    ),
+                    SizedBox(height: 10),
+                    Text('--status--'),
                     ElevatedButton(
-                      onPressed: () => sendCommand("START_PROCESS"),
+                      onPressed:
+                          () =>
+                              (), //sendCommand("START_PROCESS"), // Function here
                       style: ButtonStyle(
-                      shadowColor: Colors.black,
-                      child: Text("Send"),
+                        fixedSize: WidgetStateProperty.all(Size(80, 20)),
+                        padding: WidgetStateProperty.all(EdgeInsets.all(0)),
+                        shadowColor: WidgetStateProperty.all(Colors.black),
+                        elevation: WidgetStateProperty.all(3),
+                        side: WidgetStateProperty.all(
+                          BorderSide(color: Colors.black, width: 1.5),
+                        ),
+                      ),
+                      child: Text(
+                        "Submit",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
                     ),
                   ],
                 ),
               ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () => {},
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(
+                    Color.fromARGB(255, 2, 255, 40),
+                  ),
+                  padding: WidgetStateProperty.all(EdgeInsets.all(10)),
+                  fixedSize: WidgetStateProperty.all(Size(250, 40)),
+                  shadowColor: WidgetStateProperty.all(Colors.black),
+                  elevation: WidgetStateProperty.all(3),
+                  side: WidgetStateProperty.all(
+                    BorderSide(color: Colors.black, width: 1.5),
+                  ),
+                ),
+                child: Text(
+                  "Ecobrick Completed?",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Text("Received Status value from RasPi:"),
+              Text("--Some Value--"),
               // ElevatedButton(
               //   onPressed: connectToRaspberryPi,
               //   child: Text("Connect to Raspberry Pi"),
