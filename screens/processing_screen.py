@@ -44,7 +44,7 @@ class ProcessingScreen(BaseScreen):
         standby_screen = self.parent().widget(1)
         standby_screen.pet_clickability(True)
         standby_screen.sup_clickability(True)
-        self.timer.singleShot(10000, self._ready_to_go_back)
+        self.timer.singleShot(1000, self._ready_to_go_back)
 
     def _ready_to_go_back(self):
         self.progress_bar.setValue(0)
