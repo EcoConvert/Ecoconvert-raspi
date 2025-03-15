@@ -16,7 +16,10 @@ class _MyAppState extends State<MyApp> {
   SerialPort? port;
   List<String> availablePorts = SerialPort.availablePorts;
   String processStatus = "Waiting for connection...";
+
+  // Data values from arduino
   double supValue = 0;
+  bool isEcobrickCompleted = false;
 
   void connectToRaspberryPi() {
     if (availablePorts.isEmpty) {
@@ -27,7 +30,7 @@ class _MyAppState extends State<MyApp> {
     }
 
     // port = SerialPort(availablePorts[0]); // Use the first available port
-    port = SerialPort("COM13"); // Use the first available port
+    port = SerialPort("COM13"); // Fixed port for raspi
     print("Connecting to ${port!.name}");
 
     if (port!.openReadWrite()) {
@@ -72,8 +75,24 @@ class _MyAppState extends State<MyApp> {
       port!.write(order);
       port!.flush(); // Force send
       print("Sent: $command");
+      currentStatus = "Send $command";
     } else {
       print("Serial port not open!");
+      currentStatus = "Serial port not open!";
+    }
+  }
+
+  void sendEcobrickCompleted(bool command) {
+    if (port != null && port!.isOpen) {
+      Uint8List data = Uint8List(1); // Ensures Raspberry Pi reads a full line
+      data[0] = command ? 1 : 0;
+      port!.write(data);
+      port!.flush(); // Force send
+      print("Sent: ECOBRICK_COMPLETED");
+      currentStatus = "Send ECOBRICK_COMPLETED";
+    } else {
+      print("Serial port not open!");
+      currentStatus = "Serial port not open!";
     }
   }
 
@@ -97,7 +116,6 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("Flutter Serial Communication")),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -131,11 +149,12 @@ class _MyAppState extends State<MyApp> {
               SizedBox(height: 40),
               Text("Current Status", style: TextStyle(fontSize: 20)),
               SizedBox(height: 10),
+              // Status display------------------------------------------------
               Container(
                 width: 700,
                 padding: EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(30),
                   color: Colors.grey[200],
                 ),
                 child: Center(
@@ -146,6 +165,7 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
               SizedBox(height: 20),
+              // Weight of SUP input------------------------------------------------
               Container(
                 width: 300,
                 padding: EdgeInsets.all(20),
@@ -182,13 +202,18 @@ class _MyAppState extends State<MyApp> {
                       value: supValue,
                       max: 500,
                       onChanged: (value) => setState(() => supValue = value),
+                      activeColor: Colors.black,
+                      inactiveColor: const Color.fromARGB(255, 0, 191, 255),
                     ),
                     SizedBox(height: 10),
-                    Text('--status--'),
+                    // Text('--status--'), // Tried to display data transfer status
+
+                    // SUP Weight submit button------------------------------------------------
                     ElevatedButton(
                       onPressed:
-                          () =>
-                              (), //sendCommand("START_PROCESS"), // Function here
+                          () => setState(() {
+                            sendIntCommand(supValue.toInt());
+                          }),
                       style: ButtonStyle(
                         fixedSize: WidgetStateProperty.all(Size(80, 20)),
                         padding: WidgetStateProperty.all(EdgeInsets.all(0)),
@@ -212,7 +237,10 @@ class _MyAppState extends State<MyApp> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () => {},
+                onPressed:
+                    () => setState(() {
+                      sendEcobrickCompleted(true);
+                    }),
                 style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(
                     Color.fromARGB(255, 2, 255, 40),
@@ -235,7 +263,7 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
               SizedBox(height: 20),
-              Text("Received Status value from RasPi:"),
+              Text("Received status value from RasPi:"),
               Text("--Some Value--"),
               // ElevatedButton(
               //   onPressed: connectToRaspberryPi,

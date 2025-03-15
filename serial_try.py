@@ -10,6 +10,41 @@ time.sleep(2)  # Wait for Arduino to initialize
 
 print("Listening for data from Arduino...")
 
+def readBool():
+    data = ser.readline().decode("utf-8").strip()
+    if data:
+        print(f"Received from Arduino: {data}\n")
+        if data == 1:
+            return True
+        elif data == 0:
+            return False
+        else:
+            print("Invalid bool data from Arduino")
+            return None
+        
+        
+def readSUPWeight():
+    data = ser.readline().decode("utf-8").strip()
+    if data:
+        print(f"Received from Arduino: {data}\n")
+        if data.isdigit():
+            return int(data)
+    else:
+        print("Invalid SUP weight data from Arduino")
+        return None
+    
+    
+def readEcoBrickWeight():
+    data = ser.readline().decode("utf-8").strip()
+    if data:
+        print(f"Received from Arduino: {data}\n")
+        if data.isdigit():
+            return int(data)
+    else:
+        print("Invalid EcoBrick weight data from Arduino")
+        return None
+    
+    
 while True:
     ser.write(b"Hello Arduino!\n")  # Send data to Arduino
     time.sleep(1)
