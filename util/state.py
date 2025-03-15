@@ -1,10 +1,10 @@
 import json
 
-def load_state_variables():
-
+def load_state_variables(params=None):
     with open('state_variables.json', 'r') as f:
         data = json.load(f)
-        return data
+        return data[params] if params else data
+       
 
 def save_state_variables(key, value):
     """

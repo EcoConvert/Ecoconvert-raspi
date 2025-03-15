@@ -37,13 +37,22 @@ class StandbyScreen(BaseScreen):
             self.logger.warning("No parent QStackedWidget found.")
     
     def sup_clickability(self, state = True):
+        self.supflag = not state 
         self.sup_btn.setEnabled(state)
-        self.sup_btn.setStyleSheet("margin-bottom:30px; background-color:#D9D9D9; border: 3px solid #50000000; border-radius: 20%")
+        if state:
+            self.sup_btn.setStyleSheet("margin-bottom:30px; background-color:#F9FF89; border: 3px solid black; border-radius: 20%")
+        else:
+            self.sup_btn.setStyleSheet("margin-bottom:30px; background-color:#D9D9D9; border: 3px solid #50000000; border-radius: 20%")
 
     def pet_clickability(self, state = True):
+        self.petflag = not state 
         self.pet_btn.setEnabled(state)
         self.pet_btn.setStyleSheet("margin-bottom:30px; background-color:#D9D9D9; border: 3px solid #50000000; border-radius: 20%")
-    
+        if state:
+            self.pet_btn.setStyleSheet("margin-bottom:30px; background-color:#F9FF89; border: 3px solid black; border-radius: 20%")
+        else:
+            self.pet_btn.setStyleSheet("margin-bottom:30px; background-color:#D9D9D9; border: 3px solid #50000000; border-radius: 20%")
+
     # ###### 
     def global_state_checker(self):
         pool = QThreadPool.globalInstance()
@@ -54,8 +63,6 @@ class StandbyScreen(BaseScreen):
         init_worker.signal.show.connect(self._change_screen)
         init_worker.signal.pet.connect(self._change_screen)
         init_worker.signal.sup.connect(self._change_screen)
-        
-        
 
     def _change_screen(self, screen_index=None, pet=None, sup=None):
         if screen_index is not None:
@@ -67,7 +74,6 @@ class StandbyScreen(BaseScreen):
             curIndex = self.parent().currentIndex()
             if curIndex == 1:
                 self.pet_clickability(False)
-                self.petflag = True
 
         if (isinstance(sup, (int, float))) and (sup >= 525.00):
             print(f"SUP action triggered: {sup}")
@@ -75,7 +81,6 @@ class StandbyScreen(BaseScreen):
             print(f"Switched to index {curIndex}")
             if curIndex == 1:
                 self.sup_clickability(False)
-                self.supflag = True
 
         if self.petflag and self.supflag:
             print("Both PET and SUP are being hit")

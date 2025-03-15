@@ -19,7 +19,7 @@ def setup_ui(self):
 
     # Progress bar
     self.progress_bar = QProgressBar()
-    self.progress_bar.setValue(50)
+    self.progress_bar.setValue(0)
     self.progress_bar.setFont(self.font_inter)
     self.progress_bar.setStyleSheet("background-color: black; font-size: 16px;")
     layout.addWidget(self.progress_bar)
