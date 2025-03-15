@@ -35,6 +35,7 @@ def save_state(state):
     data = {"state": state}
     with open('state.json', 'w') as f:
         json.dump(data, f)
+    
    
 
 def main ():

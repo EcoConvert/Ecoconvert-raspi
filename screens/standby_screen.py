@@ -13,7 +13,9 @@ class StandbyScreen(BaseScreen):
     def __init__(self, config, parent=None):
         super().__init__(config, parent)
         setup_ui(self)
-
+        self.petflag = False
+        self.supflag = False
+    
     def _on_click_pet(self):
         if self.parent():
             self.update_state(1)
@@ -36,14 +38,14 @@ class StandbyScreen(BaseScreen):
     
     def sup_clickability(self, state = True):
         self.sup_btn.setEnabled(state)
+        self.sup_btn.setStyleSheet("margin-bottom:30px; background-color:#D9D9D9; border: 3px solid #50000000; border-radius: 20%")
+
     def pet_clickability(self, state = True):
         self.pet_btn.setEnabled(state)
         self.pet_btn.setStyleSheet("margin-bottom:30px; background-color:#D9D9D9; border: 3px solid #50000000; border-radius: 20%")
     
     # ###### 
     def global_state_checker(self):
-            
-
         pool = QThreadPool.globalInstance()
         init_worker = InitThread()
         pool.start(init_worker)
@@ -59,12 +61,23 @@ class StandbyScreen(BaseScreen):
         if screen_index is not None:
             if self.parent():
                 self.parent().setCurrentIndex(screen_index)
-        
+
         if pet == True:
+            print(f"pet triggered {pet}")
+            curIndex = self.parent().currentIndex()
+            if curIndex == 1:
+                self.pet_clickability(False)
+                self.petflag = True
+
+        if (isinstance(sup, (int, float))) and (sup >= 525.00):
+            print(f"SUP action triggered: {sup}")
             curIndex = self.parent().currentIndex()
             print(f"Switched to index {curIndex}")
             if curIndex == 1:
-                self.pet_clickability(False)
+                self.sup_clickability(False)
+                self.supflag = True
 
-        if isinstance(sup, (int, float)) and sup >= 525.00:
-            print(f"SUP action triggered: {sup}")
+        if self.petflag and self.supflag:
+            print("Both PET and SUP are being hit")
+            parent = self.parent()  
+            parent.setCurrentIndex(5) # go to PET Screen
