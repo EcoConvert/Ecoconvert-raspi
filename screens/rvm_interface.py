@@ -69,9 +69,8 @@ class RVMInterface(QWidget):
             # ----------------------------------------------------------------------
             # ecobrick_screen = EcoScreen(self.config, self.stacked_widget)
             # self.stacked_widget.addWidget(ecobrick_screen)
-
             # ------------------------------------------------------------------------
-
+            
             # Welcome Screen (index 0)
             welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
             self.stacked_widget.addWidget(welcome_screen)

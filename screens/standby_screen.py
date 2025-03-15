@@ -32,6 +32,7 @@ class StandbyScreen(BaseScreen):
             self.update_state(1)
             self.parent().setCurrentIndex(3) # go to SUP Screen  
             is_sup = self.parent().widget(3)
+            is_sup.process()
             # self.update_state(1) # update to insert
         else:
             self.logger.warning("No parent QStackedWidget found.")

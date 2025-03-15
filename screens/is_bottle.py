@@ -18,17 +18,23 @@ class InsertScreenBottle(BaseScreen):
             parent (QStackedWidget, optional): Parent stacked widget for navigation.
         """
         super().__init__(config, parent)  # Inherit from BaseScreen
-        
+        self.PET_POINTS = 10.0
         setup_ui(self)
      
     def _on_click(self):
         if self.parent():
             self.parent().setCurrentIndex(4) # go to QR Screen
-            qr_screen = self.parent().widget(4)
-            qr_screen.generate_qr(24)
-
+            qr_screen = self.parent().widget(4) 
+            qr_screen.generate_qr(self.points)
+            self.points = 0
         else:
             self.logger.warning("No parent QStackedWidget found.")
+    
+    def _generate_points(self): 
+        self.points = 0
+        self.points = self.PET_POINTS
+        print("Points " + str(self.points))
+       
     
     def process(self): 
         # open the camera here
@@ -38,5 +44,7 @@ class InsertScreenBottle(BaseScreen):
         if valid: 
             save_state_variables("bottle_exist", True)
             print("Valid bottle ")
+            self._generate_points() 
         else:
             pass
+    
