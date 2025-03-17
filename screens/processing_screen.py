@@ -33,7 +33,7 @@ class ProcessingScreen(BaseScreen):
         if self.progress_value >= 99:
             self.progress_value = 99
 
-        self.progress_bar.setValue(self.progress_value)
+        self.progress_bar.setValue(int(self.progress_value))
     
     def _on_serial_done(self):
         self.progress_bar.setValue(100)

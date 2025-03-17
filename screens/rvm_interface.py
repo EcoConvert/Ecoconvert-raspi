@@ -69,7 +69,9 @@ class RVMInterface(QWidget):
             # ----------------------------------------------------------------------
             # ecobrick_screen = EcoScreen(self.config, self.stacked_widget)
             # self.stacked_widget.addWidget(ecobrick_screen)
-            # ------------------------------------------------------------------------
+            qr_screen = QrScreen(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(qr_screen)
+            #  ------------------------------------------------------------------------
             
             # Welcome Screen (index 0)
             welcome_screen = WelcomeScreen(self.config, self.stacked_widget)
@@ -88,8 +90,8 @@ class RVMInterface(QWidget):
             self.stacked_widget.addWidget(is_sup)
 
             # QR Screen (index 4)
-            qr_screen = QrScreen(self.config, self.stacked_widget)
-            self.stacked_widget.addWidget(qr_screen)
+            # qr_screen = QrScreen(self.config, self.stacked_widget)
+            # self.stacked_widget.addWidget(qr_screen)
 
             # Standby Screen Done (index 5)
             ss_done = StandbyScreenDone(self.config, self.stacked_widget)

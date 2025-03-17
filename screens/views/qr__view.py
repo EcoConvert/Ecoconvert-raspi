@@ -1,8 +1,13 @@
+
+import os
+
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QLabel, QHBoxLayout, QVBoxLayout,  QTextBrowser
 from PyQt5.QtGui import QFont
 from screens.views._DropShadow import Drop_Shadow
 from screens.views._Button import BtnBack
+from PyQt5.QtGui import QPixmap
+
 
 def setup_ui(self):
     hDiv = QHBoxLayout()
@@ -36,10 +41,16 @@ def setup_ui(self):
 
     # right side
     right = QVBoxLayout()
+    base_path = os.path.dirname(__file__)  # Gets the current module's directory
+    image_path = os.path.join(base_path, "../qr_img/DAHYUN.png")
+    self.pixmap = QPixmap(image_path)
     self.qr = QLabel("")
-    self.qr.setStyleSheet("background-color: #faefae; border: 3px solid black;")
+    self.qr.setPixmap(self.pixmap)
+    self.qr.setScaledContents(True)
+    self.qr.setStyleSheet(" border: 3px solid black;")
     self.qr.setFixedSize(374, 374)
-
+    print(self.pixmap)
+    print("pixmap printing")
     right.addWidget(self.qr)
     hDiv.addLayout(left)
     hDiv.addLayout(right)

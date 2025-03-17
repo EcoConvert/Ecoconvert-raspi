@@ -1,6 +1,8 @@
 # src/lcd_interface/screens/welcome_screen.py
 from .base_screen import BaseScreen
 from .views.qr__view import setup_ui 
+
+
 class QrScreen(BaseScreen):
     """
     Welcome screen for the RVM LCD Interface.
