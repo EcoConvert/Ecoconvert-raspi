@@ -2898,3 +2898,13 @@ AttributeError: 'StandbyScreen' object has no attribute '_change_screen'
 2025-03-17 22:21:18,948 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-03-17 22:30:12,310 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 >>>>>>> global_state-naypes
+2025-03-19 14:14:14,634 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-19 14:23:30,472 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-19 14:35:22,826 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-19 14:35:27,307 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-19 14:41:57,953 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-19 14:42:01,912 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-19 16:19:51,025 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-19 16:19:53,247 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-19 18:59:30,492 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-19 18:59:38,124 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.

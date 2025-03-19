@@ -5,29 +5,36 @@ from dotenv import dotenv_values, load_dotenv
 import time
 import serial.tools.list_ports
 
-ser = serial.Serial('COM12', 9600, timeout=1)  
+# ser = serial.Serial('/dev/ttyS0', 9600, timeout=1)  
+ser = serial.Serial('COM3', 9600, timeout=1)  
 time.sleep(2)  # Wait for Arduino to initialize
 
 print("Listening for data from Arduino...")
 
-def readBool():
-    data = ser.readline().decode("utf-8").strip()
-    if data:
-        print(f"Received from Arduino: {data}\n")
-        if data == 1:
-            return True
-        elif data == 0:
-            return False
-        else:
-            print("Invalid bool data from Arduino")
-            return None
+# For debug only, (int) weight of Ecobrick is the real world data
+# def readBool():
+#     data = ser.readline().decode("utf-8").strip()
+#     if data:
+#         print(f"Received from Arduino: {data}\n")
+#         if data == 1:
+#             return True
+#         elif data == 0:
+#             return False
+#         else:
+#             print("Invalid bool data from Arduino")
+#             return None
         
+def writeSUPWeight(data):
+    if ser.open:
+        ser.write(data.encode("utf-8"))
+    else:
+        print("Serial port is not open")
         
 def readSUPWeight():
     data = ser.readline().decode("utf-8").strip()
     if data:
-        print(f"Received from Arduino: {data}\n")
         if data.isdigit():
+            print(f"Received from Arduino: {data}\n")
             return int(data)
     else:
         print("Invalid SUP weight data from Arduino")
@@ -36,21 +43,21 @@ def readSUPWeight():
 def readEcoBrickWeight():
     data = ser.readline().decode("utf-8").strip()
     if data:
-        print(f"Received from Arduino: {data}\n")
         if data.isdigit():
+            print(f"Received from Arduino: {data}\n")
             return int(data)
     else:
         print("Invalid EcoBrick weight data from Arduino")
         return None
     
     
-while True:
-    ser.write(b"Hello Arduino!\n")  # Send data to Arduino
-    time.sleep(1)
+# while True:
+#     ser.write(b"Hello Arduino!\n")  # Send data to Arduino
+#     time.sleep(1)
 
-    data = ser.readline().decode('utf-8').strip()  # Read response from Arduino
-    if data:
-        print(f"Received from Arduino: {data}\n")
+#     data = ser.readline().decode('utf-8').strip()  # Read response from Arduino
+#     if data:
+#         print(f"Received from Arduino: {data}\n")
 
 
 # def read():

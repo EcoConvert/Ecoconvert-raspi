@@ -3,6 +3,7 @@ import random
 from .base_screen import BaseScreen
 from .views.iv_sup import setup_ui 
 from util.state import save_state_variables, load_state_variables
+from serial_try import writeSUPWeight, readSUPWeight
 
 class InsertScreenSup(BaseScreen):
     """
@@ -21,6 +22,10 @@ class InsertScreenSup(BaseScreen):
         self.SUP_MULT = 0.2
         self.weight=load_state_variables("weight")
         self.ser_weight = 0
+        
+        # Prepare arduino for weighing SUP
+        writeSUPWeight()
+        
         setup_ui(self)
     
     def _on_click(self):
@@ -29,7 +34,7 @@ class InsertScreenSup(BaseScreen):
             # self.update_state(1) # update to insert 
             qr_screen = self.parent().widget(4)
             qr_screen.generate_qr(self.points)
-            self.parent().setCurrentIndex(4) # go to SUP Screen  
+            self.parent().setCurrentIndex(4) # go to QR Screen  
         else:
             self.logger.warning("No parent QStackedWidget found.")
     
@@ -57,8 +62,9 @@ class InsertScreenSup(BaseScreen):
         print("processing sup")
         valid =  True
         if valid: 
-            # some process here to get the weight 
-            self.ser_weight = self.weight + random.randint(1, 100) # simulation lang to ng wieght yung ginagawa ni pons mas accurate yon sa actual. 
+            # some process here to get the weight
+            # self.ser_weight = self.weight + random.randint(1, 100) # simulation lang to ng wieght yung ginagawa ni pons mas accurate yon sa actual. 
+            self.ser_weight = self.weight + readSUPWeight()
             print("self ", self.weight)
             print("ser ", self.ser_weight)
         else:
