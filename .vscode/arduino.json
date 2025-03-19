@@ -1,7 +1,4 @@
 {
     "port": "COM12",
-    "configuration": "cpu=atmega328",
-    "board": "arduino:avr:nano",
-    "programmer": "avrisp",
-    "sketch": "arduino_codes\\main\\main.ino"
+    "board": "arduino:avr:nano"
 }

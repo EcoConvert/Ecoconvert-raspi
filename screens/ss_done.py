@@ -26,6 +26,9 @@ class StandbyScreenDone(BaseScreen):
     def _on_click(self):
         if self.parent():
             self.parent().setCurrentIndex(6)
-        
+            self.update_state(3)
+            processing_screen = self.parent().widget(6)
+            processing_screen.wait_for_serial_done()
+            # process 
        
         

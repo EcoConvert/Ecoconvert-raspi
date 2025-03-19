@@ -2,13 +2,11 @@ import os
 import sys
 import serial
 
-
 from PyQt5.QtWidgets import QWidget
 from dotenv import dotenv_values, load_dotenv
 from process.serial_manager import serial_manager
 
 from util.state import * #load_state, save_state, load_state_variables, save_state_variables
-from process.initialize import init_sequence 
 from logging_config import lcd_logger
 from PyQt5.QtGui import QFontDatabase, QFont
 
@@ -46,7 +44,6 @@ class BaseScreen(QWidget):
         self.font_poppins = QFont(self.ff_poppins, 50)
         self.font_poppins.setLetterSpacing(QFont.AbsoluteSpacing, 10)
         
-
         # Inter
         inter = QFontDatabase.addApplicationFont("screens/fonts/Inter-VariableFont_opsz,wght.ttf")
         self.ff_inter = QFontDatabase.applicationFontFamilies(inter)[0] # use the ffs to set the font family and font size
