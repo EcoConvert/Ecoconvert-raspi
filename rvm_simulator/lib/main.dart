@@ -66,13 +66,11 @@ class _MyAppState extends State<MyApp> {
     }
   }
 
-  void sendIntCommand(int command) {
+  void sendSUPWeight(int command) {
     if (port != null && port!.isOpen) {
-      Uint8List order = Uint8List(4); // Ensures Raspberry Pi reads a full line
-      ByteData data = ByteData.sublistView(order);
-      data.setInt32(0, command, Endian.little);
-
-      port!.write(order);
+      String data =
+          command.toString() + "\n"; // Ensures Raspberry Pi reads a full line
+      port!.write(Uint8List.fromList(data.codeUnits));
       port!.flush(); // Force send
       print("Sent: $command");
       currentStatus = "Send $command";
@@ -89,7 +87,7 @@ class _MyAppState extends State<MyApp> {
       port!.write(data);
       port!.flush(); // Force send
       print("Sent: ECOBRICK_COMPLETED");
-      currentStatus = "Send ECOBRICK_COMPLETED";
+      currentStatus = "Sent Ecobrick Completed";
     } else {
       print("Serial port not open!");
       currentStatus = "Serial port not open!";
@@ -212,7 +210,7 @@ class _MyAppState extends State<MyApp> {
                     ElevatedButton(
                       onPressed:
                           () => setState(() {
-                            sendIntCommand(supValue.toInt());
+                            sendSUPWeight(supValue.toInt());
                           }),
                       style: ButtonStyle(
                         fixedSize: WidgetStateProperty.all(Size(80, 20)),

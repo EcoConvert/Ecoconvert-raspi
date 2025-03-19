@@ -33,7 +33,6 @@ def readSUPWeight():
         print("Invalid SUP weight data from Arduino")
         return None
     
-    
 def readEcoBrickWeight():
     data = ser.readline().decode("utf-8").strip()
     if data:
