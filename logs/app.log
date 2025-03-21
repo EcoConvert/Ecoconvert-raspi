@@ -233,3 +233,54 @@
 2025-03-17 22:20:46,985 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-03-17 22:21:18,948 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-03-17 22:30:12,310 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:43:38,817 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-18 21:53:07,312 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 21:42:24,631 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:33:20,102 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: QrScreen.generate_qr() missing 2 required positional arguments: 'value' and 'point'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 72, in _setup_screens
+    qr_screen = QrScreen(self.config, self.stacked_widget)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 34, in __init__
+    self.generate_qr()
+TypeError: QrScreen.generate_qr() missing 2 required positional arguments: 'value' and 'point'
+2025-03-21 22:34:07,874 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: QrScreen.generate_qr() missing 1 required positional argument: 'point'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 72, in _setup_screens
+    qr_screen = QrScreen(self.config, self.stacked_widget)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 34, in __init__
+    self.generate_qr()
+TypeError: QrScreen.generate_qr() missing 1 required positional argument: 'point'
+2025-03-21 22:34:27,254 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:37:54,340 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:39:07,865 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:40:40,042 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:41:36,021 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:42:15,528 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:50:08,856 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:52:19,080 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:59:15,908 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:02:30,027 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:04:56,913 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:05:50,090 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:08:11,890 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:12:05,185 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'SECRET_KEY' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 72, in _setup_screens
+    qr_screen = QrScreen(self.config, self.stacked_widget)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 34, in __init__
+    self.generate_qr(15)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 52, in generate_qr
+    valid_token = jwt.encode(payload, SECRET_KEY, algorithm="HS256")
+                                      ^^^^^^^^^^
+NameError: name 'SECRET_KEY' is not defined. Did you mean: 'self.SECRET_KEY'?
+2025-03-21 23:12:44,415 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:13:38,944 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:14:01,534 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:14:25,751 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:16:02,093 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:19:07,610 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:20:08,224 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:20:20,510 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.

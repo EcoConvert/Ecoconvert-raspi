@@ -1,8 +1,6 @@
 import math as m
 
-
-
-def points_conversion( weight, bottle):
+def qr_genarator( weight, bottle):
     """ 
     weight in grams and bottle if they deposit 
     """

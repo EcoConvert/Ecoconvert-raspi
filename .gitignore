@@ -1,6 +1,7 @@
 env/
 .env
-__pycache__/
+e__/
 logs/
 screens/_heirarchy.txt
 logs/
+__pycache__
