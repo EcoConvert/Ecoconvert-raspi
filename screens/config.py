@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 
 # Load environment variables from a .env file
-load_dotenv()
+load_dotenv() # semi flag to kasi nasa global scope
 
 
 def load_config():

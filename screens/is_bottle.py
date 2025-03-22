@@ -3,6 +3,7 @@ from PyQt5.QtCore import QThreadPool
 from .base_screen import BaseScreen
 from .views.iv_bottle import setup_ui 
 from util.state import save_state_variables
+from process.modules.Camera import Camera
 
 class InsertScreenBottle(BaseScreen):
     """
@@ -19,12 +20,16 @@ class InsertScreenBottle(BaseScreen):
         """
         super().__init__(config, parent)  # Inherit from BaseScreen
         self.PET_POINTS = 10.0
+        self.camera = Camera()
+        self.camera.load_labels()
         setup_ui(self)
-     
+
     def _on_click(self):
-        if self.parent():
+        result = self.process()
+
+        if self.parent() and result:
             self.parent().setCurrentIndex(4) # go to QR Screen
-            qr_screen = self.parent().widget(4) 
+            qr_screen = self.parent().widget(4)
             qr_screen.generate_qr(self.points)
             self.points = 0
         else:
@@ -34,17 +39,23 @@ class InsertScreenBottle(BaseScreen):
         self.points = 0
         self.points = self.PET_POINTS
         print("Points " + str(self.points))
-       
+    
+    def open_cam(self):
+        self.camera.init_camera()
     
     def process(self): 
         # open the camera here
         print("processing bottle")
         
+
+        
         valid =  True
+
         if valid: 
             save_state_variables("bottle_exist", True)
             print("Valid bottle ")
             self._generate_points() 
+            return True
         else:
             pass
     

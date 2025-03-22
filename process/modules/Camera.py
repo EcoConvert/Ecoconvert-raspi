@@ -5,13 +5,11 @@ import numpy as np
 import tensorflow as tf
 from dotenv import dotenv_values, load_dotenv
 
-load_dotenv()
-
 
 class Camera:
-    # I want to use type annotations, but the required version of python that the  tensorflow for needs is 3.9. WE NEED 3.10 for type annotations
     def __init__(self, camera_id=0):
         """Initialize the model, camera, and related parameters"""
+        load_dotenv()
         self.camera_id = camera_id
         self.model_path = os.getenv("MODEL_PATH")
         self.label_path = os.getenv("LABEL_PATH")
@@ -138,3 +136,8 @@ class Camera:
             self.camera.release()
             self.camera_ready = False
             print("Camera released.")
+
+
+
+class Camera_Pet(Camera): 
+    

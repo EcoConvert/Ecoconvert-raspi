@@ -33,7 +33,7 @@ class InsertScreenSup(BaseScreen):
         else:
             self.logger.warning("No parent QStackedWidget found.")
     
-    def _generate_points(self, val): 
+    def _generate_points(self, val):  
         self.points = 0
         self.points = round(val * self.SUP_MULT, 2)
         print("Points sup " + str(self.points))

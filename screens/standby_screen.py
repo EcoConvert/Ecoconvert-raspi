@@ -22,7 +22,8 @@ class StandbyScreen(BaseScreen):
             parent = self.parent()  
             parent.setCurrentIndex(2) # go to PET Screen
             is_bottle = parent.widget(2)
-            is_bottle.process()
+            is_bottle.open_cam()
+            # is_bottle.process()
             # self.update_state(1) # update to insert
         else:
             self.logger.warning("No parent QStackedWidget found.")
