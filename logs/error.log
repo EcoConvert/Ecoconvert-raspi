@@ -25,3 +25,15 @@ Traceback (most recent call last):
     valid_token = jwt.encode(payload, SECRET_KEY, algorithm="HS256")
                                       ^^^^^^^^^^
 NameError: name 'SECRET_KEY' is not defined. Did you mean: 'self.SECRET_KEY'?
+2025-03-22 11:24:34,981 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setPixmap(self, a0: QPixmap): argument 1 has unexpected type 'str'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 72, in _setup_screens
+    qr_screen = QrScreen(self.config, self.stacked_widget)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 34, in __init__
+    self.generate_qr(15)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 60, in generate_qr
+    self._change_token_image(qr_path)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 63, in _change_token_image
+    self.qr.setPixmap(filepath)
+TypeError: setPixmap(self, a0: QPixmap): argument 1 has unexpected type 'str'

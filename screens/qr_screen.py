@@ -5,10 +5,11 @@ import os
 import jwt
 import qrcode
 from dotenv import load_dotenv
-from PIL import Image
+# from PIL import Image
 
 from .base_screen import BaseScreen
 from .views.qr__view import setup_ui 
+from PyQt5.QtGui import QPixmap
 
 
 class QrScreen(BaseScreen):
@@ -31,7 +32,7 @@ class QrScreen(BaseScreen):
 
         # Load secret key
         self.SECRET_KEY = os.getenv("SECRET_KEY")
-        self.generate_qr(15)
+
     
     def _on_click(self):
         if self.parent():
@@ -54,8 +55,10 @@ class QrScreen(BaseScreen):
 
         # Generate QR Code
         qr = qrcode.make(valid_token)
-        qr_path = "token.png"
+        qr_path = "screens/qr_img/token.png"
         qr.save(qr_path)
-        print("QR Code saved as 'toksen.png'")
+        print("QR Code saved as 'token.png'")
+        self._change_token_image(qr_path)
 
-        return qr_path
+    def _change_token_image(self, filepath):  
+        self.qr.setPixmap(QPixmap(filepath))

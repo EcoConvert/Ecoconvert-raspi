@@ -284,3 +284,28 @@ NameError: name 'SECRET_KEY' is not defined. Did you mean: 'self.SECRET_KEY'?
 2025-03-21 23:19:07,610 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-03-21 23:20:08,224 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-03-21 23:20:20,510 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:18:18,804 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:24:34,981 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setPixmap(self, a0: QPixmap): argument 1 has unexpected type 'str'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 72, in _setup_screens
+    qr_screen = QrScreen(self.config, self.stacked_widget)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 34, in __init__
+    self.generate_qr(15)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 60, in generate_qr
+    self._change_token_image(qr_path)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 63, in _change_token_image
+    self.qr.setPixmap(filepath)
+TypeError: setPixmap(self, a0: QPixmap): argument 1 has unexpected type 'str'
+2025-03-22 11:25:57,747 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:27:51,585 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:28:18,693 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:28:20,716 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-22 11:29:14,416 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:29:15,511 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-22 11:30:16,111 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:30:17,693 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-22 11:30:26,480 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:30:27,464 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-22 11:33:56,166 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:33:57,772 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
