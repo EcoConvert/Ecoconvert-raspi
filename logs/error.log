@@ -37,3 +37,10 @@ Traceback (most recent call last):
   File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 63, in _change_token_image
     self.qr.setPixmap(filepath)
 TypeError: setPixmap(self, a0: QPixmap): argument 1 has unexpected type 'str'
+2025-03-23 10:08:35,408 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'CameraPet' object has no attribute 'load_labels'
+Traceback (most recent call last):
+  File "C:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 85, in _setup_screens
+    is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+  File "C:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\is_bottle.py", line 25, in __init__
+    self.camera.load_labels()
+AttributeError: 'CameraPet' object has no attribute 'load_labels'

@@ -3,7 +3,8 @@ from PyQt5.QtCore import QThreadPool
 from .base_screen import BaseScreen
 from .views.iv_bottle import setup_ui 
 from util.state import save_state_variables
-from process.modules.Camera import Camera
+from .controller.i2_camera import CameraThread
+
 
 class InsertScreenBottle(BaseScreen):
     """
@@ -20,42 +21,40 @@ class InsertScreenBottle(BaseScreen):
         """
         super().__init__(config, parent)  # Inherit from BaseScreen
         self.PET_POINTS = 10.0
-        self.camera = Camera()
-        self.camera.load_labels()
+        self.cont = False
         setup_ui(self)
+        self.done_clickability(False)
+
+    
+    def done_clickability(self, state = None):        
+        if state is None:
+            return
+        print("Done Clickability ", state)
+        self.start_button.setEnabled(state)
 
     def _on_click(self):
-        result = self.process()
+        self._capture_and_infer()
 
-        if self.parent() and result:
-            self.parent().setCurrentIndex(4) # go to QR Screen
-            qr_screen = self.parent().widget(4)
-            qr_screen.generate_qr(self.points)
-            self.points = 0
-        else:
-            self.logger.warning("No parent QStackedWidget found.")
-    
-    def _generate_points(self): 
-        self.points = 0
-        self.points = self.PET_POINTS
-        print("Points " + str(self.points))
-    
-    def open_cam(self):
-        self.camera.init_camera()
-    
-    def process(self): 
-        # open the camera here
-        print("processing bottle")
-        
+    def _capture_and_infer(self):
+        pool = QThreadPool.globalInstance()
+        inference =  CameraThread()
+        pool.start(inference)
+        inference.signal.inference.connect(self.process_bottle)
 
-        
-        valid =  True
-
-        if valid: 
-            save_state_variables("bottle_exist", True)
+    def process_bottle(self, inference = None):
+        if inference:
+            # save_state_variables("bottle_exist", True)
             print("Valid bottle ")
-            self._generate_points() 
-            return True
+            if self.parent():
+                self.parent().setCurrentIndex(4) # go to QR Screen
+                qr_screen = self.parent().widget(4)
+                qr_screen.generate_qr(self.PET_POINTS)
+            else:
+                self.logger.warning("No parent QStackedWidget found.")
         else:
+            print("Invalid bottle get that shit out of here")
+            # code for error screen
             pass
-    
+
+
+

@@ -4,6 +4,7 @@ from PyQt5.QtCore import QThreadPool
 from .base_screen import BaseScreen
 from .views.standby_view import setup_ui
 from .controller.i0_init import InitThread
+from .controller.i2_camera import CamInitThread
 
 class StandbyScreen(BaseScreen):
     """
@@ -22,9 +23,12 @@ class StandbyScreen(BaseScreen):
             parent = self.parent()  
             parent.setCurrentIndex(2) # go to PET Screen
             is_bottle = parent.widget(2)
-            is_bottle.open_cam()
-            # is_bottle.process()
-            # self.update_state(1) # update to insert
+            pool = QThreadPool.globalInstance()
+            camWorker = CamInitThread()
+            pool.start(camWorker) 
+            camWorker.signal.initDone.connect(is_bottle.done_clickability)
+            is_bottle.done_clickability(False)
+            # # self.update_state(1) # update to insert
         else:
             self.logger.warning("No parent QStackedWidget found.")
 
