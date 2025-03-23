@@ -44,20 +44,20 @@ class QrScreen(BaseScreen):
             self.logger.warning("No parent QStackedWidget found.")
 
     def generate_qr(self, point):
-        print("generating qr")  
+        # print("generating qr")  
         self.pointsLabel.setText(f"Points: {point}")
         payload = {
             "points": point,
             "iat": int(datetime.datetime.now().timestamp()),
         }
         valid_token = jwt.encode(payload, self.SECRET_KEY, algorithm="HS256")
-        print(valid_token)
+        # print(valid_token)
 
         # Generate QR Code
         qr = qrcode.make(valid_token)
         qr_path = "screens/qr_img/token.png"
         qr.save(qr_path)
-        print("QR Code saved as 'token.png'")
+        # print("QR Code saved as 'token.png'")
         self._change_token_image(qr_path)
 
     def _change_token_image(self, filepath):  

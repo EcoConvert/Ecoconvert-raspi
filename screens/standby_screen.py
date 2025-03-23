@@ -5,6 +5,7 @@ from .base_screen import BaseScreen
 from .views.standby_view import setup_ui
 from .controller.i0_init import InitThread
 from .controller.i2_camera import CamInitThread
+from .controller.i3_camera import CamInitThread2
 
 class StandbyScreen(BaseScreen):
     """
@@ -37,7 +38,12 @@ class StandbyScreen(BaseScreen):
             self.update_state(1)
             self.parent().setCurrentIndex(3) # go to SUP Screen  
             is_sup = self.parent().widget(3)
-            is_sup.process()
+            pool = QThreadPool.globalInstance()
+            camWorker = CamInitThread2()
+            pool.start(camWorker)
+            camWorker.signal.initDone.connect(is_sup.done_clickability)
+            is_sup.done_clickability(False)
+            # is_sup.process() 
             # self.update_state(1) # update to insert
         else:
             self.logger.warning("No parent QStackedWidget found.")

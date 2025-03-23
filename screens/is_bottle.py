@@ -25,7 +25,6 @@ class InsertScreenBottle(BaseScreen):
         setup_ui(self)
         self.done_clickability(False)
 
-    
     def done_clickability(self, state = None):        
         if state is None:
             return
@@ -43,7 +42,7 @@ class InsertScreenBottle(BaseScreen):
 
     def process_bottle(self, inference = None):
         if inference:
-            # save_state_variables("bottle_exist", True)
+            save_state_variables("bottle_exist", inference)
             print("Valid bottle ")
             if self.parent():
                 self.parent().setCurrentIndex(4) # go to QR Screen
