@@ -15,11 +15,15 @@ final currentStatusProvider = StateProvider<String>(
 final processStatusProvider = StateProvider<String>(
   (ref) => "Waiting for connection...",
 );
+
 final supWeightProvider = StateProvider<double>((ref) => 0);
+final ecobrickProgressProvider = StateProvider<double>(
+  (ref) => 0,
+); // For ecobrick status
 final isEcobrickCompletedProvider = StateProvider<bool>((ref) => false);
 
 class MyApp extends ConsumerStatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   ConsumerState<MyApp> createState() => _MyAppState();
@@ -59,18 +63,18 @@ class _MyAppState extends ConsumerState<MyApp> {
       currentStatusNotifier.state = "Waiting for command...";
 
       // Wait for "SW" before proceeding
-      await waitForCommand("SW");
+      await waitForCommand();
 
-      await Future.delayed(Duration(seconds: 2)); // Short delay
+      // await Future.delayed(Duration(seconds: 2)); // Short delay
 
-      currentStatusNotifier.state = "Ready to send weight";
+      // currentStatusNotifier.state = "Ready to send SUP weight";
     } else {
       processStatusNotifier.state = "Failed to connect to Raspberry Pi";
       currentStatusNotifier.state = "Failed to connect to RasPI";
     }
   }
 
-  Future<void> waitForCommand(String expectedCommand) async {
+  Future<void> waitForCommand() async {
     if (port == null || !port!.isOpen) return;
 
     Completer<void> completer = Completer<void>(); // Used to pause execution
@@ -85,8 +89,48 @@ class _MyAppState extends ConsumerState<MyApp> {
 
         print("Received: $message");
 
-        if (message == expectedCommand) {
+        if (message == "SW") {
           ref.read(currentStatusProvider.notifier).state = "Received: $message";
+
+          await Future.delayed(Duration(seconds: 2)); // Short delay
+          ref.read(currentStatusProvider.notifier).state =
+              "Ready to send SUP weight";
+          completer.complete(); // Unblock execution
+        } else if (message == "CE") {
+          ref.read(currentStatusProvider.notifier).state = "Received: $message";
+
+          await Future.delayed(Duration(seconds: 2)); // Short delay
+          ref.read(currentStatusProvider.notifier).state =
+              "Ready to create ecobrick";
+          completer.complete(); // Unblock execution
+        } else if (message == "SF") {
+          ref.read(currentStatusProvider.notifier).state = "Received: $message";
+
+          await Future.delayed(Duration(seconds: 2)); // Short delay
+          ref.read(currentStatusProvider.notifier).state = "SUP Full";
+
+          await Future.delayed(Duration(seconds: 2)); // Short delay
+
+          ref.read(currentStatusProvider.notifier).state =
+              "Waiting for PET Bottle";
+
+          // Arduino will wait until bottle is inserted
+          while (true) {
+            Uint8List data = port!.read(2); // Read 2 bytes
+            String message =
+                String.fromCharCodes(data).trim(); // Convert to string
+
+            print("Received: $message");
+
+            if (message == "CE") {
+              ref.read(currentStatusProvider.notifier).state =
+                  "Received: $message";
+              break;
+            }
+            await Future.delayed(
+              Duration(milliseconds: 50),
+            ); // Small delay to prevent freezing
+          }
           completer.complete(); // Unblock execution
         }
 
@@ -99,13 +143,77 @@ class _MyAppState extends ConsumerState<MyApp> {
     return completer.future; // Wait asynchronously
   }
 
-  void sendSUPWeight(int command) {
+  Future<void> sendSUPWeight(int command) async {
     if (port != null && port!.isOpen) {
       String data = "$command\n";
       port!.write(Uint8List.fromList(data.codeUnits));
       port!.flush();
       print("Sent: $command");
       ref.read(currentStatusProvider.notifier).state = "Sent $command";
+
+      await Future.delayed(Duration(seconds: 2)); // Short delay
+
+      ref.read(currentStatusProvider.notifier).state = "Waiting for command...";
+
+      await Future.delayed(Duration(seconds: 2)); // Short delay
+
+      // Wait for insertion command
+      while (true) {
+        Uint8List data = port!.read(2); // Read 2 bytes
+        String message = String.fromCharCodes(data).trim(); // Convert to string
+
+        print("Received: $message");
+
+        if (message == "SW") {
+          ref.read(currentStatusProvider.notifier).state = "Received: $message";
+
+          await Future.delayed(Duration(seconds: 2)); // Short delay
+          ref.read(currentStatusProvider.notifier).state =
+              "Ready to send SUP weight";
+          break;
+        } else if (message == "CE") // If bottle is inserted first
+        {
+          ref.read(currentStatusProvider.notifier).state = "Received: $message";
+
+          await Future.delayed(Duration(seconds: 2)); // Short delay
+          ref.read(currentStatusProvider.notifier).state =
+              "Ready to create ecobrick";
+          break;
+        } else if (message == "SF") // If SUP becomes full first
+        {
+          ref.read(currentStatusProvider.notifier).state = "Received: $message";
+
+          await Future.delayed(Duration(seconds: 2)); // Short delay
+          ref.read(currentStatusProvider.notifier).state = "SUP Full";
+
+          await Future.delayed(Duration(seconds: 2)); // Short delay
+
+          ref.read(currentStatusProvider.notifier).state =
+              "Waiting for PET Bottle/create ecobrick";
+
+          // Arduino will wait until bottle is inserted
+          while (true) {
+            Uint8List data = port!.read(2); // Read 2 bytes
+            String message =
+                String.fromCharCodes(data).trim(); // Convert to string
+
+            print("Received: $message");
+
+            if (message == "CE") {
+              ref.read(currentStatusProvider.notifier).state =
+                  "Received: $message";
+              break;
+            }
+            await Future.delayed(
+              Duration(milliseconds: 50),
+            ); // Small delay to prevent freezing
+          }
+          break;
+        }
+        await Future.delayed(
+          Duration(milliseconds: 50),
+        ); // Small delay to prevent freezing
+      }
     } else {
       print("Serial port not open!");
       ref.read(currentStatusProvider.notifier).state = "Serial port not open!";
@@ -113,18 +221,20 @@ class _MyAppState extends ConsumerState<MyApp> {
   }
 
   void sendEcobrickCompleted(bool command) {
-    if (port != null && port!.isOpen) {
-      Uint8List data = Uint8List(1);
-      data[0] = command ? 1 : 0;
-      port!.write(data);
-      port!.flush();
-      print("Sent: ECOBRICK_COMPLETED");
-      ref.read(currentStatusProvider.notifier).state =
-          "Sent Ecobrick Completed";
-    } else {
-      print("Serial port not open!");
-      ref.read(currentStatusProvider.notifier).state = "Serial port not open!";
-    }
+    // This should replicate levels/progress bar of the ecobrick
+
+    // if (port != null && port!.isOpen) {
+    //   Uint8List data = Uint8List(1);
+    //   data[0] = command ? 1 : 0;
+    //   port!.write(data);
+    //   port!.flush();
+    //   print("Sent: ECOBRICK_COMPLETED");
+    //   ref.read(currentStatusProvider.notifier).state =
+    //       "Sent Ecobrick Completed";
+    // } else {
+    //   print("Serial port not open!");
+    //   ref.read(currentStatusProvider.notifier).state = "Serial port not open!";
+    // }
   }
 
   @override
@@ -189,6 +299,7 @@ class _MyAppState extends ConsumerState<MyApp> {
                     child: Center(
                       child: Text(
                         currentStatus,
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 50,
                           fontWeight: FontWeight.bold,
@@ -247,7 +358,7 @@ class _MyAppState extends ConsumerState<MyApp> {
                             ElevatedButton(
                               onPressed:
                                   ref.watch(currentStatusProvider) ==
-                                          "Ready to send weight"
+                                          "Ready to send SUP weight"
                                       ? () => sendSUPWeight(supValue.toInt())
                                       : null,
                               style: ButtonStyle(
