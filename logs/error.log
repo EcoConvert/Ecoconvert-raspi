@@ -44,3 +44,71 @@ Traceback (most recent call last):
   File "C:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\is_bottle.py", line 25, in __init__
     self.camera.load_labels()
 AttributeError: 'CameraPet' object has no attribute 'load_labels'
+2025-03-25 13:04:20,047 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-25 18:52:21,053 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'NoneType' object has no attribute 'setStyleSheet'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/error_view.py", line 9, in setup_ui
+    err_screen.setStyleSheet("background-color: #faefae; ")
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'setStyleSheet'
+2025-03-25 18:52:56,767 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QHBoxLayout' object has no attribute 'setStyleSheet'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/error_view.py", line 10, in setup_ui
+    hDiv.setStyleSheet("background-color: #faefae; ")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'QHBoxLayout' object has no attribute 'setStyleSheet'
+2025-03-25 18:55:29,444 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'NoneType' object has no attribute 'setStyleSheet'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 7, in __init__
+    self.parent().widget(7).setStyleSheet("background-color: #FF0077;")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'setStyleSheet'
+2025-03-25 18:57:00,779 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'NoneType' object has no attribute 'setStyleSheet'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 7, in __init__
+    self.parent().widget(0).setStyleSheet("background-color: #FF0077;")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'setStyleSheet'
+2025-03-25 19:10:37,617 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'dict' object has no attribute 'window_width'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/error_view.py", line 9, in setup_ui
+    frame.setGeometry(0, 0, self.config.window_width, self.config.window_width)  # x, y, width, height
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'window_width'
+2025-03-25 19:11:08,922 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QStackedWidget' object has no attribute 'config'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/error_view.py", line 9, in setup_ui
+    frame.setGeometry(0, 0, self.parent().config.window_width, self.parent().config.window_height)  # x, y, width, height
+                            ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QStackedWidget' object has no attribute 'config'

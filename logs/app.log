@@ -468,3 +468,95 @@ AttributeError: 'CameraPet' object has no attribute 'load_labels'
 2025-03-25 12:16:33,456 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
 2025-03-25 12:17:02,901 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-03-25 12:17:05,334 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 13:04:05,236 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 13:04:20,047 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-25 13:04:54,088 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 13:22:10,648 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 13:22:23,313 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 13:22:28,682 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 13:24:59,145 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 13:25:08,001 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 18:33:15,039 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 18:42:41,852 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 18:52:21,053 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'NoneType' object has no attribute 'setStyleSheet'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/error_view.py", line 9, in setup_ui
+    err_screen.setStyleSheet("background-color: #faefae; ")
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'setStyleSheet'
+2025-03-25 18:52:56,767 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QHBoxLayout' object has no attribute 'setStyleSheet'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/error_view.py", line 10, in setup_ui
+    hDiv.setStyleSheet("background-color: #faefae; ")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'QHBoxLayout' object has no attribute 'setStyleSheet'
+2025-03-25 18:55:29,444 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'NoneType' object has no attribute 'setStyleSheet'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 7, in __init__
+    self.parent().widget(7).setStyleSheet("background-color: #FF0077;")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'setStyleSheet'
+2025-03-25 18:57:00,779 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'NoneType' object has no attribute 'setStyleSheet'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 7, in __init__
+    self.parent().widget(0).setStyleSheet("background-color: #FF0077;")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'setStyleSheet'
+2025-03-25 18:59:40,803 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:00:15,078 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:02:55,737 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:05:30,178 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:06:08,419 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:06:57,182 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:07:21,057 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:08:46,157 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:10:37,617 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'dict' object has no attribute 'window_width'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/error_view.py", line 9, in setup_ui
+    frame.setGeometry(0, 0, self.config.window_width, self.config.window_width)  # x, y, width, height
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'window_width'
+2025-03-25 19:11:08,922 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QStackedWidget' object has no attribute 'config'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/error_view.py", line 9, in setup_ui
+    frame.setGeometry(0, 0, self.parent().config.window_width, self.parent().config.window_height)  # x, y, width, height
+                            ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QStackedWidget' object has no attribute 'config'
+2025-03-25 19:13:40,915 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:14:14,634 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:14:34,498 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:17:15,233 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:17:59,610 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:18:21,749 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:18:52,873 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.

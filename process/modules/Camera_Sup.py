@@ -24,8 +24,7 @@ class CameraSup(CameraBase):
         self.camera_ready = False
         self.detection_result = [] 
         self.labels = {}
-        self.load_labels()
-
+        self.load_labels() 
 
     def load_labels(self):
         """Load label map from a file a return a dictionary.

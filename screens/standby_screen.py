@@ -3,7 +3,7 @@ import time
 from PyQt5.QtCore import QThreadPool
 from .base_screen import BaseScreen
 from .views.standby_view import setup_ui
-from .controller.i0_init import InitThread
+from .controller.i1_init import InitThread  
 from .controller.i2_camera import CamInitThread
 from .controller.i3_camera import CamInitThread2
 

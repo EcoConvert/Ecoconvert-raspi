@@ -4,4 +4,4 @@ e__/
 logs/
 screens/_heirarchy.txt
 logs/
-__pycache__
+__pycache__*

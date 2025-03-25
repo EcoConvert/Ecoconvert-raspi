@@ -71,6 +71,8 @@ class RVMInterface(QWidget):
             # self.stacked_widget.addWidget(ecobrick_screen)
             # qr_screen = QrScreen(self.config, self.stacked_widget)
             # self.stacked_widget.addWidget(qr_screen)
+            error_screen = ErrorScreen(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(error_screen)
             #  ------------------------------------------------------------------------
             
             # Welcome Screen (index 0)
