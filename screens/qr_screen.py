@@ -61,4 +61,4 @@ class QrScreen(BaseScreen):
         self._change_token_image(qr_path)
 
     def _change_token_image(self, filepath):  
-        self.qr.setPixmap(QPixmap(filepath))
+        self.qr.setPixmap(QPixmap(filepath))   #mot was here

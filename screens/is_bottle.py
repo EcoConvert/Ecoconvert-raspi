@@ -48,6 +48,7 @@ class InsertScreenBottle(BaseScreen):
                 self.parent().setCurrentIndex(4) # go to QR Screen
                 qr_screen = self.parent().widget(4)
                 qr_screen.generate_qr(self.PET_POINTS)
+                
             else:
                 self.logger.warning("No parent QStackedWidget found.")
         else:

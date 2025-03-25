@@ -22,8 +22,9 @@ class CameraSup(CameraBase):
         self.input_details = self.interpreter.get_input_details()
         self.output_details = self.interpreter.get_output_details()
         self.camera_ready = False
-        self.detection_result = []
+        self.detection_result = [] 
         self.labels = {}
+        self.load_labels()
 
 
     def load_labels(self):
@@ -86,7 +87,10 @@ class CameraSup(CameraBase):
         for i in range(num_detections):
             if scores[i] > 0.5:  # Confidence threshold
                 class_id = int(classes[i]) + 1
+                print("[Camera_Sup.py] self.labels: ", self.labels)
                 class_name = self.labels.get(class_id, f"Class {class_id}")
+               
+                # class_name = self.labels.get(class_id)
                 confidence = scores[i]
                 self.detection_result.append(f"{class_name}")
 

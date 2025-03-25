@@ -35,7 +35,6 @@ class InsertScreenSup(BaseScreen):
     def _on_click(self):
         if self.parent():
             self.process()
-            self._last_process()
             # self.update_state(1) # update to insert 
             # qr_screen = self.parent().widget(4)
             # qr_screen.generate_qr(self.points)
@@ -58,23 +57,15 @@ class InsertScreenSup(BaseScreen):
         print("Weight diff " + str(weight_diff))
         self._generate_points(weight_diff) 
         save_state_variables("weight", self.ser_weight)
+
+        qr_screen = self.parent().widget(4)
+        qr_screen.generate_qr(self.points)
+        self.parent().setCurrentIndex(4) # go to SUP Screen  
     
-    def is_valid_plastic(self, inference):
-        print("inference ", inference)
-        
-        valid =  False
-        if valid: 
-            # some process here to get the weight 
-            self.ser_weight = self.weight + random.randint(1, 100) # simulation lang to ng wieght yung ginagawa ni pons mas accurate yon sa actual. 
-            print("self ", self.weight)
-            print("ser ", self.ser_weight)
-        else:
-            pass
     def process(self):
         # serial 
         self.weight=load_state_variables("weight")
         self.ser_weight = 0
-        
         
         # camera thread  
         pool = QThreadPool.globalInstance()
@@ -82,4 +73,15 @@ class InsertScreenSup(BaseScreen):
         pool.start(inference)
         inference.signal.inference.connect(self.is_valid_plastic)
         print("processing sup")
-        
+    
+    def is_valid_plastic(self, inference):
+        print("inference ", inference)
+        inference = "plastic" # change this latuurrs
+        if inference == "plastic": # change this  kung mag class id tayo dito  
+            # some process here to get the weight 
+            self.ser_weight = self.weight + random.randint(1, 100) # simulation lang to ng wieght yung ginagawa ni pons mas accurate yon sa actual. 
+            print("[is_sup.py] weight ", self.weight)
+            print("[is_sup.py] ser ", self.ser_weight)
+            self._last_process()
+        else:
+            print("[is_sup.py] go to error screen")
