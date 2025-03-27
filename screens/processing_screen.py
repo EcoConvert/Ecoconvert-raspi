@@ -23,7 +23,6 @@ class SerialWorker(QRunnable):
         """
         while self.is_running:
             try:
-                print(f'Waiting for isDone signal')
                 data = ser.readline().decode("utf-8").strip()
                 if data:
                     self.callback(data)  # Send data to the main thread
