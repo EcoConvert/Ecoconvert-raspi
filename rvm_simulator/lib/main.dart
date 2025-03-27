@@ -112,7 +112,7 @@ class _MyAppState extends ConsumerState<MyApp> {
           await Future.delayed(Duration(seconds: 2)); // Short delay
 
           ref.read(currentStatusProvider.notifier).state =
-              "Waiting for PET Bottle";
+              "Waiting for PET Bottle/create ecobrick";
 
           // Arduino will wait until bottle is inserted
           while (true) {
@@ -125,6 +125,11 @@ class _MyAppState extends ConsumerState<MyApp> {
             if (message == "CE") {
               ref.read(currentStatusProvider.notifier).state =
                   "Received: $message";
+
+              Future.delayed(Duration(seconds: 2)); // Short delay
+
+              ref.read(currentStatusProvider.notifier).state =
+                  "Ready to create ecobrick";
               break;
             }
             await Future.delayed(
@@ -202,6 +207,11 @@ class _MyAppState extends ConsumerState<MyApp> {
             if (message == "CE") {
               ref.read(currentStatusProvider.notifier).state =
                   "Received: $message";
+
+              Future.delayed(Duration(seconds: 2)); // Short delay
+
+              ref.read(currentStatusProvider.notifier).state =
+                  "Ready to create ecobrick";
               break;
             }
             await Future.delayed(
@@ -220,21 +230,34 @@ class _MyAppState extends ConsumerState<MyApp> {
     }
   }
 
-  void sendEcobrickCompleted(bool command) {
+  Future<void> sendEcobrickCompleted(int command) async {
     // This should replicate levels/progress bar of the ecobrick
+    // Can also send only a true or false value to indicate completion
 
-    // if (port != null && port!.isOpen) {
-    //   Uint8List data = Uint8List(1);
-    //   data[0] = command ? 1 : 0;
-    //   port!.write(data);
-    //   port!.flush();
-    //   print("Sent: ECOBRICK_COMPLETED");
-    //   ref.read(currentStatusProvider.notifier).state =
-    //       "Sent Ecobrick Completed";
-    // } else {
-    //   print("Serial port not open!");
-    //   ref.read(currentStatusProvider.notifier).state = "Serial port not open!";
-    // }
+    if (port != null && port!.isOpen) {
+      // Uint8List data = Uint8List(1);
+      // data[0] = command ? 1 : 0;
+      // port!.write(data);
+      // port!.flush();
+      // print("Sent: (True)ECOBRICK_COMPLETED");
+      // ref.read(currentStatusProvider.notifier).state =
+      //     "Sent Ecobrick Completed";
+
+      String data = "$command\n";
+      port!.write(Uint8List.fromList(data.codeUnits));
+      port!.flush();
+      print("Sent: $command");
+      ref.read(currentStatusProvider.notifier).state = "Ecobrick completed";
+
+      await Future.delayed(Duration(seconds: 2)); // Short delay
+
+      ref.read(currentStatusProvider.notifier).state = "Waiting for command...";
+      // Wait again for command
+      waitForCommand();
+    } else {
+      print("Serial port not open!");
+      ref.read(currentStatusProvider.notifier).state = "Serial port not open!";
+    }
   }
 
   @override
@@ -310,7 +333,7 @@ class _MyAppState extends ConsumerState<MyApp> {
                 },
               ),
               SizedBox(height: 20),
-
+              // --------------------------- SUP WEIGHT --------------------------------------------------------------
               Consumer(
                 builder: (context, ref, child) {
                   final supValue = ref.watch(supWeightProvider);
@@ -381,10 +404,16 @@ class _MyAppState extends ConsumerState<MyApp> {
                           ],
                         ),
                       ),
-
+                      // --------------------------- ECOBRICK PROGRESS --------------------------------------------------------------
                       SizedBox(height: 20),
                       ElevatedButton(
-                        onPressed: () => sendEcobrickCompleted(true),
+                        onPressed:
+                            ref.watch(currentStatusProvider.notifier).state ==
+                                    "Ready to create ecobrick"
+                                ? () => sendEcobrickCompleted(
+                                  1,
+                                ) // 1 is true, 0 is false
+                                : null,
                         style: ButtonStyle(
                           backgroundColor: WidgetStateProperty.all(
                             Color.fromARGB(255, 2, 255, 40),
