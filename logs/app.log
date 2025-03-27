@@ -3002,3 +3002,5 @@ TypeError: writeSUPWeight() missing 1 required positional argument: 'data'
 2025-03-14 01:18:39,488 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
 2025-03-14 01:22:17,338 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-03-14 01:22:31,825 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-27 15:42:50,338 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-27 15:42:51,870 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.

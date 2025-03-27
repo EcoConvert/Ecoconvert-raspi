@@ -59,6 +59,9 @@ def readEcoBrickWeight():
         if data.isdigit():
             print(f"Received from Arduino: {data}\n")
             return int(data)
+        if data.isalpha():
+            print(f"Received from Arduino: {data}\n")
+            return data
     else:
         print("Invalid EcoBrick weight data from Arduino")
         return None
