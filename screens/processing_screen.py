@@ -3,7 +3,7 @@ import random
 from functools import partial
 import time
 
-from PyQt5.QtCore import QRunnable, QThreadPool, pyqtSignal, QObject
+from PyQt5.QtCore import QRunnable, QThreadPool, pyqtSignal, QObject, QTimer
 from PyQt5.QtWidgets import QApplication
 
 from .base_screen import BaseScreen
@@ -50,6 +50,7 @@ class ProcessingScreen(BaseScreen, QObject):
         self.isDone = 0
         self.thread_pool = QThreadPool()
         self.worker = None
+        self.timer = QTimer()
         setup_ui(self)
     
     
