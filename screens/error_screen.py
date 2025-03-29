@@ -10,3 +10,4 @@ class ErrorScreen(BaseScreen):
     def _on_click(self):
         if self.parent():
             self.parent().setCurrentIndex(1)
+    

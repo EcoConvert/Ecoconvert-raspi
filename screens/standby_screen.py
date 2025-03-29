@@ -3,8 +3,11 @@ import time
 from PyQt5.QtCore import QThreadPool
 from .base_screen import BaseScreen
 from .views.standby_view import setup_ui
-from .controller.i0_init import InitThread
+
 from serial_try import readSUPWeight, writeCommand
+from .controller.i1_init import InitThread  
+from .controller.i2_camera import CamInitThread
+from .controller.i3_camera import CamInitThread2
 
 class StandbyScreen(BaseScreen):
     """
@@ -23,8 +26,12 @@ class StandbyScreen(BaseScreen):
             parent = self.parent()  
             parent.setCurrentIndex(2) # go to PET Screen
             is_bottle = parent.widget(2)
-            is_bottle.process()
-            # self.update_state(1) # update to insert
+            pool = QThreadPool.globalInstance()
+            camWorker = CamInitThread()
+            pool.start(camWorker) 
+            camWorker.signal.initDone.connect(is_bottle.done_clickability)
+            is_bottle.done_clickability(False)
+            # # self.update_state(1) # update to insert
         else:
             self.logger.warning("No parent QStackedWidget found.")
 
@@ -34,7 +41,12 @@ class StandbyScreen(BaseScreen):
             self.update_state(1)
             self.parent().setCurrentIndex(3) # go to SUP Screen  
             is_sup = self.parent().widget(3)
-            is_sup.process()
+            pool = QThreadPool.globalInstance()
+            camWorker = CamInitThread2()
+            pool.start(camWorker)
+            camWorker.signal.initDone.connect(is_sup.done_clickability)
+            is_sup.done_clickability(False)
+            # is_sup.process() 
             # self.update_state(1) # update to insert
         else:
             self.logger.warning("No parent QStackedWidget found.")

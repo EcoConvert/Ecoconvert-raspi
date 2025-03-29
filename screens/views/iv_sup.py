@@ -16,14 +16,14 @@ def setup_ui(self):
     topText.setGraphicsEffect(shadow)
     #hDiv.addStretch()
     # Start button
-    start_button = BtnDone(parent=self)
-    start_button.clicked.connect(self._on_click)
+    self.start_button = BtnDone(parent=self)
+    self.start_button.clicked.connect(self._on_click)
     
     # render the horizontal division
     hDiv.addStretch()
     hDiv.addWidget(topText)
     hDiv.addStretch()
-    hDiv.addWidget(start_button, alignment=Qt.AlignCenter)
+    hDiv.addWidget(self.start_button, alignment=Qt.AlignCenter)
     hDiv.addStretch()
 
     # division below for reminders

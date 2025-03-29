@@ -1,21 +1,17 @@
-import logging
 import os
+import logging
+import tensorflow as tf 
 import cv2
 import numpy as np
-import tensorflow as tf
-from dotenv import dotenv_values, load_dotenv
+from process.modules.CameraBase import CameraBase
 
-load_dotenv()
-
-
-class Camera:
-    # I want to use type annotations, but the required version of python that the  tensorflow for needs is 3.9. WE NEED 3.10 for type annotations
-    def __init__(self, camera_id=0):
-        """Initialize the model, camera, and related parameters"""
-        self.camera_id = camera_id
+### DITO ILALAGAY YUNG INFERENCE IMPORTANT IMPORTANT IMPORTANT!!!
+class CameraSup(CameraBase):
+    def __init__(self, camera_id=0): #CHANGE THE CAM ID DEPENDS ON PORT NUMBER....
+        super().__init__(camera_id)
+        self.labels = {}
         self.model_path = os.getenv("MODEL_PATH")
         self.label_path = os.getenv("LABEL_PATH")
-
         # Load the TFLite model and allocate tensors.
         try:
             self.interpreter = tf.lite.Interpreter(model_path=self.model_path)
@@ -23,13 +19,12 @@ class Camera:
         except Exception as e:
             logging.error(f"Error loading the model: {e}")
             raise
-
-        # Get input and output tensors
         self.input_details = self.interpreter.get_input_details()
         self.output_details = self.interpreter.get_output_details()
         self.camera_ready = False
-        self.detection_result = []
+        self.detection_result = [] 
         self.labels = {}
+        self.load_labels() 
 
     def load_labels(self):
         """Load label map from a file a return a dictionary.
@@ -50,29 +45,7 @@ class Camera:
         except FileNotFoundError:
             logging.error(f"Error file not found: {self.label_path}")
         return self.labels
-
-    def init_camera(self):
-        """Initialize the camera"""
-        if self.camera_ready:
-            return
-
-        logging.info(f"Initializing camera #{self.camera_id}")
-        self.camera = cv2.VideoCapture(self.camera_id)
-
-        if not self.camera.isOpened():
-            logging.error(f"Error opening camera {self.camera_id}")
-            raise RuntimeError(f"Error opening camera {self.camera_id}")
-
-        # Try to read a test frame
-        ret, frame = self.camera.read()
-        if not ret or frame is None:
-            logging.error("Error capturing frame.")
-            self.camera.release()
-            raise RuntimeError("Error capturing frame.")
-
-        self.camera_ready = True
-        logging.info("Camera initialized.")
-
+    
     def take_photo(self):
         """Take a photo using the camera"""
         if not self.camera_ready:
@@ -113,7 +86,10 @@ class Camera:
         for i in range(num_detections):
             if scores[i] > 0.5:  # Confidence threshold
                 class_id = int(classes[i]) + 1
+                print("[Camera_Sup.py] self.labels: ", self.labels)
                 class_name = self.labels.get(class_id, f"Class {class_id}")
+               
+                # class_name = self.labels.get(class_id)
                 confidence = scores[i]
                 self.detection_result.append(f"{class_name}")
 
@@ -122,19 +98,9 @@ class Camera:
             return "No high confidence object detected."
         return self.detection_result[0]
 
-    def capture_and_infer(self):
-        """This is the only method that should be called. Capture a photo and make inference."""
-        if not self.camera_ready:
-            self.init_camera()
-
+    def infer(self):
         frame, input_data = self.take_photo()
         if frame is None or input_data is None:
             return "No frame captured for inference."
         return self.make_inference(input_data)
 
-    def release_camera(self):
-        """Release the camera"""
-        if self.camera_ready:
-            self.camera.release()
-            self.camera_ready = False
-            print("Camera released.")

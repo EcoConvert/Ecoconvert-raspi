@@ -19,7 +19,7 @@ from PyQt5.QtWidgets import (
 
 # Add the parent directory to system path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from modules.Camera import Camera
+from process.modules.CameraBase import Camera
 
 
 # Load environment variables from .env file
