@@ -233,3 +233,17 @@
 2025-03-17 22:20:46,985 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-03-17 22:21:18,948 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-03-17 22:30:12,310 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:11:46,463 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:11:49,177 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-29 15:14:16,296 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:14:19,166 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-29 15:40:09,450 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:40:11,676 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-29 15:42:36,020 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:42:38,777 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-29 15:47:12,408 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:47:14,567 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-29 15:51:17,826 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:51:19,100 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-29 15:55:54,047 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:55:57,404 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.

@@ -9,9 +9,12 @@ from process.modules.CameraBase import CameraBase
 class CameraSup(CameraBase):
     def __init__(self, camera_id=0): #CHANGE THE CAM ID DEPENDS ON PORT NUMBER....
         super().__init__(camera_id)
+        
         self.labels = {}
-        self.model_path = os.getenv("MODEL_PATH")
-        self.label_path = os.getenv("LABEL_PATH")
+        # self.model_path = os.getenv("MODEL_PATH", "../Models/mobilenet_fpn_640/mobilefpn640.tflite")
+        # self.label_path = os.getenv("LABEL_PATH", "../Models/mobilenet_fpn_640/label_map.pbtxt")
+        self.model_path = os.getenv("MODEL_PATH", r"C:\Users\Pons Anthony Advento\Ecoconvert-raspi\Models\v2_mobilenetfpn_ssd_640\v2_latest_mobilnet_ssd.tflite")
+        self.label_path = os.getenv("LABEL_PATH", r"C:\Users\Pons Anthony Advento\Ecoconvert-raspi\Models\v2_mobilenetfpn_ssd_640\label_map.pbtxt")
         # Load the TFLite model and allocate tensors.
         try:
             self.interpreter = tf.lite.Interpreter(model_path=self.model_path)
