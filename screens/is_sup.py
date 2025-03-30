@@ -75,8 +75,7 @@ class InsertScreenSup(BaseScreen):
         print("processing sup")
     
     def is_valid_plastic(self, inference):
-        print("inference ", inference)
-        inference = "plastic" # change this latuurrs
+        inference = "err" # change this latuurrs
         if inference == "plastic": # change this  kung mag class id tayo dito  
             # some process here to get the weight 
             self.ser_weight = self.weight + random.randint(1, 100) # simulation lang to ng wieght yung ginagawa ni pons mas accurate yon sa actual. 
@@ -84,4 +83,7 @@ class InsertScreenSup(BaseScreen):
             print("[is_sup.py] ser ", self.ser_weight)
             self._last_process()
         else:
-            print("[is_sup.py] go to error screen")
+            error_screen = self.parent().widget(7)
+            error_screen.spawn_error_page( error_code = 2 , error_message = "non sup item", action_message = 
+            "Please retrieve the non plastic item<br>then press return to standby")
+            self.parent().setCurrentIndex(7)

@@ -560,3 +560,114 @@ AttributeError: 'QStackedWidget' object has no attribute 'config'
 2025-03-25 19:17:59,610 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-03-25 19:18:21,749 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-03-25 19:18:52,873 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:42:56,489 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:49:30,853 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:50:32,779 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:51:14,686 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:51:51,045 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:52:15,989 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:52:33,637 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:55:01,248 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:04,112 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:05,627 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:05,847 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:06,008 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:06,157 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:06,318 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:06,538 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:09,651 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:09,800 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 18:17:51,159 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 18:25:56,121 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setFont(self, a0: QFont): too many arguments
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\error_view.py", line 49, in setup_ui
+    self.rightHead.setFont(QFont(self.ff_poppins), 24)
+TypeError: setFont(self, a0: QFont): too many arguments
+2025-03-30 18:26:20,758 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 18:27:13,063 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 18:28:06,717 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 18:39:56,870 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 18:41:14,235 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QLabel' object has no attribute 'addLayout'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\error_view.py", line 56, in setup_ui
+    self.rightHead.addLayout(self.action)
+AttributeError: 'QLabel' object has no attribute 'addLayout'
+2025-03-30 18:41:28,925 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QLabel' object has no attribute 'addWidget'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\error_view.py", line 56, in setup_ui
+    self.rightHead.addWidget(self.action)
+AttributeError: 'QLabel' object has no attribute 'addWidget'
+2025-03-30 18:41:42,568 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:21:55,355 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:21:57,309 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:24:20,643 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:24:24,622 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:25:55,601 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:30:05,245 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:30:07,257 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:30:41,121 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:30:47,505 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:31:08,713 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:31:10,010 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:31:41,660 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:31:43,155 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:31:57,259 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:31:59,304 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:33:20,821 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:33:23,056 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:34:13,143 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:34:16,559 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:35:33,225 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:35:35,106 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.

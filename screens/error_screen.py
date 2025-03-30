@@ -11,3 +11,13 @@ class ErrorScreen(BaseScreen):
         if self.parent():
             self.parent().setCurrentIndex(1)
     
+
+    def spawn_error_page(self, error_code, error_message, action_message):
+        """
+        Spawn the error page with the given error code and message.
+        """
+        self.error_code = error_code
+        self.error_message = error_message
+        self.error_code_label.setText(f"Error Code: {str(self.error_code)}")
+        self.subhead.setText(self.error_message.upper())
+        self.action.setText(action_message)

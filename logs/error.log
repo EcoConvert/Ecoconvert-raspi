@@ -112,3 +112,80 @@ Traceback (most recent call last):
     frame.setGeometry(0, 0, self.parent().config.window_width, self.parent().config.window_height)  # x, y, width, height
                             ^^^^^^^^^^^^^^^^^^^^
 AttributeError: 'QStackedWidget' object has no attribute 'config'
+2025-03-30 17:55:01,248 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:04,112 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:05,627 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:05,847 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:06,008 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:06,157 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:06,318 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:06,538 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:09,651 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:09,800 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 18:25:56,121 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setFont(self, a0: QFont): too many arguments
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\error_view.py", line 49, in setup_ui
+    self.rightHead.setFont(QFont(self.ff_poppins), 24)
+TypeError: setFont(self, a0: QFont): too many arguments
+2025-03-30 18:41:14,235 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QLabel' object has no attribute 'addLayout'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\error_view.py", line 56, in setup_ui
+    self.rightHead.addLayout(self.action)
+AttributeError: 'QLabel' object has no attribute 'addLayout'
+2025-03-30 18:41:28,925 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QLabel' object has no attribute 'addWidget'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\error_view.py", line 56, in setup_ui
+    self.rightHead.addWidget(self.action)
+AttributeError: 'QLabel' object has no attribute 'addWidget'
