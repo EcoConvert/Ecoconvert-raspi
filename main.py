@@ -2,7 +2,7 @@
 import os
 import sys
 import time
-import serial
+import serial 
 from dotenv import dotenv_values, load_dotenv
 from PyQt5.QtWidgets import QApplication
 

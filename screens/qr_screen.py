@@ -51,7 +51,7 @@ class QrScreen(BaseScreen):
             "iat": int(datetime.datetime.now().timestamp()),
         }
         valid_token = jwt.encode(payload, self.SECRET_KEY, algorithm="HS256")
-        # print(valid_token)
+        print(valid_token)
 
         # Generate QR Code
         qr = qrcode.make(valid_token)

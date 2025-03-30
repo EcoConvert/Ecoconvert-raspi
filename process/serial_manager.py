@@ -19,7 +19,7 @@ class SerialManager:
             if not port_number:
                 raise ValueError("SERIAL_PORT not set in .env file")
 
-            self.ser = serial.Serial(port_number, 9600, timeout=0)
+            self.ser = serial.Serial(port_number, 9600, timeout=1)
             if not self.ser.is_open:
                 raise IOError("Serial port failed to open")
         except IOError as e: 

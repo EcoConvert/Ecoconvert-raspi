@@ -5,8 +5,8 @@ from dotenv import dotenv_values, load_dotenv
 import time
 import serial.tools.list_ports
 
-# ser = serial.Serial('/dev/ttyS0', 9600, timeout=1)  
-ser = serial.Serial('COM3', 9600, timeout=1)  
+ser = serial.Serial('/dev/ttyS0', 9600, timeout=1)  
+# ser = serial.Serial('COM3', 9600, timeout=1)  
 time.sleep(2)  # Wait for Arduino to initialize
 
 print("Listening for data from Arduino...")
