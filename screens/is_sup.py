@@ -4,7 +4,8 @@ from PyQt5.QtCore import QThreadPool
 from .base_screen import BaseScreen
 from .views.iv_sup import setup_ui 
 from util.state import save_state_variables, load_state_variables
-from serial_try import writeCommand, readSUPWeight, flushSerial
+# from serial_try import writeCommand, readSUPWeight, flushSerial
+from process.serial_manager import writeCommand, readSUPWeight, flushSerial
 from .controller.i3_camera import CameraThread2
 
 class InsertScreenSup(BaseScreen):
