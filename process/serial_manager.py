@@ -13,6 +13,7 @@ class SerialManager:
         if cls._instance is None:
             cls._instance = super(SerialManager, cls).__new__(cls)
             cls._instance.init_serial()
+            cls._instance.ser = None
         return cls._instance
 
     def init_serial(self):
@@ -33,11 +34,14 @@ class SerialManager:
             print("failed daw to open beh")
         except ValueError as e:
             print(e)
+        except Exception as e:
+            self.ser = None
+            print(f"An error occurred: {e}")
 
     def writeCommand(self, data):
         """Write data to the serial port"""
         command = data + '\n'
-        if self.ser.open:
+        if self.ser and self.ser.is_open:
             self.ser.write(command.encode("utf-8"))
             self.ser.flush()
             print(f"\nSent to Arduino: {data}\n")
@@ -54,15 +58,19 @@ class SerialManager:
             print("Serial port is not open")
             
     def readSUPWeight(self):
-        data = self.ser.readline().decode("utf-8").strip()
-        if data:
-            if data.isdigit():
-                print(f"Received from Arduino: {data}\n")
-                return int(data)
+        if self.ser and self.ser.is_open:
+            data = self.ser.readline().decode("utf-8").strip()
+            if data:
+                if data.isdigit():
+                    print(f"Received from Arduino: {data}\n")
+                    return int(data)
+            else:
+                print("Invalid SUP weight data from Arduino")
+                # return None
+                return 0 # return 0 instead
         else:
-            print("Invalid SUP weight data from Arduino")
-            # return None
-            return 0 # return 0 instead
+            print("Serial port is not open")
+            return 0
     
     def readEcoBrickWeight(self):
         data = self.ser.readline().decode("utf-8").strip()
