@@ -34,7 +34,7 @@ class SerialManager:
         except ValueError as e:
             print(e)
 
-    def write(self, data):
+    def writeCommand(self, data):
         """Write data to the serial port"""
         command = data + '\n'
         if self.ser.open:

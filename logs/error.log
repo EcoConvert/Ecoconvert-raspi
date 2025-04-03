@@ -1,0 +1,9 @@
+2025-04-03 15:22:08,272 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: SerialWorker.__init__() missing 1 required positional argument: 'callback'
+Traceback (most recent call last):
+  File "C:\Users\Pons Anthony Advento\Ecoconvert-raspi\screens\rvm_interface.py", line 103, in _setup_screens
+    processing_screen = ProcessingScreen(self.config, self.stacked_widget, None)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pons Anthony Advento\Ecoconvert-raspi\screens\processing_screen.py", line 25, in __init__
+    self.worker = SerialWorker()
+                  ^^^^^^^^^^^^^^
+TypeError: SerialWorker.__init__() missing 1 required positional argument: 'callback'

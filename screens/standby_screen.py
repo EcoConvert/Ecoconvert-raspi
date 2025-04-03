@@ -4,7 +4,8 @@ from PyQt5.QtCore import QThreadPool
 from .base_screen import BaseScreen
 from .views.standby_view import setup_ui
 
-from serial_try import readSUPWeight, writeCommand
+# from serial_try import readSUPWeight, writeCommand
+from process.serial_manager import serial_manager
 from .controller.i1_init import InitThread  
 from .controller.i2_camera import CamInitThread
 from .controller.i3_camera import CamInitThread2
@@ -92,7 +93,7 @@ class StandbyScreen(BaseScreen):
 
         if (isinstance(sup, (int, float))) and (sup >= 525.00):
             print(f"SUP action triggered: {sup}")
-            writeCommand("SF")
+            serial_manager.writeCommand("SF")
             curIndex = self.parent().currentIndex()
             print(f"Switched to index {curIndex}")
             if curIndex == 1:

@@ -10,7 +10,7 @@ from .base_screen import BaseScreen
 from .views.processing_view import setup_ui
 from util.state import save_state_variables, load_state_variables
 # from serial_try import readEcoBrickWeight, ser
-from process.serial_manager import readEcoBrickWeight, ser
+from screens.controller.i4_ecob_process import SerialWorker
 
 class ProcessingScreen(BaseScreen, QObject):
     """
@@ -22,7 +22,7 @@ class ProcessingScreen(BaseScreen, QObject):
         self.progress_value = 0  # Current progress value
         self.isDone = 0
         self.thread_pool = QThreadPool()
-        self.worker = None
+        self.worker = SerialWorker()
         self.timer = QTimer()
         setup_ui(self)
     
@@ -91,7 +91,7 @@ class ProcessingScreen(BaseScreen, QObject):
         # self.timer = QTimer()
         # self.timer.timeout.connect(self._read_and_write())
         # self.timer.start(100)
-        self.worker = SerialWorker(self._read_and_write)
+        self.worker.signal.data_received.connect(self._read_and_write)
         self.thread_pool.start(self.worker)
         
         
@@ -107,6 +107,11 @@ class ProcessingScreen(BaseScreen, QObject):
         #         self._on_serial_done()
         # except ValueError:
         #     print("Invalid data received")
+        """
+            We can send a 'done' signal only when the ecobrick is stored
+            instead of constantly reading the weight.
+            This is to avoid overloading the serial port with data.
+        """
         self.isDone = data
         if (self.isDone == '1'):
             self.worker.stop()

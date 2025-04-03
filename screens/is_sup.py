@@ -5,7 +5,7 @@ from .base_screen import BaseScreen
 from .views.iv_sup import setup_ui 
 from util.state import save_state_variables, load_state_variables
 # from serial_try import writeCommand, readSUPWeight, flushSerial
-from process.serial_manager import writeCommand, readSUPWeight, flushSerial
+from process.serial_manager import serial_manager
 from .controller.i3_camera import CameraThread2
 
 class InsertScreenSup(BaseScreen):
@@ -61,7 +61,7 @@ class InsertScreenSup(BaseScreen):
     def _last_process(self):
         # open the camera here
         # self.weight = load_state_variables("weight")
-        rWeight = readSUPWeight()
+        rWeight = serial_manager.readSUPWeight()
         # some process here to get the weight 
         print("SUPS deposited")
         self.ser_weight = self.weight + rWeight
@@ -89,15 +89,15 @@ class InsertScreenSup(BaseScreen):
             # some process here to get the weight
             # self.ser_weight = self.weight + random.randint(1, 100) # simulation lang to ng weight yung ginagawa ni pons mas accurate yon sa actual. 
             # flushSerial()
-            writeCommand('SW')
+            serial_manager.writeCommand('SW')
             
             # self.ser_weight = self.weight + self.rWeight
             # print("self ", self.weight)
             # print("ser ", self.ser_weight)
         # camera thread  
-        pool = QThreadPool.globalInstance()
+        self.pool = QThreadPool.globalInstance()
         inference = CameraThread2()
-        pool.start(inference)
+        self.pool.start(inference)
         inference.signal.inference.connect(self.is_valid_plastic)
         print("processing sup")
     

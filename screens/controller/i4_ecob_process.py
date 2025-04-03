@@ -1,5 +1,5 @@
 from PyQt5.QtCore import QThreadPool, QRunnable, pyqtSignal, QObject
-from process.serial_manager import ser
+from process.serial_manager import serial_manager
 import time
 
 class SerialSignal(QObject):
@@ -9,9 +9,10 @@ class SerialSignal(QObject):
     data_received = pyqtSignal(str)  # Signal to emit when data is received from the serial port
 
 class SerialWorker(QRunnable):
-    def __init__(self, callback):
+    def __init__(self):
         super().__init__()
         # self.callback = callback  # Callback to send data to the main thread
+        # self.serialManager = SerialManager()
         self.signal = SerialSignal()
         self.is_running = True
 
@@ -21,7 +22,7 @@ class SerialWorker(QRunnable):
         """
         while self.is_running:
             try:
-                data = ser.readline().decode("utf-8").strip()
+                data = serial_manager.ser.readline().decode("utf-8").strip()
                 print(f'Ecobrick done?: {data}')
                 if data:
                     # self.callback(data)  # Send data to the main thread

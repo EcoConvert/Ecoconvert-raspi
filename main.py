@@ -12,7 +12,7 @@ from screens.rvm_interface import RVMInterface
 from screens.config import load_config
 from logging_config import setup_logging, lcd_logger
 # import serial_try
-from serial_try import flushSerial
+# from serial_try import flushSerial
 # load_dotenv()
 # port_number= os.getenv("SERIAL_PORT")
 # ser = serial.Serial(port_number, 9600, timeout=0)
