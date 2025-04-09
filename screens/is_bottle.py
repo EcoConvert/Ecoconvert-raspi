@@ -41,6 +41,7 @@ class InsertScreenBottle(BaseScreen):
         inference.signal.inference.connect(self.process_bottle)
 
     def process_bottle(self, inference = None):
+        inference = False
         if inference:
             save_state_variables("bottle_exist", inference)
             print("Valid bottle ")
@@ -52,9 +53,10 @@ class InsertScreenBottle(BaseScreen):
             else:
                 self.logger.warning("No parent QStackedWidget found.")
         else:
-            print("Invalid bottle get that shit out of here")
-            # code for error screen
-            pass
+            error_screen = self.parent().widget(7)
+            error_screen.spawn_error_page(error_code = 1 , error_message = "non 1.5 pet bottle", action_message = 
+            "Please retrieve the non 1.5 bottle<br>then press return to standby")
+            self.parent().setCurrentIndex(7)
 
 
 

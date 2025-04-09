@@ -6,6 +6,6 @@ class CameraPet(CameraBase):
         super().__init__(camera_id)
     
     def infer(self):
-        print("infer")
+        print("[camera pet] infer")
         inferance = True
         return inferance 

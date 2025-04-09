@@ -21,14 +21,13 @@ def setup_ui(self):
     heading.setFont(QFont(self.ff_poppins, 50))
     heading.setStyleSheet("color: white;")
     # subhead
-    logs = " Ur fault: Do not insert <br> non plastic item.<br> RETRIEVE IT"
-    self.subhead = QLabel(f"Logs: {logs}")
+    self.error_message = "Non 1.5 platic<br>bottle detected!"
+    self.subhead = QLabel(f"Error Message: {self.error_message}")
     self.subhead.setFont(QFont(self.ff_poppins, 15))
     self.subhead.setAlignment(Qt.AlignCenter)
     self.subhead.setStyleSheet("color: white;")
-    # points
-    if self.error_code is None:
-        self.error_code = 0
+    # code
+    self.error_code = 0
     self.error_code_label = QLabel(f"error_code: {self.error_code}")
     self.error_code_label.setFont(QFont(self.ff_poppins, 24))
     self.error_code_label.setAlignment(Qt.AlignCenter)
@@ -46,11 +45,16 @@ def setup_ui(self):
 
     # right side
     right = QVBoxLayout()
-    self.qr = QLabel("")
-    self.qr.setStyleSheet("color: white; background-color: #faefae; border: 3px solid black; ")
-    self.qr.setFixedSize(374, 374)
-
-    right.addWidget(self.qr)
+    self.rightHead = QLabel("Action:")
+    self.rightHead.setStyleSheet("color: white; font-weight: bold;")
+    self.rightHead.setFont(QFont(self.ff_poppins, 24))
+    
+    self.action = QLabel("Please retrieve the non 1.5<br>bottle then press return to standby")
+    self.action.setStyleSheet("color: white;")
+    self.action.setFont(QFont(self.ff_poppins, 15))
+    self.action.setAlignment(Qt.AlignTop)
+    right.addWidget(self.rightHead)
+    right.addWidget(self.action)
     hDiv.addLayout(left)
     hDiv.addLayout(right)
     # Set layout
