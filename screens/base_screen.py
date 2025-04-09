@@ -54,7 +54,8 @@ class BaseScreen(QWidget):
     # not that it is needed on all screen, but its much easier this way. 
     def update_state(self, i): 
         try:
-            serial_manager.write(i) 
+            # serial_manager.writeCommand(i) 
+            print(f"update_state{(i)}")
         except Exception as e:
             print(f"Error updating state: {e}")
     
