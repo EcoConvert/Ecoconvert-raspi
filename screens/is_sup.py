@@ -27,8 +27,6 @@ class InsertScreenSup(BaseScreen):
         self.ser_weight = 0
         self.rWeight = 0
         
-        
-        
         setup_ui(self)
         
         
@@ -60,11 +58,8 @@ class InsertScreenSup(BaseScreen):
 
     def _last_process(self):
         # open the camera here
-        # self.weight = load_state_variables("weight")
-        rWeight = serial_manager.readSUPWeight()
         # some process here to get the weight 
         print("SUPS deposited")
-        self.ser_weight = self.weight + rWeight
         weight_diff = self.ser_weight - self.weight 
         print(f"Weight diff: {weight_diff}")
         self._generate_points(weight_diff) 
@@ -75,25 +70,13 @@ class InsertScreenSup(BaseScreen):
         self.parent().setCurrentIndex(4) # go to SUP Screen  
     
     def process(self):
-        # serial 
+        serial_manager.writeCommand("SW")
         self.weight=load_state_variables("weight")
         print(f"saved weight is: {self.weight}")
         self.ser_weight = 0
         
         # open the camera here
         print("processing sup")
-        # if sups are valid
-        print("sup is valid")
-        valid =  True
-        if valid: 
-            # some process here to get the weight
-            # self.ser_weight = self.weight + random.randint(1, 100) # simulation lang to ng weight yung ginagawa ni pons mas accurate yon sa actual. 
-            # flushSerial()
-            serial_manager.writeCommand('SW')
-            
-            # self.ser_weight = self.weight + self.rWeight
-            # print("self ", self.weight)
-            # print("ser ", self.ser_weight)
         # camera thread  
         self.pool = QThreadPool.globalInstance()
         inference = CameraThread2()
@@ -102,10 +85,11 @@ class InsertScreenSup(BaseScreen):
         print("processing sup")
     
     def is_valid_plastic(self, inference):
-        inference = "err" # change this latuurrs
+        inference = "plastic" # change this latuurrs
         if inference == "plastic": # change this  kung mag class id tayo dito  
             # some process here to get the weight 
-            self.ser_weight = self.weight + random.randint(1, 100) # simulation lang to ng wieght yung ginagawa ni pons mas accurate yon sa actual. 
+            self.rWeight = serial_manager.readSUPWeight()
+            self.ser_weight = self.weight + self.rWeight
             print("[is_sup.py] weight ", self.weight)
             print("[is_sup.py] ser ", self.ser_weight)
             self._last_process()

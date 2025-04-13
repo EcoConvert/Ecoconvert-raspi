@@ -34,6 +34,7 @@ def flushSerial():
         
 
 def writeCommand(data):
+    print(serial)
     command = data + '\n'
     if ser.open:
         ser.write(command.encode("utf-8"))

@@ -4,7 +4,7 @@ import serial.tools.list_ports
 import time
 from dotenv import load_dotenv
 from util.state import save_state
-
+from serial_try import writeCommand
 
 class SerialManager:
     _instance = None  # Singleton instance
@@ -13,14 +13,16 @@ class SerialManager:
         if cls._instance is None:
             cls._instance = super(SerialManager, cls).__new__(cls)
             cls._instance.init_serial()
-            cls._instance.ser = None
+            # cls._instance.ser = None
         return cls._instance
 
     def init_serial(self):
+        print(serial)
+        print
         try:
             load_dotenv()
-            port_number = os.getenv("SERIAL_PORT")
-
+            # port_number = os.getenv("SERIAL_PORT")
+            port_number = "/dev/ttyS0"
             if not port_number:
                 raise ValueError("SERIAL_PORT not set in .env file")
 
@@ -30,10 +32,6 @@ class SerialManager:
 
             if not self.ser.is_open:
                 raise IOError("Serial port failed to open")
-        except IOError as e: 
-            print("failed daw to open beh")
-        except ValueError as e:
-            print(e)
         except Exception as e:
             self.ser = None
             print(f"An error occurred: {e}")
@@ -41,7 +39,7 @@ class SerialManager:
     def writeCommand(self, data):
         """Write data to the serial port"""
         command = data + '\n'
-        if self.ser and self.ser.is_open:
+        if self.ser.open:
             self.ser.write(command.encode("utf-8"))
             self.ser.flush()
             print(f"\nSent to Arduino: {data}\n")
@@ -50,7 +48,7 @@ class SerialManager:
         
     def flushSerial(self):
         """Clearing the serial buffer"""
-        if self.ser.isOpen():
+        if self.ser.open:
             self.ser.flushInput()
             self.ser.flushOutput()
             print("Serial buffer flushed")
