@@ -40,25 +40,25 @@ class BaseScreen(QWidget):
         # create fonts here
         try:
             # Poppins
-            self.logger.debug("Loading Poppins font...")
+            self.logger.debug("Loading Poppins font...") #Log added
             poppins = QFontDatabase.addApplicationFont("screens/fonts/Poppins-Regular.ttf")
             self.ff_poppins = QFontDatabase.applicationFontFamilies(poppins)[0]
             self.font_poppins = QFont(self.ff_poppins, 50)
             self.font_poppins.setLetterSpacing(QFont.AbsoluteSpacing, 10)
-            self.logger.debug("Poppins font loaded successfully.")
+            self.logger.debug("Poppins font loaded successfully.") #Log added
         except Exception as e:
-            self.logger.error(f"Failed to load Poppins font: {e}")
+            self.logger.error(f"Failed to load Poppins font: {e}") #Log added
 
         try:
             # Inter
-            self.logger.debug("Loading Inter font...")
+            self.logger.debug("Loading Inter font...") #Log added
             inter = QFontDatabase.addApplicationFont("screens/fonts/Inter-VariableFont_opsz,wght.ttf")
             self.ff_inter = QFontDatabase.applicationFontFamilies(inter)[0]
             self.font_inter = QFont(self.ff_inter, 35)
             self.font_inter.setLetterSpacing(QFont.AbsoluteSpacing, 10)
-            self.logger.debug("Inter font loaded successfully.")
+            self.logger.debug("Inter font loaded successfully.") #Log added
         except Exception as e:
-            self.logger.error(f"Failed to load Inter font: {e}")
+            self.logger.error(f"Failed to load Inter font: {e}") #Log added
 
     # every screen has the ability to update state. 
     # not that it is needed on all screen, but its much easier this way. 
@@ -66,7 +66,7 @@ class BaseScreen(QWidget):
         self.logger.debug(f"Attempting to update state with value: {i}")
         try:
             serial_manager.write(i) 
-            self.logger.debug(f"State updated with value: {i}")
+            self.logger.debug(f"State updated with value: {i}") #Log added
         except Exception as e:
-            self.logger.error(f"Error updating state: {e}")
+            self.logger.error(f"Error updating state: {e}") #Log added
             print(f"Error updating state: {e}")

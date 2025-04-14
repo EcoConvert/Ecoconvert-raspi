@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QPushButton, QLabel, QVBoxLayout
 from PyQt5.QtGui import QColor, QFont
 from screens.views._DropShadow import Drop_Shadow
 
-logger = logging.getLogger(__name__)  # ✅ Logging setup
+logger = logging.getLogger(__name__)  #Logging
 logging.basicConfig(level=logging.DEBUG)
 
 class Btn(QPushButton):
@@ -12,7 +12,7 @@ class Btn(QPushButton):
     Creates the generic Button
     """
     def __init__(self, text="click", bt_w = 642, bt_h = 202, padding_size = 10, font_size = 35, disabled = False, parent=None):
-        logger.debug("Initializing Btn")  # ✅ Log added
+        logger.debug("Initializing Btn")  #Log added
         super().__init__(parent)
         self.label = QLabel(text, self)
         self.label.setWordWrap(True)
@@ -34,7 +34,7 @@ class Btn(QPushButton):
 
         layout = QVBoxLayout(self)
         layout.addWidget(self.label)
-        logger.debug("Btn initialized successfully")  # ✅ Log added
+        logger.debug("Btn initialized successfully")  #Log added
 
 
 class BtnDone(QPushButton):
@@ -42,7 +42,7 @@ class BtnDone(QPushButton):
     Creates the generic Button
     """
     def __init__(self, text="Done", bt_w = 140, bt_h = 101, padding_size = 20, parent=None):
-        logger.debug("Initializing BtnDone")  # ✅ Log added
+        logger.debug("Initializing BtnDone")  #Log added
         super().__init__(parent)
         self.label = QLabel(text, self)
         self.label.setWordWrap(True)
@@ -57,7 +57,7 @@ class BtnDone(QPushButton):
 
         layout = QVBoxLayout(self)
         layout.addWidget(self.label)
-        logger.debug("BtnDone initialized successfully")  # ✅ Log added
+        logger.debug("BtnDone initialized successfully")  #Log added
 
 
 class BtnBack(QPushButton):
@@ -65,7 +65,7 @@ class BtnBack(QPushButton):
     Creates the generic Button
     """
     def __init__(self, text="⬅️ Return to Home", bt_w = 214, bt_h = 50, padding_size = 10, parent=None):
-        logger.debug("Initializing BtnBack")  # ✅ Log added
+        logger.debug("Initializing BtnBack")  #Log added
         super().__init__(parent)
         self.label = QLabel(text, self)
         self.label.setWordWrap(True)
@@ -79,4 +79,4 @@ class BtnBack(QPushButton):
         self.label.move(0,0)
         layout = QVBoxLayout(self)
         layout.addWidget(self.label)
-        logger.debug("BtnBack initialized successfully")  # ✅ Log added
+        logger.debug("BtnBack initialized successfully")  #Log added
