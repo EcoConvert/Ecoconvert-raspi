@@ -1,5 +1,6 @@
 # src/lcd_interface/screens/detection_result_screen.py
 import random
+import logging  
 
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QLabel, QPushButton, QVBoxLayout
@@ -23,6 +24,7 @@ class DetectionResultScreen(BaseScreen):
             parent (QStackedWidget, optional): Parent stacked widget for navigation.
         """
         super().__init__(config, parent)
+        self.logger = logging.getLogger(__name__)  # Initialize
         self._setup_ui()
 
     def _setup_ui(self):
@@ -71,6 +73,9 @@ class DetectionResultScreen(BaseScreen):
         # Randomly select a dummy result
         result = random.choice(dummy_results)
 
+       
+        self.logger.info(f"Simulated Detection Result: {result['message']} | Valid: {result['is_valid']}") #Logging
+
         # Update UI to reflect the result
         self.show_result(result["message"], result["is_valid"])
 
@@ -96,6 +101,6 @@ class DetectionResultScreen(BaseScreen):
         """
         if self.parent():
             self.parent().setCurrentIndex(4)  # Completion Screen Index
-            self.logger.info(
-                "Navigated from Detection Result Screen to Completion Screen."
-            )
+
+            
+            self.logger.info("Navigated from Detection Result Screen to Completion Screen.") #Logging

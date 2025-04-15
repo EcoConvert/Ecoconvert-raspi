@@ -5,6 +5,9 @@ from screens.views._DropShadow import Drop_Shadow
 from screens.views._Button import BtnBack
 import logging
 
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.DEBUG)
+
 def setup_ui(self):
     self.logger.debug("Starting UI setup")  #Logging added
     hDiv = QHBoxLayout()

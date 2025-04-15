@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QPushButton, QLabel, QVBoxLayout
 from PyQt5.QtGui import QColor, QFont
 from screens.views._DropShadow import Drop_Shadow
 
-logger = logging.getLogger(__name__)  #Logging
+logger = logging.getLogger(__name__)  
 logging.basicConfig(level=logging.DEBUG)
 
 class Btn(QPushButton):

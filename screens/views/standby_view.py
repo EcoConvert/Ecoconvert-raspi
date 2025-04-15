@@ -1,3 +1,8 @@
+import logging  
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QLabel, QPushButton, QVBoxLayout, QHBoxLayout
 from screens.views._DropShadow import Drop_Shadow
@@ -8,6 +13,7 @@ def setup_ui(self):
         Set up the user interface for the Reminder Screen.
         """
         layout = QVBoxLayout()
+        logging.info("Vertical layout initialized for Reminder Screen")  # logging
 
         # Title
         title = QLabel("Choose to Insert")
@@ -17,16 +23,21 @@ def setup_ui(self):
         shadow = Drop_Shadow()
         title.setGraphicsEffect(shadow)
         layout.addWidget(title)
-
+        logging.info("Title label 'Choose to Insert' created and styled")  # logging
 
         div = QHBoxLayout()
+        logging.info("Horizontal layout (div) initialized for buttons")  # logging
+
         self.pet_btn = Btn("1.5 Plastic <br> Bottle", bt_w = 298, bt_h = 202, padding_size = 0, parent=self)
         self.pet_btn.clicked.connect(self._on_click_pet)
         div.addWidget(self.pet_btn)
+        logging.info("PET button initialized and event connected")  # logging
 
         self.sup_btn = Btn("Single Use <br> Plastic", bt_w = 298, bt_h = 202, padding_size = 0, parent=self)
         self.sup_btn.clicked.connect(self._on_click_sup)
         div.addWidget(self.sup_btn)
+        logging.info("SUP button initialized and event connected")  # logging
 
         layout.addLayout(div)
         self.setLayout(layout)
+        logging.info("Final layout set for Reminder Screen")  # logging
