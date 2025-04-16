@@ -1,6 +1,7 @@
-# src/lcd_interface/screens/welcome_screen.py
+# src/lcd_interface/screens/qr_screen.py
 import datetime
 import os
+import logging  
 
 import jwt
 import qrcode
@@ -33,6 +34,11 @@ class QrScreen(BaseScreen):
         # Load secret key
         self.SECRET_KEY = os.getenv("SECRET_KEY")
 
+        # <-- Logging: Logger setup added here
+        self.logger = logging.getLogger(__name__)
+        logging.basicConfig(level=logging.INFO)
+        self.logger.info("QrScreen initialized.")
+
     
     def _on_click(self):
         if self.parent():
@@ -40,8 +46,9 @@ class QrScreen(BaseScreen):
             standby_screen = self.parent().widget(1)
             # implement conditional showing of button
             standby_screen.global_state_checker() # <-screen changer  is on this one 
+            self.logger.info("Navigated to standby screen.")  # Logging
         else:
-            self.logger.warning("No parent QStackedWidget found.")
+            self.logger.warning("No parent QStackedWidget found.")  # Logging
 
     def generate_qr(self, point):
         # print("generating qr")  
@@ -52,13 +59,16 @@ class QrScreen(BaseScreen):
         }
         valid_token = jwt.encode(payload, self.SECRET_KEY, algorithm="HS256")
         # print(valid_token)
+        self.logger.info("JWT generated for points: %s", point)  # Logging
 
         # Generate QR Code
         qr = qrcode.make(valid_token)
         qr_path = "screens/qr_img/token.png"
         qr.save(qr_path)
         # print("QR Code saved as 'token.png'")
+        self.logger.info("QR code saved at %s", qr_path)  # Logging
         self._change_token_image(qr_path)
 
     def _change_token_image(self, filepath):  
         self.qr.setPixmap(QPixmap(filepath))   #mot was here
+        self.logger.info("QR image updated on screen from %s", filepath)  # Logging

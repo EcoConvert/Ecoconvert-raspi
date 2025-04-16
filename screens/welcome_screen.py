@@ -1,7 +1,8 @@
 # src/lcd_interface/screens/welcome_screen.py
-
+import logging  
 from .base_screen import BaseScreen
 from .views.welcome_view import setup_ui 
+
 class WelcomeScreen(BaseScreen):
     """
     Welcome screen for the RVM LCD Interface.
@@ -16,6 +17,11 @@ class WelcomeScreen(BaseScreen):
             parent (QStackedWidget, optional): Parent stacked widget for navigation.
         """
         super().__init__(config, parent)  # Inherit from BaseScreen
+
+        # Basic logging setup
+        self.logger = logging.getLogger(__name__)
+        logging.basicConfig(level=logging.INFO)  # Set up logging
+
         #self._setup_ui()
         
         # this is the new updated way to set up UI. it is divergent from the Object oriented programming because I personally find functional programming more straightforward
@@ -33,12 +39,8 @@ class WelcomeScreen(BaseScreen):
                 # Navigate to the next screen (index 1 assumed)
                 standby_screen = self.parent().widget(1)
                 standby_screen.global_state_checker()
-                
-                self.logger.info("Navigated from Welcome Screen to Reminder Screen.")
+                self.logger.info("Navigated from Welcome Screen to Reminder Screen.")  # Logging
             else:
-                self.logger.warning("No parent QStackedWidget found for navigation.")
+                self.logger.warning("No parent QStackedWidget found for navigation.")  # Logging
         except Exception as e:
-            self.logger.error(
-                f"Error navigating to the next screen: {e}", exc_info=True
-            )
-        
+            self.logger.error(f"Error navigating to the next screen: {e}", exc_info=True)  # Logging

@@ -1,5 +1,6 @@
 # src/lcd_interface/screens/reminder_screen.py
 import time
+import logging 
 from PyQt5.QtCore import QThreadPool
 from .base_screen import BaseScreen
 from .views.standby_view import setup_ui
@@ -17,7 +18,9 @@ class StandbyScreen(BaseScreen):
         setup_ui(self)
         self.petflag = False
         self.supflag = False
-    
+        self.logger = logging.getLogger(__name__)  # Logging
+        self.logger.info("StandbyScreen initialized.")  # Logging
+
     def _on_click_pet(self):
         if self.parent():
             self.update_state(1)
@@ -29,9 +32,10 @@ class StandbyScreen(BaseScreen):
             pool.start(camWorker) 
             camWorker.signal.initDone.connect(is_bottle.done_clickability)
             is_bottle.done_clickability(False)
+            self.logger.info("PET button clicked: Navigated to PET screen and started camera init.")  # Logging
             # # self.update_state(1) # update to insert
         else:
-            self.logger.warning("No parent QStackedWidget found.")
+            self.logger.warning("No parent QStackedWidget found.") 
 
     def _on_click_sup(self):
         if self.parent():
@@ -43,10 +47,11 @@ class StandbyScreen(BaseScreen):
             pool.start(camWorker)
             camWorker.signal.initDone.connect(is_sup.done_clickability)
             is_sup.done_clickability(False)
+            self.logger.info("SUP button clicked: Navigated to SUP screen and started camera init.") # Logging
             # is_sup.process() 
             # self.update_state(1) # update to insert
         else:
-            self.logger.warning("No parent QStackedWidget found.")
+            self.logger.warning("No parent QStackedWidget found.")  
     
     def sup_clickability(self, state = True):
         self.supflag = not state 
@@ -55,6 +60,7 @@ class StandbyScreen(BaseScreen):
             self.sup_btn.setStyleSheet("margin-bottom:30px; background-color:#F9FF89; border: 3px solid black; border-radius: 20%")
         else:
             self.sup_btn.setStyleSheet("margin-bottom:30px; background-color:#D9D9D9; border: 3px solid #50000000; border-radius: 20%")
+        self.logger.info(f"SUP clickability set to {state}.")  # Logging
 
     def pet_clickability(self, state = True):
         self.petflag = not state 
@@ -64,6 +70,7 @@ class StandbyScreen(BaseScreen):
             self.pet_btn.setStyleSheet("margin-bottom:30px; background-color:#F9FF89; border: 3px solid black; border-radius: 20%")
         else:
             self.pet_btn.setStyleSheet("margin-bottom:30px; background-color:#D9D9D9; border: 3px solid #50000000; border-radius: 20%")
+        self.logger.info(f"PET clickability set to {state}.")  # Logging
 
     # ###### 
     def global_state_checker(self):
@@ -76,16 +83,19 @@ class StandbyScreen(BaseScreen):
         init_worker.signal.pet.connect(self._change_screen)
         init_worker.signal.sup.connect(self._change_screen)
 
+        self.logger.info("Global state checker started and signals connected.")  # Logging
+
     def _change_screen(self, screen_index=None, pet=None, sup=None):
         if screen_index is not None:
             if self.parent():
                 self.parent().setCurrentIndex(screen_index)
-
+                self.logger.info(f"Screen changed to index {screen_index}.")  # Logging
         if pet == True:
             print(f"pet triggered {pet}")
             curIndex = self.parent().currentIndex()
             if curIndex == 1:
                 self.pet_clickability(False)
+                self.logger.info("PET signal triggered and button disabled.") # Logging
 
         if (isinstance(sup, (int, float))) and (sup >= 525.00):
             print(f"SUP action triggered: {sup}")
@@ -93,8 +103,10 @@ class StandbyScreen(BaseScreen):
             print(f"Switched to index {curIndex}")
             if curIndex == 1:
                 self.sup_clickability(False)
+                self.logger.info(f"SUP signal triggered with value {sup}, button disabled.")  # Logging
 
         if self.petflag and self.supflag:
             print("Both PET and SUP are being hit")
             parent = self.parent()  
             parent.setCurrentIndex(5) # go to PET Screen
+            self.logger.info("Both PET and SUP flags hit. Navigated to index 5.")  # Logging
