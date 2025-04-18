@@ -13,7 +13,7 @@ class Btn(QPushButton):
         
         # Initialize logger for this class/module with class name
         self.logger = lcd_logger(self.__class__.__name__)
-        self.logger.debug("Starting Btn initialization")  # Logging added
+        self.logger.debug("Starting Btn initialization")  # Logging addedd
         
         self.label = QLabel(text, self)
         self.label.setWordWrap(True)
