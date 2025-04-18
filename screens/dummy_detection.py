@@ -1,12 +1,11 @@
 # src/lcd_interface/screens/detection_result_screen.py
 import random
-import logging  
 
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QLabel, QPushButton, QVBoxLayout
 
 from .base_screen import BaseScreen
-
+from logging_config import lcd_logger  
 
 class DetectionResultScreen(BaseScreen):
     """
@@ -24,13 +23,15 @@ class DetectionResultScreen(BaseScreen):
             parent (QStackedWidget, optional): Parent stacked widget for navigation.
         """
         super().__init__(config, parent)
-        self.logger = logging.getLogger(__name__)  # Initialize
+        self.logger = lcd_logger(self.__class__.__name__)  # Initialize logger for this screen
+        self.logger.debug("Initializing DetectionResultScreen")  # Log when screen is initialized
         self._setup_ui()
 
     def _setup_ui(self):
         """
         Set up the user interface for the detection result screen.
         """
+        self.logger.debug("Setting up UI for Detection Result Screen")  # Log UI setup
         layout = QVBoxLayout()
 
         # Title
@@ -62,6 +63,7 @@ class DetectionResultScreen(BaseScreen):
         """
         Simulate a dummy detection result after a short delay.
         """
+        self.logger.debug("Simulating detection result...")  # Log simulation action
         dummy_results = [
             {"message": "Valid Item: 1.5L PET Bottle", "is_valid": True},
             {"message": "Error: Glass materials are not allowed", "is_valid": False},
@@ -72,9 +74,7 @@ class DetectionResultScreen(BaseScreen):
 
         # Randomly select a dummy result
         result = random.choice(dummy_results)
-
-       
-        self.logger.info(f"Simulated Detection Result: {result['message']} | Valid: {result['is_valid']}") #Logging
+        self.logger.info(f"Simulated Result: {result['message']}")  # Log simulated result
 
         # Update UI to reflect the result
         self.show_result(result["message"], result["is_valid"])
@@ -92,6 +92,7 @@ class DetectionResultScreen(BaseScreen):
         self.result_label.setStyleSheet(
             f"font-size: 18px; color: {color}; margin-bottom: 20px;"
         )
+        self.logger.debug(f"Result displayed: {message} with color {color}")  # Log result display
 
     def _on_continue_clicked(self):
         """
@@ -99,8 +100,9 @@ class DetectionResultScreen(BaseScreen):
 
         Navigate to the completion screen.
         """
+        self.logger.info("Continue button clicked")  # Log button click
         if self.parent():
             self.parent().setCurrentIndex(4)  # Completion Screen Index
-
-            
-            self.logger.info("Navigated from Detection Result Screen to Completion Screen.") #Logging
+            self.logger.info(
+                "Navigated from Detection Result Screen to Completion Screen."
+            )

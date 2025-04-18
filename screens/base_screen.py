@@ -37,36 +37,34 @@ class BaseScreen(QWidget):
         # Common debug log
         self.logger.debug(f"Initialized {self.__class__.__name__}")
 
-        # create fonts here
-        try:
-            # Poppins
-            self.logger.debug("Loading Poppins font...") #Log added
-            poppins = QFontDatabase.addApplicationFont("screens/fonts/Poppins-Regular.ttf")
-            self.ff_poppins = QFontDatabase.applicationFontFamilies(poppins)[0]
-            self.font_poppins = QFont(self.ff_poppins, 50)
-            self.font_poppins.setLetterSpacing(QFont.AbsoluteSpacing, 10)
-            self.logger.debug("Poppins font loaded successfully.") #Log added
-        except Exception as e:
-            self.logger.error(f"Failed to load Poppins font: {e}") #Log added
+        # Log font loading
+        self.logger.debug("Loading fonts...")
 
-        try:
-            # Inter
-            self.logger.debug("Loading Inter font...") #Log added
-            inter = QFontDatabase.addApplicationFont("screens/fonts/Inter-VariableFont_opsz,wght.ttf")
-            self.ff_inter = QFontDatabase.applicationFontFamilies(inter)[0]
-            self.font_inter = QFont(self.ff_inter, 35)
-            self.font_inter.setLetterSpacing(QFont.AbsoluteSpacing, 10)
-            self.logger.debug("Inter font loaded successfully.") #Log added
-        except Exception as e:
-            self.logger.error(f"Failed to load Inter font: {e}") #Log added
+        # Poppins font
+        poppins = QFontDatabase.addApplicationFont("screens/fonts/Poppins-Regular.ttf")
+        self.ff_poppins = QFontDatabase.applicationFontFamilies(poppins)[0]  # use the ffs to set the font family and font size
+        self.font_poppins = QFont(self.ff_poppins, 50)
+        self.font_poppins.setLetterSpacing(QFont.AbsoluteSpacing, 10)
 
-    # every screen has the ability to update state. 
-    # not that it is needed on all screen, but its much easier this way. 
-    def update_state(self, i): 
-        self.logger.debug(f"Attempting to update state with value: {i}")
+        # Log that the Poppins font is loaded
+        self.logger.debug("Poppins font loaded successfully.")
+
+        # Inter font
+        inter = QFontDatabase.addApplicationFont("screens/fonts/Inter-VariableFont_opsz,wght.ttf")
+        self.ff_inter = QFontDatabase.applicationFontFamilies(inter)[0]  # use the ffs to set the font family and font size
+        self.font_inter = QFont(self.ff_inter, 35)
+        self.font_inter.setLetterSpacing(QFont.AbsoluteSpacing, 10)
+
+        # Log that the Inter font is loaded
+        self.logger.debug("Inter font loaded successfully.")
+
+    # Every screen has the ability to update state.
+    # Not that it is needed on all screens, but it's much easier this way.
+    def update_state(self, i):
         try:
-            serial_manager.write(i) 
-            self.logger.debug(f"State updated with value: {i}") #Log added
+            self.logger.debug(f"Attempting to update state with value: {i}")  # Log the state update attempt
+            serial_manager.write(i)
+            self.logger.debug("State updated successfully.")  # Log success
         except Exception as e:
-            self.logger.error(f"Error updating state: {e}") #Log added
+            self.logger.error(f"Error updating state: {e}")  # Log error if state update fails
             print(f"Error updating state: {e}")

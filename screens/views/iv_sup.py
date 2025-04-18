@@ -1,18 +1,17 @@
-import logging  # logging
-
-# Configure logging
-logging.basicConfig(level=logging.INFO)  # logging
-
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QLabel, QHBoxLayout, QVBoxLayout,  QTextBrowser
+from PyQt5.QtWidgets import QLabel, QHBoxLayout, QVBoxLayout, QTextBrowser
 from PyQt5.QtGui import QFont
 from screens.views._DropShadow import Drop_Shadow
 from screens.views._Button import BtnDone
+from logging_config import lcd_logger  
 
 def setup_ui(self):
-    logging.info("SUP UI: Initializing main vertical layout")  # logging
+    self.logger = lcd_logger(self.__class__.__name__)  # Initialize logger
+    self.logger.debug("Initializing Insert SUP UI")  # Logging added
+
     layout = QVBoxLayout()
     hDiv = QHBoxLayout()
+    self.logger.debug("Main vertical and horizontal layouts created")  # Logging added
 
     # Welcome label
     topText = QLabel("Insert: SUP")
@@ -20,22 +19,22 @@ def setup_ui(self):
     topText.setFont(QFont(self.ff_inter, 35))
     shadow = Drop_Shadow()
     topText.setGraphicsEffect(shadow)
-    logging.info("SUP UI: Top label with shadow added: 'Insert: SUP'")  # logging
+    self.logger.debug("Top label for SUP and shadow effect applied")  # Logging added
 
     # Start button
     self.start_button = BtnDone(parent=self)
     self.start_button.clicked.connect(self._on_click)
-    logging.info("SUP UI: Start button initialized and click event connected")  # logging
+    self.logger.debug("Start button initialized and connected")  # Logging added
 
-    # render the horizontal division
+    # Render the horizontal division
     hDiv.addStretch()
     hDiv.addWidget(topText)
     hDiv.addStretch()
     hDiv.addWidget(self.start_button, alignment=Qt.AlignCenter)
     hDiv.addStretch()
-    logging.info("SUP UI: Horizontal layout (hDiv) populated with label and button")  # logging
+    self.logger.debug("Horizontal layout populated")  # Logging added
 
-    # division below for reminders
+    # Division below for reminders
     vDiv = QVBoxLayout()
     flavor_text = [
         "• Do not insert contaminated or wet plastic",
@@ -50,11 +49,10 @@ def setup_ui(self):
         bottomText.setFixedHeight(50)
         bottomText.setStyleSheet("margin-left:20px;")
         vDiv.addWidget(bottomText)
-        logging.info(f"SUP UI: Reminder label added: '{i}'")  # logging
     vDiv.addStretch()
-    logging.info("SUP UI: Vertical layout (vDiv) for reminders constructed")  # logging
+    self.logger.debug("Reminder labels for SUP created and added")  # Logging added
 
     layout.addLayout(hDiv)
     layout.addLayout(vDiv)
     self.setLayout(layout)
-    logging.info("SUP UI: Full layout set on widget")  # logging
+    self.logger.debug("Final layout set")  # Logging added

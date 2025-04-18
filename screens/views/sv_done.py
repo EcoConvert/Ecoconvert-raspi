@@ -1,16 +1,15 @@
-import logging  
-# Configure logging
-logging.basicConfig(level=logging.INFO)  
-
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QLabel, QVBoxLayout
 from PyQt5.QtGui import QFont
 from screens.views._DropShadow import Drop_Shadow
 from screens.views._Button import Btn
+from logging_config import lcd_logger  
 
 def setup_ui(self):
+    self.logger = lcd_logger(self.__class__.__name__)  # Logger setup
+    self.logger.debug("Initializing Start Screen UI")  # Logging UI init
+
     layout = QVBoxLayout()
-    logging.info("VBoxLayout initialized for welcome screen")  # logging
 
     # Welcome label
     welcome_label = QLabel("Ready to make <br> Ecobrick")
@@ -19,14 +18,14 @@ def setup_ui(self):
     shadow = Drop_Shadow()
     welcome_label.setGraphicsEffect(shadow)
     layout.addWidget(welcome_label)
-    logging.info("Welcome label set and styled: 'Ready to make <br> Ecobrick'")  # logging
+    self.logger.debug("Welcome label configured")
 
     # Start button
     start_button = Btn("Start making Ecobrick", bt_w=642, bt_h=202, padding_size=0, parent=self)
     start_button.clicked.connect(self._on_click)
     layout.addWidget(start_button, alignment=Qt.AlignCenter)
-    logging.info("Start button initialized and click event connected")  # logging
+    self.logger.debug("Start button created and connected")
 
     # Set layout
     self.setLayout(layout)
-    logging.info("Final layout set for the welcome screen")  # logging
+    self.logger.debug("Start screen layout set")

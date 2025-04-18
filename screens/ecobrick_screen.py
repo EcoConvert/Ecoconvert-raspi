@@ -1,11 +1,8 @@
 # src/lcd_interface/screens/welcome_screen.py
 
-import logging  
 from .base_screen import BaseScreen
 from .views.ecobrick_view import setup_ui
-
-# Set up basic logging configuration
-logging.basicConfig(level=logging.DEBUG)
+from logging_config import lcd_logger  
 
 class EcoScreen(BaseScreen):
     """
@@ -15,10 +12,15 @@ class EcoScreen(BaseScreen):
     def __init__(self, config, parent=None):
         super().__init__(config, parent)  # Inherit from BaseScreen
         self.ecobrick = 0
-        logging.debug("EcoScreen initialized")  # Logging
+        self.logger = lcd_logger(self.__class__.__name__)  # Initialize logger for this screen
+        self.logger.debug("Initializing EcoScreen")  # Log when EcoScreen is initialized
         setup_ui(self)
     
     def _on_click(self):
-        logging.debug("Button clicked in EcoScreen")  # Logging
+        """
+        Handle the click event to navigate to the next screen.
+        """
+        self.logger.info("EcoScreen 'Start The Machine' button clicked.")  # Log button click
         if self.parent():
-            self.parent().setCurrentIndex(1)
+            self.parent().setCurrentIndex(1)  # Assuming 1 is the index for the next screen
+            self.logger.info("Navigated from EcoScreen to the next screen.")
