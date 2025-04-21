@@ -16,8 +16,8 @@ class ErrorScreen(BaseScreen):
         """
         self.logger.info("Error screen 'Continue' button clicked")  # Log button click
         if self.parent():
-            self.parent().setCurrentIndex(1)  # Go to another screen (e.g., Home or Welcome screen)
-            self.logger.info("Navigated from Error Screen to Welcome Screen.")
+            self.parent().setCurrentIndex(1)  # Go to Standby Screen
+            self.logger.info("Navigated from Error Screen to Standby Screen.")
     
     def spawn_error_page(self, error_code, error_message, action_message):
         """
@@ -28,7 +28,7 @@ class ErrorScreen(BaseScreen):
             error_message (str): The error message to display.
             action_message (str): The message instructing the user on what action to take.
         """
-        self.logger.debug(f"Spawning error page with error code: {error_code}")  # Log spawning error page
+        self.logger.error(f"Spawning error page with error code: {error_code}")  # Log spawning error page
         self.error_code = error_code
         self.error_message = error_message
         self.error_code_label.setText(f"Error Code: {str(self.error_code)}")
@@ -36,4 +36,4 @@ class ErrorScreen(BaseScreen):
         self.action.setText(action_message)
 
         # Log error page setup
-        self.logger.info(f"Error page set with message: {self.error_message} and action: {action_message}")
+        self.logger.error(f"Error page set with message: {self.error_message} and action: {action_message}")

@@ -23,4 +23,4 @@ class EcoScreen(BaseScreen):
         self.logger.info("EcoScreen 'Start The Machine' button clicked.")  # Log button click
         if self.parent():
             self.parent().setCurrentIndex(1)  # Assuming 1 is the index for the next screen
-            self.logger.info("Navigated from EcoScreen to the next screen.")
+            self.logger.info("Navigated from EcoScreen to Standby screen.")

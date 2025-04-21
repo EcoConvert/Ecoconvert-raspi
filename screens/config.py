@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 from logging_config import lcd_logger  
 
-# Load environment variables from a .env file
+## Load environment variables from a .env file
 load_dotenv()  # Semi flag to kasi nasa global scope
 
 # Set up logging

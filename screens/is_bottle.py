@@ -78,11 +78,11 @@ class InsertScreenBottle(BaseScreen):
                 self.logger.warning("No parent QStackedWidget found.")  # Log if parent widget is not found
         else:
             error_screen = self.parent().widget(7)
-            self.logger.error("Invalid bottle detected. Displaying error screen.")  # Log invalid bottle detection
+            self.logger.error("Invalid bottle detected.")  # Log invalid bottle detection
             error_screen.spawn_error_page(
                 error_code=1,
                 error_message="non 1.5 pet bottle",
                 action_message="Please retrieve the non 1.5 bottle<br>then press return to standby"
             )
             self.parent().setCurrentIndex(7)  # Set to error screen
-            self.logger.info("Navigated to error screen with appropriate error message.")  # Log navigation to error screen
+            self.logger.info("Navigated to error screen.")  ## Log navigation to error screen

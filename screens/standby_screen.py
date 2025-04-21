@@ -20,34 +20,34 @@ class StandbyScreen(BaseScreen):
         
         # Logger
         self.logger = lcd_logger(__name__)  # Initialize logger for StandbyScreen
-        self.logger.debug("StandbyScreen initialized.")  # Log initialization of the screen
+        self.logger.debug("Standby Screen initialized.")  # Log initialization of the screen
     
     def _on_click_pet(self):
         if self.parent():
             self.update_state(1)
             parent = self.parent()  
-            parent.setCurrentIndex(2)  # Go to PET Screen
+            parent.setCurrentIndex(2)  # Go to Insert Screen Bottle
             is_bottle = parent.widget(2)
             pool = QThreadPool.globalInstance()
             camWorker = CamInitThread()
             pool.start(camWorker) 
             camWorker.signal.initDone.connect(is_bottle.done_clickability)
             is_bottle.done_clickability(False)
-            self.logger.info("Transitioning to PET Screen.")  # Log the transition to the PET screen
+            self.logger.info("Transitioning to IS Bottle.")  # Log the transition to the is_bottle screen
         else:
             self.logger.warning("No parent QStackedWidget found.")
 
     def _on_click_sup(self):
         if self.parent():
             self.update_state(1)
-            self.parent().setCurrentIndex(3)  # Go to SUP Screen  
+            self.parent().setCurrentIndex(3)  # Go to Insert Screen SUP 
             is_sup = self.parent().widget(3)
             pool = QThreadPool.globalInstance()
             camWorker = CamInitThread2()
             pool.start(camWorker)
             camWorker.signal.initDone.connect(is_sup.done_clickability)
             is_sup.done_clickability(False)
-            self.logger.info("Transitioning to SUP Screen.")  # Log the transition to the SUP screen
+            self.logger.info("Transitioning to IS SUP.")  # Log the transition to the is_sup screen
         else:
             self.logger.warning("No parent QStackedWidget found.")
     
@@ -100,7 +100,7 @@ class StandbyScreen(BaseScreen):
         if self.petflag and self.supflag:
             print("Both PET and SUP are being hit")
             parent = self.parent()  
-            parent.setCurrentIndex(5)  # Go to PET Screen
+            parent.setCurrentIndex(5)  # Go to SS done
 
             # Log when both PET and SUP actions are triggered
-            self.logger.info("Both PET and SUP triggered. Transitioning to next screen.")  # Log the transition to the next screen
+            self.logger.info("Both PET and SUP triggered. Transitioning to Standby Screen Done.")  # Log the transition to SS Done screen

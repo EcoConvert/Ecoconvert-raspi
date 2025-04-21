@@ -23,7 +23,7 @@ class DetectionResultScreen(BaseScreen):
             parent (QStackedWidget, optional): Parent stacked widget for navigation.
         """
         super().__init__(config, parent)
-        self.logger = lcd_logger(self.__class__.__name__)  # Initialize logger for this screen
+        self.logger = lcd_logger(self.__class__.__name__)  ## Initialize logger for this screen
         self.logger.debug("Initializing DetectionResultScreen")  # Log when screen is initialized
         self._setup_ui()
 
@@ -104,5 +104,5 @@ class DetectionResultScreen(BaseScreen):
         if self.parent():
             self.parent().setCurrentIndex(4)  # Completion Screen Index
             self.logger.info(
-                "Navigated from Detection Result Screen to Completion Screen."
+                "Navigated from Detection Result Screen to QR Screen."
             )

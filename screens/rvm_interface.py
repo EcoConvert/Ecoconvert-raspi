@@ -1,13 +1,14 @@
+# src/lcd_interface/screens/rvm_interface.py
 from PyQt5.QtWidgets import QStackedWidget, QVBoxLayout, QWidget
 
-from util.state import *  # load_state, save_state, load_state_variables, save_state_variables
+from util.state import * # load_state, save_state, load_state_variables, save_state_variables
 from logging_config import lcd_logger
 from .processing_screen import ProcessingScreen
 from .standby_screen import StandbyScreen
 from .welcome_screen import WelcomeScreen
 from .is_bottle import InsertScreenBottle
 from .is_sup import InsertScreenSup
-from .error_screen import ErrorScreen
+from .error_screen import ErrorScreen 
 from .ss_done import StandbyScreenDone
 from .qr_screen import QrScreen
 from .ecobrick_screen import EcoScreen
@@ -30,7 +31,7 @@ class RVMInterface(QWidget):
         self.state = load_state()
         self.managed_index = None
         # Logger
-        self.logger = lcd_logger(__name__)  # Initialize logger for RVMInterface
+        self.logger = lcd_logger(__name__)
         # Configuration
         self.config = config
         # Setup main window
@@ -59,7 +60,6 @@ class RVMInterface(QWidget):
         layout.addWidget(self.stacked_widget)
 
         self.setLayout(layout)
-        self.logger.debug("Main window setup complete.")  # Log window setup completion
 
     def _setup_screens(self):
         """
@@ -115,9 +115,9 @@ class RVMInterface(QWidget):
             # Set the initial screen
             self.stacked_widget.setCurrentIndex(0)
 
-            self.logger.info("Screens initialized successfully.")  # Log successful initialization of screens
+            self.logger.info("Screens initialized successfully.")
         except Exception as e:
-            self.logger.error(f"Error setting up screens: {e}", exc_info=True)  # Log error if any
+            self.logger.error(f"Error setting up screens: {e}", exc_info=True)
             raise
     
     # from here on, we manage the state based on what is the index number

@@ -63,4 +63,4 @@ class QrScreen(BaseScreen):
 
     def _change_token_image(self, filepath):  
         self.qr.setPixmap(QPixmap(filepath))  # Display the generated QR code
-        self.logger.debug(f"QR code image changed to {filepath}")  # Log QR code image change
+        self.logger.debug(f"QR code image changed to {filepath}")  # Log QR code image changee

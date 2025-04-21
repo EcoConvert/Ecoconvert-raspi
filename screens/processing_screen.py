@@ -16,7 +16,7 @@ class ProcessingScreen(BaseScreen):
         super().__init__(config, parent, camera)
         self.logger = lcd_logger(self.__class__.__name__)  # Initialize logger for this screen
         self.progress_value = 0  # Current progress value
-        self.logger.debug("Initializing ProcessingScreen")  # Log screen initialization
+        self.logger.debug("Initializing Processing Screen")  # Log screen initialization
         setup_ui(self)
     
     def wait_for_serial_done(self):
@@ -44,7 +44,7 @@ class ProcessingScreen(BaseScreen):
         save_state_variables("eco_brick_stored", bricks + 1)
         save_state_variables("weight", 0.0)
         save_state_variables("bottle_exist", False)
-        self.logger.info("Serial done received: Progress bar set to 100%, eco-brick stored count updated")  # Log serial done event
+        self.logger.info("Serial done")  # Log serial done event
         
         standby_screen = self.parent().widget(1)
         standby_screen.pet_clickability(True)
@@ -53,9 +53,9 @@ class ProcessingScreen(BaseScreen):
 
     def _ready_to_go_back(self):
         self.progress_bar.setValue(0)
-        self.parent().setCurrentIndex(1)
+        self.parent().setCurrentIndex(1) # Standby Screen
         self.update_state(0)
-        self.logger.info("Ready to go back to standby screen: Progress bar reset")  # Log ready to go back action
+        self.logger.info("Ready to go back to standby screen: Progress bar reset")  # Log ready to standby screen :* mwah
 
     def _simulate_serial_reads(self):
         """
@@ -73,4 +73,4 @@ class ProcessingScreen(BaseScreen):
         for key, val in TimeDict.items(): 
             self.timer.singleShot(key, partial(self.update_progress_bar, val))
         self.timer.singleShot(3000, self._on_serial_done)
-        self.logger.debug("Scheduled simulated serial reads and progress updates")  # Log scheduling of serial reads
+        self.logger.debug("Scheduled simulated serial reads and progress updates")  # Log scheduling of serial reads and ung progress bar

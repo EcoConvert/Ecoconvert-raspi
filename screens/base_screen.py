@@ -34,7 +34,7 @@ class BaseScreen(QWidget):
         self.camera = camera
         self.logger = lcd_logger(self.__class__.__name__)
 
-        # Common debug log
+        ## Common debug log
         self.logger.debug(f"Initialized {self.__class__.__name__}")
 
         # Log font loading

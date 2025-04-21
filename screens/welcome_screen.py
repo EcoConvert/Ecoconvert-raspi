@@ -22,7 +22,7 @@ class WelcomeScreen(BaseScreen):
         
         # Logger initialization
         self.logger = lcd_logger(__name__)  # Initialize logger for WelcomeScreen
-        self.logger.debug("WelcomeScreen initialized.")  # Log initialization of the screen
+        self.logger.debug("Welcome Screen initialized.")  # Log initialization of the screen
         
         # Update state to standby mode
         self.update_state(0)  # update to standby mode
@@ -34,12 +34,10 @@ class WelcomeScreen(BaseScreen):
         """
         try:
             if self.parent():
-                # Navigate to the next screen (index 1 assumed)
+                # Navigate to the next screen (index 1 assumed) - Standby Screen
                 standby_screen = self.parent().widget(1)
                 standby_screen.global_state_checker()  # Call global state checker
-                
-                # Log navigation from WelcomeScreen to ReminderScreen
-                self.logger.info("Navigated from Welcome Screen to Reminder Screen.")
+                self.logger.info("Navigated from Welcome Screen to Standby Screen.")
             else:
                 self.logger.warning("No parent QStackedWidget found for navigation.")
         except Exception as e:

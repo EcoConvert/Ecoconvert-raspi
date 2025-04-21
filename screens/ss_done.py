@@ -24,11 +24,11 @@ class StandbyScreenDone(BaseScreen):
 
         # Logger
         self.logger = lcd_logger(__name__)  # Initialize logger for StandbyScreenDone
-        self.logger.debug("StandbyScreenDone initialized.")  # Log initialization of the screen
+        self.logger.debug("Standby Screen Done initialized.")  # Log initialization of the screen
     
     def _on_click(self):
         if self.parent():
-            self.parent().setCurrentIndex(6)
+            self.parent().setCurrentIndex(6) # Processing Screen
             self.update_state(3)
             processing_screen = self.parent().widget(6)
             processing_screen.wait_for_serial_done()

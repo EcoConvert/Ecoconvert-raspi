@@ -77,7 +77,7 @@ class InsertScreenSup(BaseScreen):
 
         qr_screen = self.parent().widget(4)
         qr_screen.generate_qr(self.points)
-        self.logger.info("Generated QR code and navigated to QR screen.")  # Log QR generation and screen navigation
+        self.logger.info(f"Generated QR code with {self.points} points.") # Log QR generationn
         self.parent().setCurrentIndex(4)  # Go to QR Screen
     
     def process(self):
@@ -119,4 +119,4 @@ class InsertScreenSup(BaseScreen):
                 action_message="Please retrieve the non plastic item<br>then press return to standby"
             )
             self.parent().setCurrentIndex(7)  # Set to error screen
-            self.logger.info("Navigated to error screen with appropriate error message.")  # Log navigation to error screen
+            self.logger.info("Navigated to error screen.")  # Log navigation to error screen
