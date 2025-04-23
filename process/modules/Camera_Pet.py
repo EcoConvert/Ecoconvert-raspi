@@ -25,11 +25,11 @@ logging.basicConfig(
 class CameraPet(CameraBase):
     def __init__(self, camera_id=0): #CHANGE THE CAM ID DEPENDS ON PORT NUMBER....
         super().__init__(camera_id)
-        self.model_path = os.getenv("MODEL_PATH_DETECTION")
+        self.model_path = os.getenv("MODEL_PATH_CLASSIFICATION")
         
         if not self.model_path:
             logging.error("Model path not provided")
-            raise ValueError(("Model path not provided"))
+            raise ValueError(("Model path not provided")) 
 
         # Initialize parameters for PET Bottle
         self.fgbg = None

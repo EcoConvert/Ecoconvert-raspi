@@ -671,3 +671,37 @@ AttributeError: 'QLabel' object has no attribute 'addWidget'
 2025-03-30 19:34:16,559 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
 2025-03-30 19:35:33,225 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-03-30 19:35:35,106 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 19:19:04,150 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 19:19:07,301 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 19:34:17,255 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 19:34:19,440 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 19:48:03,337 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 19:48:08,129 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 19:49:35,261 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 19:49:36,404 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 19:50:07,171 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 19:50:08,391 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 20:02:47,216 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 20:02:49,770 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 20:11:10,086 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 20:11:13,410 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 20:19:09,410 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 20:19:10,877 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 20:26:09,792 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 20:26:11,620 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 20:37:59,682 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 20:40:09,257 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 20:41:39,617 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 20:41:40,538 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 20:42:24,952 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 20:42:26,105 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 20:42:41,339 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 20:42:42,154 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 20:53:45,326 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 20:53:47,294 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 20:54:21,414 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 20:54:22,160 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 21:05:39,738 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 21:05:41,916 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 21:06:05,977 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 21:06:06,736 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
