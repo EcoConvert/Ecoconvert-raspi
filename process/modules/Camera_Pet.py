@@ -29,7 +29,7 @@ class CameraPet(CameraBase):
         
         if not self.model_path:
             logging.error("Model path not provided")
-            raise ValueError(("Model path not provided"))
+            raise ValueError(("Model path not provided")) 
 
         # Initialize parameters for PET Bottle
         self.fgbg = None
