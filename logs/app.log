@@ -671,3 +671,10 @@ AttributeError: 'QLabel' object has no attribute 'addWidget'
 2025-03-30 19:34:16,559 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
 2025-03-30 19:35:33,225 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
 2025-03-30 19:35:35,106 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 21:22:49,314 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 21:33:41,316 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 21:33:42,420 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 21:34:02,169 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 21:34:03,306 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-22 21:35:42,740 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-04-22 21:35:44,046 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
