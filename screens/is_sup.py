@@ -1,10 +1,10 @@
-# src/lcd_interface/screens/welcome_screen.py
 import random
 from PyQt5.QtCore import QThreadPool
 from .base_screen import BaseScreen
-from .views.iv_sup import setup_ui 
+from .views.iv_sup import setup_ui
 from util.state import save_state_variables, load_state_variables
 from .controller.i3_camera import CameraThread2
+from logging_config import lcd_logger  
 
 class InsertScreenSup(BaseScreen):
     """
@@ -15,75 +15,108 @@ class InsertScreenSup(BaseScreen):
     def __init__(self, config, parent=None):
         """
         Initialize the welcome screen.
+        
         Args:
             config (dict): Application configuration dictionary.
             parent (QStackedWidget, optional): Parent stacked widget for navigation.
         """
         super().__init__(config, parent)  # Inherit from BaseScreen
+        self.logger = lcd_logger(self.__class__.__name__)  # Initialize logger for this screen
         self.SUP_MULT = 0.2
-        self.weight=load_state_variables("weight")
+        self.weight = load_state_variables("weight")
         self.ser_weight = 0
+        self.logger.debug("Initializing InsertScreenSup")  # Log screen initialization
         setup_ui(self)
         self.done_clickability(False)
     
-    def done_clickability(self, state = None):
+    def done_clickability(self, state=None):
+        """
+        Control the clickability of the Done button.
+        
+        Args:
+            state (bool, optional): Enable or disable the button. Defaults to None.
+        """
         if state is None:
             return
+        self.logger.debug(f"Setting Done button clickability to {state}")  # Log button state change
         print("Done Clickability ", state)
         self.start_button.setEnabled(state)
 
     def _on_click(self):
+        """
+        Handle the click event to start processing.
+        """
+        self.logger.info("Start button clicked, initiating process")  # Log button click
         if self.parent():
             self.process()
-            # self.update_state(1) # update to insert 
-            # qr_screen = self.parent().widget(4)
-            # qr_screen.generate_qr(self.points)
-            # self.parent().setCurrentIndex(4) # go to SUP Screen  
         else:
-            self.logger.warning("No parent QStackedWidget found.")
+            self.logger.warning("No parent QStackedWidget found.")  # Log if parent widget is not found
     
-    def _generate_points(self, val):  
-        self.points = 0
+    def _generate_points(self, val):
+        """
+        Generate points based on the given value.
+        
+        Args:
+            val (float): Value used to calculate points.
+        """
         self.points = round(val * self.SUP_MULT, 2)
+        self.logger.debug(f"Generated points: {self.points}")  # Log generated points
         print("Points sup " + str(self.points))
-        pass 
-
-
+    
     def _last_process(self):
-        # open the camera here
-        # some process here to get the weight 
+        """
+        Process the last step, including calculating weight and generating QR code.
+        """
+        self.logger.debug("Performing last process step")  # Log last process
         print("SUPS deposited")
-        weight_diff = self.ser_weight - self.weight 
+        weight_diff = self.ser_weight - self.weight
+        self.logger.debug(f"Weight difference: {weight_diff}")  # Log weight difference
         print("Weight diff " + str(weight_diff))
-        self._generate_points(weight_diff) 
+        self._generate_points(weight_diff)
         save_state_variables("weight", self.ser_weight)
 
         qr_screen = self.parent().widget(4)
         qr_screen.generate_qr(self.points)
-        self.parent().setCurrentIndex(4) # go to SUP Screen  
+        self.logger.info(f"Generated QR code with {self.points} points.") # Log QR generationn
+        self.parent().setCurrentIndex(4)  # Go to QR Screen
     
     def process(self):
-        # serial 
-        self.weight=load_state_variables("weight")
+        """
+        Start the process of capturing and inferring plastic items.
+        """
+        self.logger.debug("Starting process to capture and infer plastic items")  # Log process start
+        self.weight = load_state_variables("weight")
         self.ser_weight = 0
         
-        # camera thread  
+        # Start camera thread
         pool = QThreadPool.globalInstance()
         inference = CameraThread2()
         pool.start(inference)
         inference.signal.inference.connect(self.is_valid_plastic)
+        self.logger.info("Camera thread started for plastic inference")  # Log camera thread start
         print("processing sup")
     
     def is_valid_plastic(self, inference):
-        inference = "err" # change this latuurrs
-        if inference == "plastic": # change this  kung mag class id tayo dito  
-            # some process here to get the weight 
-            self.ser_weight = self.weight + random.randint(1, 100) # simulation lang to ng wieght yung ginagawa ni pons mas accurate yon sa actual. 
-            print("[is_sup.py] weight ", self.weight)
-            print("[is_sup.py] ser ", self.ser_weight)
+        """
+        Check if the detected item is a valid plastic and process accordingly.
+        
+        Args:
+            inference (str): Inference result, expected to be 'plastic' for valid items.
+        """
+        self.logger.debug(f"Received inference result: {inference}")  # Log inference result
+        inference = "err"  # This is just a placeholder for now
+        if inference == "plastic":
+            # Simulating weight processing
+            self.ser_weight = self.weight + random.randint(1, 100)  # Simulating weight change
+            self.logger.debug(f"Weight: {self.weight}, Processed Weight: {self.ser_weight}")  # Log weight data
             self._last_process()
         else:
+            self.logger.error("Invalid item detected: non-plastic")  # Log invalid item detection
             error_screen = self.parent().widget(7)
-            error_screen.spawn_error_page( error_code = 2 , error_message = "non sup item", action_message = 
-            "Please retrieve the non plastic item<br>then press return to standby")
-            self.parent().setCurrentIndex(7)
+            error_screen.spawn_error_page(
+                error_code=2,
+                error_message="non sup item",
+                action_message="Please retrieve the non plastic item<br>then press return to standby"
+            )
+            self.parent().setCurrentIndex(7)  # Set to error screen
+            self.logger.info("Navigated to error screen.")  # Log navigation to error screen

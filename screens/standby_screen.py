@@ -1,4 +1,3 @@
-# src/lcd_interface/screens/reminder_screen.py
 import time
 from PyQt5.QtCore import QThreadPool
 from .base_screen import BaseScreen
@@ -6,6 +5,7 @@ from .views.standby_view import setup_ui
 from .controller.i1_init import InitThread  
 from .controller.i2_camera import CamInitThread
 from .controller.i3_camera import CamInitThread2
+from logging_config import lcd_logger 
 
 class StandbyScreen(BaseScreen):
     """
@@ -17,38 +17,41 @@ class StandbyScreen(BaseScreen):
         setup_ui(self)
         self.petflag = False
         self.supflag = False
+        
+        # Logger
+        self.logger = lcd_logger(__name__)  # Initialize logger for StandbyScreen
+        self.logger.debug("Standby Screen initialized.")  # Log initialization of the screen
     
     def _on_click_pet(self):
         if self.parent():
             self.update_state(1)
             parent = self.parent()  
-            parent.setCurrentIndex(2) # go to PET Screen
+            parent.setCurrentIndex(2)  # Go to Insert Screen Bottle
             is_bottle = parent.widget(2)
             pool = QThreadPool.globalInstance()
             camWorker = CamInitThread()
             pool.start(camWorker) 
             camWorker.signal.initDone.connect(is_bottle.done_clickability)
             is_bottle.done_clickability(False)
-            # # self.update_state(1) # update to insert
+            self.logger.info("Transitioning to IS Bottle.")  # Log the transition to the is_bottle screen
         else:
             self.logger.warning("No parent QStackedWidget found.")
 
     def _on_click_sup(self):
         if self.parent():
             self.update_state(1)
-            self.parent().setCurrentIndex(3) # go to SUP Screen  
+            self.parent().setCurrentIndex(3)  # Go to Insert Screen SUP 
             is_sup = self.parent().widget(3)
             pool = QThreadPool.globalInstance()
             camWorker = CamInitThread2()
             pool.start(camWorker)
             camWorker.signal.initDone.connect(is_sup.done_clickability)
             is_sup.done_clickability(False)
-            # is_sup.process() 
-            # self.update_state(1) # update to insert
+            self.logger.info("Transitioning to IS SUP.")  # Log the transition to the is_sup screen
         else:
             self.logger.warning("No parent QStackedWidget found.")
     
-    def sup_clickability(self, state = True):
+    def sup_clickability(self, state=True):
         self.supflag = not state 
         self.sup_btn.setEnabled(state)
         if state:
@@ -56,7 +59,7 @@ class StandbyScreen(BaseScreen):
         else:
             self.sup_btn.setStyleSheet("margin-bottom:30px; background-color:#D9D9D9; border: 3px solid #50000000; border-radius: 20%")
 
-    def pet_clickability(self, state = True):
+    def pet_clickability(self, state=True):
         self.petflag = not state 
         self.pet_btn.setEnabled(state)
         self.pet_btn.setStyleSheet("margin-bottom:30px; background-color:#D9D9D9; border: 3px solid #50000000; border-radius: 20%")
@@ -65,7 +68,7 @@ class StandbyScreen(BaseScreen):
         else:
             self.pet_btn.setStyleSheet("margin-bottom:30px; background-color:#D9D9D9; border: 3px solid #50000000; border-radius: 20%")
 
-    # ###### 
+    # ######
     def global_state_checker(self):
         pool = QThreadPool.globalInstance()
         init_worker = InitThread()
@@ -97,4 +100,7 @@ class StandbyScreen(BaseScreen):
         if self.petflag and self.supflag:
             print("Both PET and SUP are being hit")
             parent = self.parent()  
-            parent.setCurrentIndex(5) # go to PET Screen
+            parent.setCurrentIndex(5)  # Go to SS done
+
+            # Log when both PET and SUP actions are triggered
+            self.logger.info("Both PET and SUP triggered. Transitioning to Standby Screen Done.")  # Log the transition to SS Done screen

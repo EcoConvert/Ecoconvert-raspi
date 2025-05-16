@@ -1,10 +1,13 @@
 # src/lcd_interface/config.py
 import os
 from dotenv import load_dotenv
+from logging_config import lcd_logger  
 
-# Load environment variables from a .env file
-load_dotenv() # semi flag to kasi nasa global scope
+## Load environment variables from a .env file
+load_dotenv()  # Semi flag to kasi nasa global scope
 
+# Set up logging
+logger = lcd_logger(__name__)  # Create a logger for this module
 
 def load_config():
     """
@@ -12,7 +15,9 @@ def load_config():
     Returns:
         dict: Configuration dictionary containing app settings.
     """
-    return {
+    logger.debug("Loading configuration...")  # Log that configuration loading has started
+
+    config = {
         "window_title": os.getenv("WINDOW_TITLE", "RVM LCD Interface"),
         "window_width": int(os.getenv("WINDOW_WIDTH", 800)),
         "window_height": int(os.getenv("WINDOW_HEIGHT", 480)),
@@ -33,3 +38,8 @@ def load_config():
         "model_path": os.getenv("MODEL_PATH", "./resources/models/model.tflite"),
         "label_path": os.getenv("LABEL_PATH", "./resources/labels/labels.txt"),
     }
+
+    # Log the loaded configuration (without sensitive data like paths)
+    logger.debug(f"Configuration loaded: {list(config.keys())}")  # Log only the keys to avoid sensitive data leakage
+    
+    return config
