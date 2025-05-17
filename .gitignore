@@ -1,9 +1,0 @@
-env/
-.env
-e__/
-logs/
-screens/_heirarchy.txt
-logs/
-__pycache__*
-.ruff_cache
-.zed
