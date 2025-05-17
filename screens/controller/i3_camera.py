@@ -1,5 +1,5 @@
 from PyQt5.QtCore import QRunnable, pyqtSignal, QObject
-from process.modules.Camera_Sup import CameraSup
+from process.modules.Camera_YSup import CameraSup
 
 class s_inference_signal(QObject):
     inference = pyqtSignal(str)

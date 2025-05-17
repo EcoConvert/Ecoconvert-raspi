@@ -1,5 +1,5 @@
 from PyQt5.QtCore import QRunnable, pyqtSignal, QObject
-from process.modules.Camera_Pet import CameraPet
+from process.modules.Camera_YPet import CameraPet
 
 class p_inference_signal(QObject):
     inference = pyqtSignal(bool)

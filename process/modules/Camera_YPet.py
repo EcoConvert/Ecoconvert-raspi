@@ -8,7 +8,7 @@ import time
 
 import cv2
 import numpy as np
-import tensorflow as tf
+# import tensorflow as tf
 from dotenv import load_dotenv
 from ultralytics import YOLO
 
