@@ -37,7 +37,7 @@ def setup_ui(self):
     vDiv.addStretch()
     for i in flavor_text:
         bottomText = QLabel(i)
-        bottomText.setFont(QFont(self.ff_poppins, 24))
+        bottomText.setFont(QFont(self.ff_poppins, 24)) 
         bottomText.setFixedHeight(50)
         bottomText.setStyleSheet("margin-left:20px;")
         vDiv.addWidget(bottomText)

@@ -2,7 +2,7 @@ from PyQt5.QtCore import QRunnable, pyqtSignal, QObject
 from process.modules.Camera_YSup import CameraSup
 
 class s_inference_signal(QObject):
-    inference = pyqtSignal(str)
+    inference = pyqtSignal(bool)
 
 class i_signal(QObject):
     initDone= pyqtSignal(bool)
@@ -34,7 +34,12 @@ class CameraThread2(QRunnable):
         if SharedCamera.camera is None:
             print("Camera not initialized")
             return
-        obj_det_result= SharedCamera.camera.infer()  # Capture and process
-        print(f"Object detected: {obj_det_result}")
-        self.signal.inference.emit(obj_det_result)
+        obj_det_result = SharedCamera.camera.infer()  # Capture and process
+        
+        if "metal" in obj_det_result or "rock" in obj_det_result or "trash" in obj_det_result:
+            # print("Metal, rock, or trash detected")
+            self.signal.inference.emit(False)
+        else:
+            # print(f"Object detected: {obj_det_result}")
+            self.signal.inference.emit(True)
         SharedCamera.camera.release_camera()

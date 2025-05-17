@@ -126,13 +126,19 @@ class CameraSup(CameraBase):
             return []
             
         detections, output_frame = self.make_inference(conf_threshold=conf_threshold)
-            
-        if display and output_frame is not None:
-            cv2.imshow("Detection", output_frame)
-            cv2.waitKey(1)
-            
-        return detections
-    
+        try:    
+            if display and output_frame is not None:
+                cv2.imshow("Detection", output_frame)
+                cv2.waitKey(1)
+                
+            return detections
+        except Exception as e:
+            logging.error(f"Error displaying frame: {e}")
+            return []
+        finally:
+            if display:
+                cv2.destroyAllWindows()
+
     def infer(self, display=True, conf_threshold=None, new_capture=False):
         """
         Perform inference on current or new frame

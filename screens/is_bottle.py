@@ -82,7 +82,7 @@ class InsertScreenBottle(BaseScreen):
             error_screen.spawn_error_page(
                 error_code=1,
                 error_message="non 1.5 pet bottle",
-                action_message="Please retrieve the non 1.5 bottle<br>then press return to standby"
+                action_message="Please retrieve <br> the non 1.5 bottle<br>then press <br> return to standby"
             )
             self.parent().setCurrentIndex(7)  # Set to error screen
             self.logger.info("Navigated to error screen.")  ## Log navigation to error screen

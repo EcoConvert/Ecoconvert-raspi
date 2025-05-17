@@ -229,11 +229,11 @@ class CameraPet(CameraBase):
                     
                     # Show detection progress
                     if display:
-                        cv2.putText(frame_with_roi, f"Detecting: {self.frame_counter}/{self.frames_threshold}", 
+                        cv2.putText(frame_with_roi, f"Detecting: {self.frame_counter}/{self.frame_threshold}", 
                                    (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
                     
                     # Check if detection threshold reached
-                    if self.frame_counter >= self.frames_threshold and not self.detection_triggered:
+                    if self.frame_counter >= self.frame_threshold and not self.detection_triggered:
                         # Run inference
                         class_label, score, inference_time = self._run_inference(frame)
                         

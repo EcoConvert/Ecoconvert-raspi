@@ -35,5 +35,11 @@ class CameraThread(QRunnable):
             print("Camera not initialized")
             return
         valid = SharedCamera.camera.infer()  # Capture and process
-        self.signal.inference.emit(valid)
+        # print("Camera inference ", valid)
+    
+        if valid['class'] == '0_unacceptable':
+            self.signal.inference.emit(False)
+        elif valid['class'] == '1_pet_bottle':
+            self.signal.inference.emit(True)
+       
         SharedCamera.camera.release_camera()

@@ -6,7 +6,7 @@ from screens.views._Button import BtnBack
 
 def setup_ui(self):
     bg = QFrame(self)
-    bg.setGeometry(0, 0, self.config["window_width"], self.config["window_height"])  # x, y, width, height
+    bg.setGeometry(0, 0, self.config["window_width"]+150, self.config["window_height"]+50)  # x, y, width, height
     bg.setStyleSheet("background-color: #FF0077;")
 
     hDiv = QHBoxLayout()

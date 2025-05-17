@@ -104,8 +104,8 @@ class InsertScreenSup(BaseScreen):
             inference (str): Inference result, expected to be 'plastic' for valid items.
         """
         self.logger.debug(f"Received inference result: {inference}")  # Log inference result
-        inference = "err"  # This is just a placeholder for now
-        if inference == "plastic":
+        
+        if inference:
             # Simulating weight processing
             self.ser_weight = self.weight + random.randint(1, 100)  # Simulating weight change
             self.logger.debug(f"Weight: {self.weight}, Processed Weight: {self.ser_weight}")  # Log weight data
@@ -116,7 +116,7 @@ class InsertScreenSup(BaseScreen):
             error_screen.spawn_error_page(
                 error_code=2,
                 error_message="non sup item",
-                action_message="Please retrieve the non plastic item<br>then press return to standby"
+                action_message="Please retrieve <br> the non plastic item<br>then press <br> return to standby"
             )
             self.parent().setCurrentIndex(7)  # Set to error screen
             self.logger.info("Navigated to error screen.")  # Log navigation to error screen
