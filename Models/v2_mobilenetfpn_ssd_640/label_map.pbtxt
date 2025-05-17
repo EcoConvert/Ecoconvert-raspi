@@ -1,0 +1,59 @@
+item {
+    id: 1
+    name: 'cardboard_paper'
+}
+
+item {
+    id: 2
+    name: 'glass'
+}
+
+item {
+    id: 3
+    name: 'metal'
+}
+
+item {
+    id: 4
+    name: 'plastic'
+}
+
+item {
+    id: 5
+    name: 'rock'
+}
+
+item {
+    id: 6
+    name: 'trash'
+}
+
+item {
+    id: 7
+    name: 'PET_bottle_1.5L'
+}
+
+item {
+    id: 8
+    name: 'Not_1.5'
+}
+
+item {
+    id: 9
+    name: 'Crumpled'
+}
+
+item {
+    id: 10
+    name: 'Capped'
+}
+
+item {
+    id: 11
+    name: 'Unclean'
+}
+
+item {
+    id: 12
+    name: 'leaf'
+}
