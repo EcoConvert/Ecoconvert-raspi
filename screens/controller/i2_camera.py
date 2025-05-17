@@ -36,10 +36,8 @@ class CameraThread(QRunnable):
             return
         valid = SharedCamera.camera.infer()  # Capture and process
         # print("Camera inference ", valid)
-    
-        if valid['class'] == '0_unacceptable':
+        if valid['class'] == '0_unacceptable' or valid["class"] == 'unacceptable':
             self.signal.inference.emit(False)
-        elif valid['class'] == '1_pet_bottle':
+        elif valid['class'] == '1_pet_bottle' or valid["class"] == 'pet_bottle':
             self.signal.inference.emit(True)
-       
         SharedCamera.camera.release_camera()

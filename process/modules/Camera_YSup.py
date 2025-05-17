@@ -139,7 +139,7 @@ class CameraSup(CameraBase):
             if display:
                 cv2.destroyAllWindows()
 
-    def infer(self, display=True, conf_threshold=None, new_capture=False):
+    def infer(self, display=False, conf_threshold=None, new_capture=False):
         """
         Perform inference on current or new frame
         

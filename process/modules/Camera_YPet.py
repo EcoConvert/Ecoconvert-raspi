@@ -166,7 +166,7 @@ class CameraPet(CameraBase):
                 
         return roi_mask, total_area 
 
-    def infer(self, timeout=10.0, display=True):
+    def infer(self, timeout=10.0, display=False):
         """
         Detect and classify PET bottles.
         
