@@ -2,7 +2,7 @@
 
 from .base_screen import BaseScreen
 from .views.ecobrick_view import setup_ui
-from logging_config import lcd_logger  
+
 
 class EcoScreen(BaseScreen):
     """
@@ -12,7 +12,6 @@ class EcoScreen(BaseScreen):
     def __init__(self, config, parent=None):
         super().__init__(config, parent)  # Inherit from BaseScreen
         self.ecobrick = 0
-        self.logger = lcd_logger(self.__class__.__name__)  # Initialize logger for this screen
         self.logger.debug("Initializing EcoScreen")  # Log when EcoScreen is initialized
         setup_ui(self)
     

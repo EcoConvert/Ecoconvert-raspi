@@ -3,7 +3,6 @@ from .base_screen import BaseScreen
 from .views.iv_bottle import setup_ui
 from util.state import save_state_variables
 from .controller.i2_camera import CameraThread
-from logging_config import lcd_logger  
 
 class InsertScreenBottle(BaseScreen):
     """
@@ -20,7 +19,7 @@ class InsertScreenBottle(BaseScreen):
             parent (QStackedWidget, optional): Parent stacked widget for navigation.
         """
         super().__init__(config, parent)  # Inherit from BaseScreen
-        self.logger = lcd_logger(self.__class__.__name__)  # Initialize logger for this screen
+        
         self.PET_POINTS = 10.0
         self.cont = False
         self.logger.debug("Initializing InsertScreenBottle")  # Log screen initialization

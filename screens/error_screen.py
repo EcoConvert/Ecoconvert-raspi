@@ -1,11 +1,10 @@
 from .base_screen import BaseScreen
 from .views.error_view import setup_ui
-from logging_config import lcd_logger  
+
 
 class ErrorScreen(BaseScreen):
     def __init__(self, config, parent=None):
         super().__init__(config, parent)
-        self.logger = lcd_logger(self.__class__.__name__)  # Initialize logger for this screen
         self.error_code = -4
         self.logger.debug("Initializing ErrorScreen")  # Log when screen is initialized
         setup_ui(self)

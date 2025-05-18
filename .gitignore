@@ -1,16 +1,18 @@
 env/
-.env
+
 e__/
+_env11/ 
+env11/ 
+nenv/
 logs/
 screens/_heirarchy.txt
 logs/
 __pycache__*
 .ruff_cache
 .zed
-_env11/ 
-env11/ 
+.env
 screens/qr_img/*.png
 state_variables.json
 state.json
-nenv/
+
 
