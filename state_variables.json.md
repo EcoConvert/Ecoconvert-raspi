@@ -1,3 +1,13 @@
+on fresh install, create these files 
+
+state_variables.json 
+{
+    "weight": 0.0,
+    "eco_brick_stored": 0,
+    "bottle_exist": false
+}
+state.json
+{"state": 1}
 Try to change the value of the state variables
 here are the trigers
 
@@ -8,3 +18,4 @@ here are the trigers
 "weight" > 525 and "bottle_exist" == true => show Create ecobrick screen
 
 "eco_brick_stored": 0 => dito wala pa ko talaga naiisip
+

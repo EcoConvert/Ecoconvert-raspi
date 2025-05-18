@@ -9,4 +9,6 @@ __pycache__*
 .zed
 _env11/ 
 env11/ 
-screens/qr_img
+screens/qr_img/*.png
+state_variables.json
+state.json

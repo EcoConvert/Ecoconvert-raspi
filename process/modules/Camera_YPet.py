@@ -31,7 +31,7 @@ class CameraPet(CameraBase):
     A class for detecting and classifying PET bottles.
     """
     
-    def __init__(self, camera_id=0, model_path=None):
+    def __init__(self, camera_id=None, model_path=None):
         """
         Initialize the CameraPet detector.
         
@@ -39,8 +39,10 @@ class CameraPet(CameraBase):
             camera_id: Camera device index
             model_path: Path to the YOLO model file
         """
+        camera_id = int(os.getenv("CAM_PET") or camera_id)
         super().__init__(camera_id)
         # Set model path from ENV
+
         self.model_path = model_path or os.getenv("MODEL_PATH_CLASSIFICATION")
         if not self.model_path:
             logging.error("Model path not provided")

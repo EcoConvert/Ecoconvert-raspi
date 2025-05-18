@@ -21,7 +21,8 @@ logging.basicConfig(
 )
 
 class CameraSup(CameraBase):
-    def __init__(self, camera_id=0, conf_threshold=0.2):
+    def __init__(self, camera_id=None, conf_threshold=0.2):
+        camera_id = int(os.getenv("CAM_SUP") or camera_id)
         super().__init__(camera_id)
         self.model_path = os.getenv("MODEL_PATH_DETECTION")  # Path to YOLO model
         self.camera_ready = False
