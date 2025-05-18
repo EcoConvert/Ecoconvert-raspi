@@ -1,0 +1,696 @@
+2025-03-10 21:15:24,740 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 21:15:30,912 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 21:19:42,897 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 21:19:46,303 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 21:20:18,893 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 21:20:20,909 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 21:21:09,482 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 21:21:13,313 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 21:27:45,916 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 21:27:50,982 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 21:30:23,913 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 21:30:29,041 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 21:31:17,503 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 21:31:23,912 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 21:31:55,808 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 21:31:57,711 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 21:32:51,449 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 21:32:54,535 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 21:50:06,688 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 21:50:13,905 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 21:50:55,073 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 21:51:03,790 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 22:39:40,217 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 22:39:57,355 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 22:48:59,660 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 22:49:04,903 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:06:30,460 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:06:39,406 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:07:31,748 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:07:34,575 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:08:41,947 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:08:45,903 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:10:56,223 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:11:01,052 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:13:19,752 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:13:24,218 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:19:10,506 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:19:13,269 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:19:54,425 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:19:56,910 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:21:01,125 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:21:03,731 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:23:42,340 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:23:45,186 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:25:03,658 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:25:05,975 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:26:54,243 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:26:57,220 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:27:40,301 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:27:42,524 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:30:17,725 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:30:20,416 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:30:53,373 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:30:57,378 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:32:23,375 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:32:26,898 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:32:46,229 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:32:50,090 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:33:59,065 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:34:04,556 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:34:44,254 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:34:45,611 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-10 23:36:00,643 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-10 23:36:03,101 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-14 19:04:25,669 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-14 19:04:28,850 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-14 19:12:57,752 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-14 19:13:00,332 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-14 19:14:57,377 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-14 19:15:01,575 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-14 19:15:42,537 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-14 19:15:43,667 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-14 19:15:47,740 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-14 19:15:48,987 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-14 19:18:36,117 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-14 19:18:37,377 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-14 19:19:45,789 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-14 19:19:47,542 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-14 19:20:10,274 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-14 19:20:11,422 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-14 19:21:17,703 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-14 19:21:18,872 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-14 19:22:02,788 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-14 19:22:05,102 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-14 19:25:46,229 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-14 19:25:47,983 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-14 19:26:36,382 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-14 19:26:38,507 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 10:47:41,039 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 10:55:19,186 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:05:01,310 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:05:03,109 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:05:28,788 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:05:29,866 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:06:08,597 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:06:10,608 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:08:39,907 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:08:41,126 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:09:24,756 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:09:25,725 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:10:45,523 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:10:46,562 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:11:03,190 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:11:04,803 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:12:18,456 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:12:19,845 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:13:13,823 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:13:14,778 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:13:56,296 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:13:57,016 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:14:25,181 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:14:26,021 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:14:44,062 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:14:45,093 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:15:14,762 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:15:15,773 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:18:10,794 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:18:11,884 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:18:31,314 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:18:32,476 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:21:22,293 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:21:23,313 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:21:44,075 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:21:44,942 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:22:31,992 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:22:32,833 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:25:10,936 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:25:11,858 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:25:30,664 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:25:31,556 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:25:57,237 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:25:58,172 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:27:44,469 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:27:45,427 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:31:45,320 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:31:53,628 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:37:42,289 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:37:43,340 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:38:11,976 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:38:12,955 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:42:05,082 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:42:06,542 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 11:42:14,727 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 11:42:27,439 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 14:12:50,739 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 14:12:51,850 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 14:14:48,568 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 14:14:49,329 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 14:16:08,111 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 14:16:09,112 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 14:18:30,024 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 14:18:30,843 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 14:22:19,427 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 14:22:20,527 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 14:23:33,657 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 14:23:34,727 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 14:27:11,118 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 14:27:12,071 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 14:30:20,631 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 14:30:24,470 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 14:30:54,215 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 14:30:55,293 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 14:34:38,199 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 14:34:40,474 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 14:36:09,329 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 14:36:10,972 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 14:38:09,634 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 14:38:11,518 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 14:39:33,116 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 14:39:33,978 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 14:40:07,803 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 14:40:08,641 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 15:03:38,309 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 15:03:41,596 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 16:31:49,318 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 16:51:15,131 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 16:51:16,151 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 17:24:00,098 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 17:24:04,228 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 17:24:44,576 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 17:24:45,542 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 17:25:04,704 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 17:25:05,861 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 17:27:44,701 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 17:28:54,556 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 17:28:55,880 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 17:29:31,592 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 17:29:32,912 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 17:31:04,856 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 17:31:05,765 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 17:32:04,358 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 17:32:06,112 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 17:32:45,146 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 17:32:46,130 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 17:34:55,150 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 17:34:56,251 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 17:35:40,621 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 17:35:41,639 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-15 17:37:58,509 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-15 17:37:59,398 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-17 21:48:43,862 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 21:48:47,903 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-17 21:51:23,967 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 21:51:24,791 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-17 22:06:04,385 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:06:05,634 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-17 22:06:40,444 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:06:41,831 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-17 22:07:05,422 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:07:06,234 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-17 22:07:50,090 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:07:52,004 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-17 22:07:57,671 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:07:58,933 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-17 22:10:34,086 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:10:35,279 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-17 22:10:53,465 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:10:54,618 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-17 22:11:12,506 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:11:14,060 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-17 22:14:54,271 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:14:55,323 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-17 22:16:11,530 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:16:12,910 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-17 22:17:07,523 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:17:08,597 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-17 22:17:36,109 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:17:39,962 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:17:40,867 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-17 22:18:25,021 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:18:40,087 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:18:48,661 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:20:46,985 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:21:18,948 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-17 22:30:12,310 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:11:46,463 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:11:49,177 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-29 15:14:16,296 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:14:19,166 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-29 15:40:09,450 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:40:11,676 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-29 15:42:36,020 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:42:38,777 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-29 15:47:12,408 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:47:14,567 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-29 15:51:17,826 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:51:19,100 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-29 15:55:54,047 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-29 15:55:57,404 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 18:33:38,512 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 18:33:45,429 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 18:41:56,798 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 18:41:59,954 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 18:42:40,378 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 18:42:52,153 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:26:54,024 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:26:57,241 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:57:59,749 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:58:02,075 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 20:34:12,568 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 20:34:38,019 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-04-03 15:22:08,272 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: SerialWorker.__init__() missing 1 required positional argument: 'callback'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 72, in _setup_screens
+    qr_screen = QrScreen(self.config, self.stacked_widget)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 34, in __init__
+    self.generate_qr()
+TypeError: QrScreen.generate_qr() missing 2 required positional arguments: 'value' and 'point'
+2025-03-21 22:34:07,874 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: QrScreen.generate_qr() missing 1 required positional argument: 'point'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 72, in _setup_screens
+    qr_screen = QrScreen(self.config, self.stacked_widget)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 34, in __init__
+    self.generate_qr()
+TypeError: QrScreen.generate_qr() missing 1 required positional argument: 'point'
+2025-03-21 22:34:27,254 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:37:54,340 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:39:07,865 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:40:40,042 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:41:36,021 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:42:15,528 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:50:08,856 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:52:19,080 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 22:59:15,908 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:02:30,027 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:04:56,913 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:05:50,090 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:08:11,890 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:12:05,185 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: name 'SECRET_KEY' is not defined
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 72, in _setup_screens
+    qr_screen = QrScreen(self.config, self.stacked_widget)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 34, in __init__
+    self.generate_qr(15)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 52, in generate_qr
+    valid_token = jwt.encode(payload, SECRET_KEY, algorithm="HS256")
+                                      ^^^^^^^^^^
+NameError: name 'SECRET_KEY' is not defined. Did you mean: 'self.SECRET_KEY'?
+2025-03-21 23:12:44,415 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:13:38,944 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:14:01,534 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:14:25,751 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:16:02,093 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:19:07,610 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:20:08,224 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-21 23:20:20,510 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:18:18,804 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:24:34,981 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setPixmap(self, a0: QPixmap): argument 1 has unexpected type 'str'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 72, in _setup_screens
+    qr_screen = QrScreen(self.config, self.stacked_widget)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 34, in __init__
+    self.generate_qr(15)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 60, in generate_qr
+    self._change_token_image(qr_path)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/qr_screen.py", line 63, in _change_token_image
+    self.qr.setPixmap(filepath)
+TypeError: setPixmap(self, a0: QPixmap): argument 1 has unexpected type 'str'
+2025-03-22 11:25:57,747 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:27:51,585 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:28:18,693 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:28:20,716 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-22 11:29:14,416 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:29:15,511 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-22 11:30:16,111 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:30:17,693 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-22 11:30:26,480 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:30:27,464 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-22 11:33:56,166 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-22 11:33:57,772 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 10:08:35,408 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'CameraPet' object has no attribute 'load_labels'
+Traceback (most recent call last):
+  File "C:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 85, in _setup_screens
+    is_bottle = InsertScreenBottle(self.config, self.stacked_widget)
+  File "C:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\is_bottle.py", line 25, in __init__
+    self.camera.load_labels()
+AttributeError: 'CameraPet' object has no attribute 'load_labels'
+2025-03-23 10:10:13,403 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 10:10:23,280 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 10:10:35,279 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 10:11:46,894 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 10:12:08,737 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 10:12:15,372 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 10:14:31,279 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 10:14:32,600 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 10:16:06,394 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 10:16:12,643 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 10:16:58,248 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 10:17:07,388 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 10:18:45,879 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 10:18:47,152 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 10:18:56,203 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 10:18:57,258 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 10:20:36,633 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 10:20:49,641 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 10:20:53,677 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 10:22:08,435 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 10:23:01,582 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:09:41,514 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:09:42,643 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:10:40,550 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:10:41,930 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:12:09,073 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:12:10,045 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:13:35,551 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:13:46,315 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:13:47,325 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:15:51,714 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:15:52,643 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:15:54,459 - RVMInterface.InsertScreenBottle - WARNING - No parent QStackedWidget found.
+2025-03-23 12:16:03,284 - RVMInterface.InsertScreenBottle - WARNING - No parent QStackedWidget found.
+2025-03-23 12:16:23,912 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:16:24,740 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:16:27,049 - RVMInterface.InsertScreenBottle - WARNING - No parent QStackedWidget found.
+2025-03-23 12:16:32,915 - RVMInterface.InsertScreenBottle - WARNING - No parent QStackedWidget found.
+2025-03-23 12:17:31,985 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:17:33,069 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:18:22,281 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:18:23,127 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:18:24,593 - RVMInterface.InsertScreenBottle - WARNING - No parent QStackedWidget found.
+2025-03-23 12:19:35,298 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:19:36,230 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:19:37,817 - RVMInterface.InsertScreenBottle - WARNING - No parent QStackedWidget found.
+2025-03-23 12:19:38,995 - RVMInterface.InsertScreenBottle - WARNING - No parent QStackedWidget found.
+2025-03-23 12:19:46,780 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:19:47,781 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:19:49,736 - RVMInterface.InsertScreenBottle - WARNING - No parent QStackedWidget found.
+2025-03-23 12:20:34,422 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:20:35,398 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:20:36,864 - RVMInterface.InsertScreenBottle - WARNING - No parent QStackedWidget found.
+2025-03-23 12:25:57,426 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:25:58,326 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:27:38,984 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:27:39,907 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:28:45,217 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:28:46,129 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:28:56,211 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:28:58,722 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:41:05,948 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:41:06,783 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:41:33,102 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:41:34,036 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:44:29,745 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:44:32,718 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:45:13,036 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:45:13,990 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:45:45,255 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:45:46,270 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 12:52:59,674 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 12:53:00,523 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 13:04:03,222 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 13:04:04,044 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 13:05:26,552 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 13:05:27,580 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 13:06:29,735 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 13:06:30,892 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 13:07:28,832 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 13:07:31,638 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 13:08:30,615 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 13:08:31,601 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 13:08:57,716 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 13:08:58,602 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 13:09:25,738 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 13:09:26,476 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 13:10:23,572 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 13:10:24,465 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 13:10:34,458 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 13:10:35,153 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 13:11:10,120 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 13:11:11,158 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 13:12:27,323 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 13:12:28,306 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 13:14:44,084 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 13:14:45,226 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 13:37:05,611 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 13:37:06,433 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 14:19:02,591 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 14:19:03,580 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 14:19:39,843 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 14:19:40,790 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 14:22:27,370 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 14:22:28,545 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 15:40:27,401 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 15:40:28,158 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 20:55:31,725 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 20:55:33,074 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 20:58:04,735 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 20:58:05,874 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 21:08:33,277 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 21:08:34,774 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 21:21:38,021 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 21:21:39,088 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 21:22:09,852 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 21:22:11,584 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 21:23:00,081 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 21:23:01,729 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-23 21:23:39,163 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-23 21:23:40,292 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 10:54:44,335 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 10:55:08,290 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 11:28:24,733 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 11:28:25,889 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 11:30:12,696 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 11:30:13,743 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 11:38:36,287 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 11:38:37,200 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 11:40:32,499 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 11:40:33,668 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 11:51:30,426 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 11:51:31,427 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 11:53:57,038 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 11:53:58,009 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 11:54:19,914 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 11:54:20,751 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 11:55:59,111 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 11:55:59,864 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 11:56:51,611 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 11:56:52,519 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 12:00:27,325 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 12:00:28,258 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 12:00:41,972 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 12:14:07,440 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 12:14:08,369 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 12:14:38,891 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 12:14:40,268 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 12:16:32,646 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 12:16:33,456 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 12:17:02,901 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 12:17:05,334 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 13:04:05,236 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 13:04:20,047 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-25 13:04:54,088 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 13:22:10,648 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 13:22:23,313 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 13:22:28,682 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 13:24:59,145 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 13:25:08,001 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-25 18:33:15,039 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 18:42:41,852 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 18:52:21,053 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'NoneType' object has no attribute 'setStyleSheet'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/error_view.py", line 9, in setup_ui
+    err_screen.setStyleSheet("background-color: #faefae; ")
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'setStyleSheet'
+2025-03-25 18:52:56,767 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QHBoxLayout' object has no attribute 'setStyleSheet'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/error_view.py", line 10, in setup_ui
+    hDiv.setStyleSheet("background-color: #faefae; ")
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'QHBoxLayout' object has no attribute 'setStyleSheet'
+2025-03-25 18:55:29,444 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'NoneType' object has no attribute 'setStyleSheet'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 7, in __init__
+    self.parent().widget(7).setStyleSheet("background-color: #FF0077;")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'setStyleSheet'
+2025-03-25 18:57:00,779 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'NoneType' object has no attribute 'setStyleSheet'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 7, in __init__
+    self.parent().widget(0).setStyleSheet("background-color: #FF0077;")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'setStyleSheet'
+2025-03-25 18:59:40,803 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:00:15,078 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:02:55,737 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:05:30,178 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:06:08,419 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:06:57,182 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:07:21,057 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:08:46,157 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:10:37,617 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'dict' object has no attribute 'window_width'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/error_view.py", line 9, in setup_ui
+    frame.setGeometry(0, 0, self.config.window_width, self.config.window_width)  # x, y, width, height
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'window_width'
+2025-03-25 19:11:08,922 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QStackedWidget' object has no attribute 'config'
+Traceback (most recent call last):
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "/home/dahy14/Documents/Python/Ecoconvert-raspi/screens/views/error_view.py", line 9, in setup_ui
+    frame.setGeometry(0, 0, self.parent().config.window_width, self.parent().config.window_height)  # x, y, width, height
+                            ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QStackedWidget' object has no attribute 'config'
+2025-03-25 19:13:40,915 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:14:14,634 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:14:34,498 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:17:15,233 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:17:59,610 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:18:21,749 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-25 19:18:52,873 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:42:56,489 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:49:30,853 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:50:32,779 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:51:14,686 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:51:51,045 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:52:15,989 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:52:33,637 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 17:55:01,248 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:04,112 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:05,627 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:05,847 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:06,008 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:06,157 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:06,318 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:06,538 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:09,651 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 17:55:09,800 - RVMInterface.WelcomeScreen - ERROR - Error navigating to the next screen: 'WelcomeScreen' object has no attribute 'global_state_checker'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\welcome_screen.py", line 35, in _on_click
+    standby_screen.global_state_checker()
+AttributeError: 'WelcomeScreen' object has no attribute 'global_state_checker'
+2025-03-30 18:17:51,159 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 18:25:56,121 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: setFont(self, a0: QFont): too many arguments
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\error_view.py", line 49, in setup_ui
+    self.rightHead.setFont(QFont(self.ff_poppins), 24)
+TypeError: setFont(self, a0: QFont): too many arguments
+2025-03-30 18:26:20,758 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 18:27:13,063 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 18:28:06,717 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 18:39:56,870 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 18:41:14,235 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QLabel' object has no attribute 'addLayout'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\error_view.py", line 56, in setup_ui
+    self.rightHead.addLayout(self.action)
+AttributeError: 'QLabel' object has no attribute 'addLayout'
+2025-03-30 18:41:28,925 - RVMInterface.screens.rvm_interface - ERROR - Error setting up screens: 'QLabel' object has no attribute 'addWidget'
+Traceback (most recent call last):
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\rvm_interface.py", line 74, in _setup_screens
+    error_screen = ErrorScreen(self.config, self.stacked_widget)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\error_screen.py", line 8, in __init__
+    setup_ui(self)
+  File "c:\Users\Juno\docus not onedrive\Python\Ecoconvert-raspi\screens\views\error_view.py", line 56, in setup_ui
+    self.rightHead.addWidget(self.action)
+AttributeError: 'QLabel' object has no attribute 'addWidget'
+2025-03-30 18:41:42,568 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:21:55,355 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:21:57,309 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:24:20,643 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:24:24,622 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:25:55,601 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:30:05,245 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:30:07,257 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:30:41,121 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:30:47,505 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:31:08,713 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:31:10,010 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:31:41,660 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:31:43,155 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:31:57,259 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:31:59,304 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:33:20,821 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:33:23,056 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:34:13,143 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:34:16,559 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.
+2025-03-30 19:35:33,225 - RVMInterface.screens.rvm_interface - INFO - Screens initialized successfully.
+2025-03-30 19:35:35,106 - RVMInterface.WelcomeScreen - INFO - Navigated from Welcome Screen to Reminder Screen.

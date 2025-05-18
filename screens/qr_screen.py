@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from .base_screen import BaseScreen
 from .views.qr__view import setup_ui 
 from PyQt5.QtGui import QPixmap
-from logging_config import lcd_logger 
+
 
 class QrScreen(BaseScreen):
     """
@@ -24,7 +24,7 @@ class QrScreen(BaseScreen):
             parent (QStackedWidget, optional): Parent stacked widget for navigation.
         """
         super().__init__(config, parent)  # Inherit from BaseScreen
-        self.logger = lcd_logger(self.__class__.__name__)  # Initialize logger for this screen
+        
         self.points = 0
         setup_ui(self)
         load_dotenv(override=True)
@@ -53,7 +53,6 @@ class QrScreen(BaseScreen):
         }
         valid_token = jwt.encode(payload, self.SECRET_KEY, algorithm="HS256")
         self.logger.debug(f"Generated JWT token: {valid_token}")  # Log JWT token generation
-
         # Generate QR Code
         qr = qrcode.make(valid_token)
         qr_path = "screens/qr_img/token.png"

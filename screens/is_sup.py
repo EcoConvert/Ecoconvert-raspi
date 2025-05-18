@@ -3,8 +3,10 @@ from PyQt5.QtCore import QThreadPool
 from .base_screen import BaseScreen
 from .views.iv_sup import setup_ui
 from util.state import save_state_variables, load_state_variables
+# from serial_try import writeCommand, readSUPWeight, flushSerial
+from process.serial_manager import serial_manager
 from .controller.i3_camera import CameraThread2
-from logging_config import lcd_logger  
+
 
 class InsertScreenSup(BaseScreen):
     """
@@ -21,12 +23,16 @@ class InsertScreenSup(BaseScreen):
             parent (QStackedWidget, optional): Parent stacked widget for navigation.
         """
         super().__init__(config, parent)  # Inherit from BaseScreen
-        self.logger = lcd_logger(self.__class__.__name__)  # Initialize logger for this screen
         self.SUP_MULT = 0.2
         self.weight = load_state_variables("weight")
         self.ser_weight = 0
         self.logger.debug("Initializing InsertScreenSup")  # Log screen initialization
+        self.rWeight = 0
+        
         setup_ui(self)
+        
+        
+    # This will be triggered if the 'done' button is clicked
         self.done_clickability(False)
     
     def done_clickability(self, state=None):
@@ -69,10 +75,10 @@ class InsertScreenSup(BaseScreen):
         """
         self.logger.debug("Performing last process step")  # Log last process
         print("SUPS deposited")
+
         weight_diff = self.ser_weight - self.weight
         self.logger.debug(f"Weight difference: {weight_diff}")  # Log weight difference
-        print("Weight diff " + str(weight_diff))
-        self._generate_points(weight_diff)
+        self._generate_points(weight_diff) 
         save_state_variables("weight", self.ser_weight)
 
         qr_screen = self.parent().widget(4)
@@ -81,6 +87,7 @@ class InsertScreenSup(BaseScreen):
         self.parent().setCurrentIndex(4)  # Go to QR Screen
     
     def process(self):
+
         """
         Start the process of capturing and inferring plastic items.
         """
@@ -90,6 +97,9 @@ class InsertScreenSup(BaseScreen):
         
         # Start camera thread
         pool = QThreadPool.globalInstance()
+
+        serial_manager.writeCommand("SW")
+ 
         inference = CameraThread2()
         pool.start(inference)
         inference.signal.inference.connect(self.is_valid_plastic)
@@ -97,6 +107,7 @@ class InsertScreenSup(BaseScreen):
         print("processing sup")
     
     def is_valid_plastic(self, inference):
+
         """
         Check if the detected item is a valid plastic and process accordingly.
         
@@ -106,10 +117,13 @@ class InsertScreenSup(BaseScreen):
         self.logger.debug(f"Received inference result: {inference}")  # Log inference result
         
         if inference:
-            # Simulating weight processing
-            self.ser_weight = self.weight + random.randint(1, 100)  # Simulating weight change
+            # self.ser_weight = self.weight + random.randint(1, 100)  
+            # some process here to get the weight 
+            self.rWeight = serial_manager.readSUPWeight()
+            self.ser_weight = self.weight + self.rWeight
             self.logger.debug(f"Weight: {self.weight}, Processed Weight: {self.ser_weight}")  # Log weight data
             self._last_process()
+
         else:
             self.logger.error("Invalid item detected: non-plastic")  # Log invalid item detection
             error_screen = self.parent().widget(7)
