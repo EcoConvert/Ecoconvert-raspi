@@ -73,7 +73,7 @@ class ProcessingScreen(BaseScreen):
             This is to avoid overloading the serial port with data.
         """
         self.isDone = data
-        if (self.isDone == '1'):
+        if (self.isDone == 'H'):
             self.worker.stop()
             self._on_serial_done()
         else:

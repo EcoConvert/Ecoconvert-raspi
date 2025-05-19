@@ -18,5 +18,4 @@ class SupSerialReadThread(QRunnable):
             self.signal.weight.emit(weight)
             print("weight to: ",weight)
             self.done = True; 
-                  
 
