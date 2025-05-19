@@ -7,7 +7,8 @@ n\ 10, 0x0A, .readString() default terminator
 2, 50, 0x32, state_2
 3, 51, 0x33, state_3
 4, 52, 0x34, state_4
-G, 71, 0x47, end_insert
+F, 70, 0x46, end_insert_pet
+G, 71, 0x47, end_insert_SUP
 R, 72, 0x82, rPi ack
 
 Should be able to send

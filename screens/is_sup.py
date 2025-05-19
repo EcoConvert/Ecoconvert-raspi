@@ -6,7 +6,7 @@ from util.state import save_state_variables, load_state_variables
 # from serial_try import writeCommand, readSUPWeight, flushSerial
 from process.serial_manager import serial_manager
 from .controller.i3_camera import CameraThread2
-
+from .controller.i3_sup_read import SupSerialReadThread
 
 class InsertScreenSup(BaseScreen):
     """
@@ -28,7 +28,7 @@ class InsertScreenSup(BaseScreen):
         self.ser_weight = 0
         self.logger.debug("Initializing InsertScreenSup")  # Log screen initialization
         self.rWeight = 0
-        
+        self.pool = QThreadPool.globalInstance()
         setup_ui(self)
         
         
@@ -38,7 +38,6 @@ class InsertScreenSup(BaseScreen):
     def done_clickability(self, state=None):
         """
         Control the clickability of the Done button.
-        
         Args:
             state (bool, optional): Enable or disable the button. Defaults to None.
         """
@@ -96,31 +95,28 @@ class InsertScreenSup(BaseScreen):
         self.ser_weight = 0
         
         # Start camera thread
-        pool = QThreadPool.globalInstance()
-
-        serial_manager.writeCommand("SW")
- 
         inference = CameraThread2()
-        pool.start(inference)
+        self.pool.start(inference)
         inference.signal.inference.connect(self.is_valid_plastic)
         self.logger.info("Camera thread started for plastic inference")  # Log camera thread start
         print("processing sup")
-    
+     
+
     def is_valid_plastic(self, inference):
 
         """
         Check if the detected item is a valid plastic and process accordingly.
-        
         Args:
             inference (str): Inference result, expected to be 'plastic' for valid items.
         """
         self.logger.debug(f"Received inference result: {inference}")  # Log inference result
         
         if inference:
-            # self.ser_weight = self.weight + random.randint(1, 100)  
-            # some process here to get the weight 
-            self.rWeight = serial_manager.readSUPWeight()
-            self.ser_weight = self.weight + self.rWeight
+            serial_manager.writeCommand("G")
+            sup_thread = SupSerialReadThread()
+            self.pool.start(sup_thread)
+            sup_thread.signal.weight.connect(self.set_rWeight)
+            self.ser_weight = self.weight + self.rW
             self.logger.debug(f"Weight: {self.weight}, Processed Weight: {self.ser_weight}")  # Log weight data
             self._last_process()
 
@@ -134,3 +130,6 @@ class InsertScreenSup(BaseScreen):
             )
             self.parent().setCurrentIndex(7)  # Set to error screen
             self.logger.info("Navigated to error screen.")  # Log navigation to error screen
+    
+    def set_rWeight(self,weight):
+        self.rWeight = weight

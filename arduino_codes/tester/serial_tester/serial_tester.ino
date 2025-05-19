@@ -1,41 +1,47 @@
-//Many thanks to Nick Gammon for the basis of this code
-//http://www.gammon.com.au/serial
-
 const int led = 13;
+const int ZERO = 0;
 
 void SerialCommand(String& Command, const int& pin, int rep, int del = 200) {
-  Serial.print("State: ");
+  // Serial.print("State: ");
   Serial.println(Command); 
+
   if (Command != "R"){
-    char ardAck[] = "A";
-    Serial.write(ardAck);
-    Serial.println("");
+    // char ardAck[] = "A\n";
+    // Serial.flush();
+    // Serial.write(ardAck);
+    // Serial.println("");
   }  
   for(int i = 0; i < rep; i++) {
       digitalWrite(pin, HIGH);
-      delay(del);
+      delay(ZERO);
       digitalWrite(pin, LOW);
-      Serial.println("one cycle");   
-      delay(del);  
+      // Serial.println("one cycle");   
+      delay(ZERO);  
   }
 }
 
-void state2() {
-  float value = 999.12356;
+void GripperEndProcess(){
+
+}
+
+void SUPEndProcess(){
+  float value = 500.12356;
   char c_string[8];
   dtostrf(value, 6, 2, c_string);
   Serial.write(c_string);
-  Serial.println(""); 
+  Serial.print("\n");
 }
+
 void state3(int del= 200) {
-  delay(del);
-  char ecoDone[] = "H";
-  Serial.write(ecoDone);
-  Serial.println(""); 
+  delay(ZERO);
+  char ecoDone[] = "H\n";
+  Serial.flush();
+  // Serial.write(ecoDone);
+  // Serial.println(""); 
 }
 
 void setup() {
- Serial.begin(9600);
+ Serial.begin(115200);
  pinMode(led, OUTPUT);
 }
 
@@ -50,7 +56,6 @@ void loop() {
     SerialCommand(inString, led, int(inString.toInt()), int(1000));
   else if(inString == "2"){
         SerialCommand(inString, led, int(inString.toInt()), int(500));
-        state2();
     }
   else if (inString == "3"){
     SerialCommand(inString, led, int(inString.toInt()), int(250));
@@ -60,8 +65,11 @@ void loop() {
     SerialCommand(inString, led, int(inString.toInt()), int(500));
   else if (inString == "R") 
     SerialCommand(inString, led, int(2), int(200));
-  else if (inString == "G") 
-    SerialCommand(inString, led, int(3), int(200));
+  else if (inString == "F") 
+    SerialCommand(inString, led, int(4), int(200));
+  else if (inString == "G"){
+    SUPEndProcess();
+  }
  }
 }
 

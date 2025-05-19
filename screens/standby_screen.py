@@ -43,7 +43,7 @@ class StandbyScreen(BaseScreen):
     def _on_click_sup(self):
         if self.parent():
             # Prepare arduino for weighing SUP
-            self.update_state(1)
+            self.update_state(2)
             self.parent().setCurrentIndex(3)  # Go to Insert Screen SUP 
             is_sup = self.parent().widget(3)
             pool = QThreadPool.globalInstance()

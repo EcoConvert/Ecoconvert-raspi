@@ -15,7 +15,6 @@ class CamInitThread2(QRunnable):
     """Thread to initialize and open the camera"""
     def __init__(self):
         super().__init__()
-        self.signal = s_inference_signal()
         self.signal = i_signal()
     def run(self):
         print("Camera init")
@@ -34,12 +33,10 @@ class CameraThread2(QRunnable):
         if SharedCamera.camera is None:
             print("Camera not initialized")
             return
-        obj_det_result = SharedCamera.camera.infer()  # Capture and process
-        
-        if "metal" in obj_det_result or "rock" in obj_det_result or "trash" in obj_det_result:
-            # print("Metal, rock, or trash detected")
-            self.signal.inference.emit(False)
-        else:
-            # print(f"Object detected: {obj_det_result}")
-            self.signal.inference.emit(True)
+        # obj_det_result = SharedCamera.camera.infer()  # Capture and process
+        # if "metal" in obj_det_result or "rock" in obj_det_result or "trash" in obj_det_result:
+        #     self.signal.inference.emit(False)
+        # else:
+        #     self.signal.inference.emit(True)
+        self.signal.inference.emit(True)
         SharedCamera.camera.release_camera()

@@ -16,6 +16,7 @@ class ErrorScreen(BaseScreen):
         self.logger.info("Error screen 'Continue' button clicked")  # Log button click
         if self.parent():
             self.parent().setCurrentIndex(1)  # Go to Standby Screen
+            self.update_state(0)
             self.logger.info("Navigated from Error Screen to Standby Screen.")
     
     def spawn_error_page(self, error_code, error_message, action_message):
