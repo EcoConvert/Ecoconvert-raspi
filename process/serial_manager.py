@@ -81,7 +81,15 @@ class SerialManager:
         else:
             print("Invalid EcoBrick weight data from Arduino")
             return None
-
+    
+    def write(self, data):
+        """Write data to the serial port"""
+        try:
+            self.ser.write(str(str(data)).encode()) # this double string conversion, idk why but it works. Do not remove or state 2 and 3 will not work.
+            print(f"Sent: {str(data).encode()}")
+        except Exception as e:
+            print(f"Serial write error: {e}")
+        save_state(data)
         
 
 # Global instance
