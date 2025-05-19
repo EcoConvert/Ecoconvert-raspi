@@ -16,5 +16,7 @@ class SupSerialReadThread(QRunnable):
         while not self.done:
             weight =  serial_manager.readSUPWeight()
             self.signal.weight.emit(weight)
+            print("weight to: ",weight)
+            self.done = True; 
                   
 

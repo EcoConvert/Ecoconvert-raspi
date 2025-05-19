@@ -1,10 +1,9 @@
 const int led = 13;
 const int ZERO = 0;
+const int VAR = 500; 
 
 void SerialCommand(String& Command, const int& pin, int rep, int del = 200) {
   // Serial.print("State: ");
-  Serial.println(Command); 
-
   if (Command != "R"){
     // char ardAck[] = "A\n";
     // Serial.flush();
@@ -25,11 +24,15 @@ void GripperEndProcess(){
 }
 
 void SUPEndProcess(){
-  float value = 500.12356;
+  float value = 120.0;
   char c_string[8];
   dtostrf(value, 6, 2, c_string);
   Serial.write(c_string);
-  Serial.print("\n");
+  Serial.write("\n");
+  digitalWrite(led, HIGH);
+  delay(500);
+  digitalWrite(led, LOW );
+  delay(500);
 }
 
 void state3(int del= 200) {

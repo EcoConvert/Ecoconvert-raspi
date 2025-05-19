@@ -23,8 +23,8 @@ class SerialManager:
             if not port_number:
                 raise ValueError("SERIAL_PORT not set in .env file")
 
-            self.ser = serial.Serial(port_number, 115200, timeout=0)
-            time.sleep(2)  # Wait for Arduino to initialize
+            self.ser = serial.Serial(port_number, 115200, timeout=5)
+            time.sleep(1)  # Wait for Arduino to initialize
             print("Listening for data from Arduino...")
 
             if not self.ser.is_open:
@@ -37,8 +37,7 @@ class SerialManager:
         """Write data to the serial port"""
         command = data + '\n'
         if self.ser.open:
-            self.ser.write(command.encode("utf-8"))
-            self.ser.flush()
+            self.ser.write(command.encode())
             print(f"\nSent to Arduino: {data}\n")
         else:
             print("Serial port is not open")
@@ -53,13 +52,19 @@ class SerialManager:
             print("Serial port is not open")
             
     def readSUPWeight(self):
-        try:
-            if self.ser and self.ser.is_open:
-                data = self.ser.readline().decode("utf-8").strip()
+        if self.ser and self.ser.is_open:
+            data = self.ser.readline().decode("utf-8").strip()
+            if data:
                 if type(float(data)) == float:
-                    return float(data), 
-        except Exception as e:
-            print(f"Serial write error: {e}")
+                    print(f"Received from Arduino: {data}\n")
+                    return float(data)
+            else:
+                print("Invalid SUP weight data from Arduino")
+                # return None
+                return 0 # return 0 instead
+        else:
+            print("Serial port is not open")
+            return 0
     
     def readEcoBrickWeight(self):
         data = self.ser.readline().decode("utf-8").strip()

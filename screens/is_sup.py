@@ -25,7 +25,6 @@ class InsertScreenSup(BaseScreen):
         super().__init__(config, parent)  # Inherit from BaseScreen
         self.SUP_MULT = 0.2
         self.weight = load_state_variables("weight")
-        self.ser_weight = 0
         self.logger.debug("Initializing InsertScreenSup")  # Log screen initialization
         self.rWeight = 0
         self.pool = QThreadPool.globalInstance()
@@ -57,34 +56,6 @@ class InsertScreenSup(BaseScreen):
         else:
             self.logger.warning("No parent QStackedWidget found.")  # Log if parent widget is not found
     
-    def _generate_points(self, val):
-        """
-        Generate points based on the given value.
-        
-        Args:
-            val (float): Value used to calculate points.
-        """
-        self.points = round(val * self.SUP_MULT, 2)
-        self.logger.debug(f"Generated points: {self.points}")  # Log generated points
-        print("Points sup " + str(self.points))
-    
-    def _last_process(self):
-        """
-        Process the last step, including calculating weight and generating QR code.
-        """
-        self.logger.debug("Performing last process step")  # Log last process
-        print("SUPS deposited")
-
-        weight_diff = self.ser_weight - self.weight
-        self.logger.debug(f"Weight difference: {weight_diff}")  # Log weight difference
-        self._generate_points(weight_diff) 
-        save_state_variables("weight", self.ser_weight)
-
-        qr_screen = self.parent().widget(4)
-        qr_screen.generate_qr(self.points)
-        self.logger.info(f"Generated QR code with {self.points} points.") # Log QR generationn
-        self.parent().setCurrentIndex(4)  # Go to QR Screen
-    
     def process(self):
 
         """
@@ -115,10 +86,7 @@ class InsertScreenSup(BaseScreen):
             serial_manager.writeCommand("G")
             sup_thread = SupSerialReadThread()
             self.pool.start(sup_thread)
-            sup_thread.signal.weight.connect(self.set_rWeight)
-            self.ser_weight = self.weight + self.rW
-            self.logger.debug(f"Weight: {self.weight}, Processed Weight: {self.ser_weight}")  # Log weight data
-            self._last_process()
+            sup_thread.signal.weight.connect(self.set_ser_weight)
 
         else:
             self.logger.error("Invalid item detected: non-plastic")  # Log invalid item detection
@@ -129,7 +97,36 @@ class InsertScreenSup(BaseScreen):
                 action_message="Please retrieve <br> the non plastic item<br>then press <br> return to standby"
             )
             self.parent().setCurrentIndex(7)  # Set to error screen
-            self.logger.info("Navigated to error screen.")  # Log navigation to error screen
+            self.logger.info("Navigated to error screen.") # Log navigation to error screen
     
-    def set_rWeight(self,weight):
-        self.rWeight = weight
+    def set_ser_weight(self,ser_weight):
+        self.ser_weight = ser_weight
+        self.logger.info(f"Weight: {self.weight}, Processed Weight: {self.ser_weight}")  # Log weight data
+        self._last_process()
+    
+    def _last_process(self):
+        """
+        Process the last step, including calculating weight and generating QR code.
+        """
+        self.logger.debug("Performing last process step")  # Log last process
+        print("SUPS deposited")
+
+        weight_diff = self.ser_weight - self.weight
+        self.logger.debug(f"Weight difference: {weight_diff}")  # Log weight difference
+        self._generate_points(weight_diff) 
+        save_state_variables("weight", self.ser_weight)
+
+        qr_screen = self.parent().widget(4)
+        qr_screen.generate_qr(self.points)
+        self.logger.info(f"Generated QR code with {self.points} points.") # Log QR generationn
+        self.parent().setCurrentIndex(4)  # Go to QR Screen
+
+    def _generate_points(self, val):
+        """
+        Generate points based on the given value.
+        Args:
+            val (float): Value used to calculate points.
+        """
+        self.points = round(val * self.SUP_MULT, 2)
+        self.logger.debug(f"Generated points: {self.points}")  # Log generated points
+        print("Points sup " + str(self.points))
