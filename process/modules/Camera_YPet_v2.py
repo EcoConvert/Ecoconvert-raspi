@@ -54,14 +54,14 @@ class CameraPet(CameraBase):
         
         # Configure ROI and thresholds
         self.roi_config = {
-            "x1": 230, "y1": 40,
-            "x2": 370, "y2": 100,
+            "x1": 250, "y1": 15,
+            "x2": 390, "y2": 85,
             "area_threshold": 500,
             "time_threshold": 1.0
         }
 
         # Setup Morphological kernel
-        self.kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3)) # Experiment here
+        self.kernel = cv2.getStructuringElement(cv2.MORPH_CROSS, (3, 3)) # Experiment here
 
         
         self._setup_model()
@@ -120,7 +120,7 @@ class CameraPet(CameraBase):
             logging.error(f"Error during inference: {e}")
             return None, None, None
 
-    def prepare_for_detection(self, display=False):
+    def prepare_for_detection(self, display=True):
         """
         Initialize the background model before the classification.
         Call this method after the user clicked the "Insert 1.5L PET Bottle"
@@ -144,7 +144,7 @@ class CameraPet(CameraBase):
         # Higher history = Slower to adapt to change -> Suitable for statioc
         # Can be change the history
 
-        self.fgbg = cv2.createBackgroundSubtractorMOG2(history=100, detectShadows=False) # History experiment
+        self.fgbg = cv2.createBackgroundSubtractorMOG2(history=100000, detectShadows=False) # History experiment
 
         # Calculate frame threshold based on camera fps
         if self.camera_ready:
@@ -173,7 +173,7 @@ class CameraPet(CameraBase):
                 # Draw ROI rectangle
                 x1, y1 = self.roi_config["x1"], self.roi_config["y1"]
                 x2, y2 = self.roi_config["x2"], self.roi_config["y2"]
-                cv2.rectangle(frame_copy, (x1, y1), (x2, y2), (0, 25555, 0), 2)
+                cv2.rectangle(frame_copy, (x1, y1), (x2, y2), (0, 255, 0), 2)
 
                 # Display progress text
                 cv2.putText(frame_copy, f"Learning background: {progress}%",
@@ -202,21 +202,6 @@ class CameraPet(CameraBase):
         self.frame_counter = 0
         
         return True
-
-    # # Remove this code
-    # def _setup_detection(self):
-    #     """Initialize background subtractor and frame threshold."""
-    #     # Create background subtractor
-    #     self.fgbg = cv2.createBackgroundSubtractorMOG2(detectShadows=False)
-
-    #     # calculate frame threshold based on camera fps
-    #     if self.camera_ready:
-    #         fps = self.camera.get(cv2.CAP_PROP_FPS)
-    #         self.frame_threshold = int(self.roi_config["time_threshold"] * fps)
-    #     else:
-    #         # Default to 30 fps
-    #         self.frame_threshold = int(self.roi_config["time_threshold"] * 30)
-            
     def _process_roi(self, frame):
         """
         Process the region of interest to detect objects.
