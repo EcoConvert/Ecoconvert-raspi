@@ -2,15 +2,16 @@
 import os
 import sys
 import time
+
 import serial
 from dotenv import dotenv_values, load_dotenv
 from PyQt5.QtWidgets import QApplication
 
-from util.state import *
-from process.initialize import init_sequence 
-from screens.rvm_interface import RVMInterface
+from logging_config import lcd_logger, setup_logging
+from process.initialize import init_sequence
 from screens.config import load_config
-from logging_config import setup_logging, lcd_logger
+from screens.rvm_interface import RVMInterface
+from util.state import *
 
 # load_dotenv()
 # port_number= os.getenv("SERIAL_PORT")

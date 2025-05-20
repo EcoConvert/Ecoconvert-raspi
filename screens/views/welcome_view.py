@@ -1,7 +1,9 @@
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QLabel, QVBoxLayout
-from screens.views._DropShadow import Drop_Shadow
+from PyQt5.QtWidgets import QHBoxLayout, QLabel, QVBoxLayout
+
 from screens.views._Button import Btn
+from screens.views._DropShadow import Drop_Shadow
+
 
 def setup_ui(self):
     layout = QVBoxLayout()
@@ -13,10 +15,20 @@ def setup_ui(self):
     welcome_label.setGraphicsEffect(shadow)
     layout.addWidget(welcome_label)
 
+    # Buttons layout
+    buttons_layout = QHBoxLayout()
     # Start button
-    start_button = Btn("Start The Machine", bt_w = 642 , bt_h = 202, font_size=50, padding_size=0, parent=self)
+    start_button = Btn("Start The Machine", bt_w = 375 , bt_h = 202, font_size=40, padding_size=0, parent=self)
     start_button.clicked.connect(self._on_click)
-    layout.addWidget(start_button, alignment=Qt.AlignCenter)
+    buttons_layout.addWidget(start_button, alignment=Qt.AlignLeft)
+
+    # Add Admin Dashboard button
+    admin_button = Btn("Admin", bt_w = 375 , bt_h = 202, font_size=40, padding_size=0, parent=self)
+    admin_button.clicked.connect(self._on_click_admin)
+    buttons_layout.addWidget(admin_button, alignment=Qt.AlignRight)
+
+    # ADd horizontal layout
+    layout.addLayout(buttons_layout)
 
     # Set layout
     self.setLayout(layout)

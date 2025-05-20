@@ -1,17 +1,21 @@
 # src/lcd_interface/screens/rvm_interface.py
 from PyQt5.QtWidgets import QStackedWidget, QVBoxLayout, QWidget
 
-from util.state import * # load_state, save_state, load_state_variables, save_state_variables
 from logging_config import lcd_logger
-from .processing_screen import ProcessingScreen
-from .standby_screen import StandbyScreen
-from .welcome_screen import WelcomeScreen
+from util.state import *  # load_state, save_state, load_state_variables, save_state_variables
+
+from .admin_override_screen import OverrideScreen
+from .admin_password_screen import AdminPasswordScreen
+from .ecobrick_screen import EcoScreen
+from .error_screen import ErrorScreen
 from .is_bottle import InsertScreenBottle
 from .is_sup import InsertScreenSup
-from .error_screen import ErrorScreen 
-from .ss_done import StandbyScreenDone
+from .processing_screen import ProcessingScreen
 from .qr_screen import QrScreen
-from .ecobrick_screen import EcoScreen
+from .ss_done import StandbyScreenDone
+from .standby_screen import StandbyScreen
+from .welcome_screen import WelcomeScreen
+
 
 class RVMInterface(QWidget):
     """
@@ -111,7 +115,13 @@ class RVMInterface(QWidget):
             ecobrick_screen = EcoScreen(self.config, self.stacked_widget)
             self.stacked_widget.addWidget(ecobrick_screen)
 
+            # Admin Password Screen (index 9)
+            admin_pw_screen = AdminPasswordScreen(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(admin_pw_screen)
             
+            # Admin Override Screen (index 10)
+            override_screen = OverrideScreen(self.config, self.stacked_widget)
+            self.stacked_widget.addWidget(override_screen)
             # Set the initial screen
             self.stacked_widget.setCurrentIndex(0)
 

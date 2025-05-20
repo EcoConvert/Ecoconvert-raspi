@@ -1,6 +1,10 @@
+from PyQt5.QtCore import QThreadPool
+
+from logging_config import lcd_logger
+
 from .base_screen import BaseScreen
 from .views.welcome_view import setup_ui
-from logging_config import lcd_logger  
+
 
 class WelcomeScreen(BaseScreen):
     """
@@ -44,3 +48,13 @@ class WelcomeScreen(BaseScreen):
             self.logger.error(
                 f"Error navigating to the next screen: {e}", exc_info=True
             )
+
+    def _on_click_admin(self):
+        try:
+            if self.parent():
+                self.update_state(1)
+                parent = self.parent()
+                parent.setCurrentIndex(9)
+                self.logger.info("Transitioning to Admin Password")
+        except Exception as e:
+            self.logger.error(f"Error navigation to the admin screen: {e}", exc_info=True)
