@@ -1,7 +1,5 @@
 from PyQt5.QtCore import QThreadPool
-
 from logging_config import lcd_logger
-
 from .base_screen import BaseScreen
 from .views.welcome_view import setup_ui
 

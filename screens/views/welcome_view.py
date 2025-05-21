@@ -20,12 +20,12 @@ def setup_ui(self):
     # Start button
     start_button = Btn("Start The Machine", bt_w = 375 , bt_h = 202, font_size=40, padding_size=0, parent=self)
     start_button.clicked.connect(self._on_click)
-    buttons_layout.addWidget(start_button, alignment=Qt.AlignLeft)
+    buttons_layout.addWidget(start_button )
 
     # Add Admin Dashboard button
     admin_button = Btn("Admin", bt_w = 375 , bt_h = 202, font_size=40, padding_size=0, parent=self)
     admin_button.clicked.connect(self._on_click_admin)
-    buttons_layout.addWidget(admin_button, alignment=Qt.AlignRight)
+    buttons_layout.addWidget(admin_button)
 
     # ADd horizontal layout
     layout.addLayout(buttons_layout)
