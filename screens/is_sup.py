@@ -69,12 +69,11 @@ class InsertScreenSup(BaseScreen):
         """
         self.logger.debug("Performing last process step")  # Log last process
         print("SUPS deposited")
-        weight_diff = self.ser_weight - self.weight
-        self.logger.debug(f"Weight difference: {weight_diff}")  # Log weight difference
-        print("Weight diff " + str(weight_diff))
-        self._generate_points(weight_diff)
-        save_state_variables("weight", self.ser_weight)
-
+        self.weight = self.weight + self.ser_weight
+        self.logger.debug(f"Weight difference: {self.ser_weight}")  # Log weight difference
+        print("serial weight on generate points ",  str(self.ser_weight))   
+        self._generate_points(self.ser_weight)
+        save_state_variables("weight", self.weight)
         qr_screen = self.parent().widget(4)
         qr_screen.generate_qr(self.points)
         self.logger.info(f"Generated QR code with {self.points} points.") # Log QR generationn
@@ -107,7 +106,10 @@ class InsertScreenSup(BaseScreen):
         
         if inference:
             # Simulating weight processing
-            self.ser_weight = self.weight + random.randint(1, 100)  # Simulating weight change
+            weight_change = round(random.uniform(0.001, 0.300), 5)
+            print("value from arduino" , weight_change)
+            self.ser_weight= (weight_change * 1000)
+            self.weight = self.weight + self.ser_weight   # Simulating weight change
             self.logger.debug(f"Weight: {self.weight}, Processed Weight: {self.ser_weight}")  # Log weight data
             self._last_process()
         else:

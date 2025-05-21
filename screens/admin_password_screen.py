@@ -1,10 +1,14 @@
 # admin_password_screen.py
+
+import os
+import dotenv
 from PyQt5.QtCore import QTimer
 
 from logging_config import lcd_logger
 
 from .base_screen import BaseScreen
 from .views.admin_password_view import setup_ui
+
 
 
 class AdminPasswordScreen(BaseScreen):
@@ -17,7 +21,7 @@ class AdminPasswordScreen(BaseScreen):
 
         setup_ui(self)
 
-        self.correct_password = "admin123"  # Temp -> Transfer to .env
+        self.correct_password = os.getenv("PASSWORD")  # Temp -> Transfer to .env
         self.tries = 0
         self.logger = lcd_logger(__name__)
         self.logger.debug("Admin Password Screen initialized.")
@@ -37,7 +41,7 @@ class AdminPasswordScreen(BaseScreen):
             self.logger.info("Access Granted")
             parent = self.parent()
             if parent:
-                parent.setCurrentIndex(10)  # For example, admin dashboard
+                parent.setCurrentIndex(8)  # For example, admin dashboard
         else:
             self.tries += 1
             self.logger.warning(f"Incorrect admin password attempt {self.tries}/3")
