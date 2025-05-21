@@ -21,7 +21,12 @@ class InitThread(QRunnable):
 
         # init state 
         state = load_state()
-        state_map = {0: 1, 1: 2, 2: 3, 3: 5, 4: 8} # refer to the figma board RVM Screens
+        state_map = {0: 1, 
+                     1: 2, 
+                     2: 3, 
+                     3: 5, 
+                     4: 8
+                     } # refer to the figma board RVM Screens
         screen_index = state_map.get(state, 7)  # iterate over the state_map dictionary to get the screen index  Default to error screen (7) if out of bounds. 
         print(f"Signal emitted: {screen_index}")
         self.signal.show.emit(screen_index, None, None)
