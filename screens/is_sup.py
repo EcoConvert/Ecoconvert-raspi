@@ -100,7 +100,8 @@ class InsertScreenSup(BaseScreen):
             self.logger.info("Navigated to error screen.") # Log navigation to error screen
     
     def set_ser_weight(self,ser_weight):
-        self.ser_weight = ser_weight
+        grams_ser_weight = ser_weight * 1000 # convert from kg to g
+        self.ser_weight = grams_ser_weight
         self.logger.info(f"Weight: {self.weight}, Processed Weight: {self.ser_weight}")  # Log weight data
         self._last_process()
     
@@ -110,12 +111,10 @@ class InsertScreenSup(BaseScreen):
         """
         self.logger.debug("Performing last process step")  # Log last process
         print("SUPS deposited")
-
-        weight_diff = self.ser_weight - self.weight
-        self.logger.debug(f"Weight difference: {weight_diff}")  # Log weight difference
-        self._generate_points(weight_diff) 
-        save_state_variables("weight", self.ser_weight)
-
+        self.weight = self.weight + self.ser_weight
+        self.logger.debug(f"Weight difference: {self.ser_weight}")  # Log weight difference
+        self._generate_points(self.ser_weight) 
+        save_state_variables("weight", self.weight)
         qr_screen = self.parent().widget(4)
         qr_screen.generate_qr(self.points)
         self.logger.info(f"Generated QR code with {self.points} points.") # Log QR generationn
