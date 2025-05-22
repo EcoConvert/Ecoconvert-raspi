@@ -28,6 +28,7 @@ class InsertScreenSup(BaseScreen):
         self.logger.debug("Initializing InsertScreenSup")  # Log screen initialization
         setup_ui(self)
         self.done_clickability(False)
+        self.sup_cam = True
     
     def done_clickability(self, state=None):
         """
@@ -87,14 +88,21 @@ class InsertScreenSup(BaseScreen):
         self.weight = load_state_variables("weight")
         self.ser_weight = 0
         
+
+        admin_control_screen = self.parent().widget(8)
+        use_camera = admin_control_screen.get_SupCam_state()
+        if (use_camera):
         # Start camera thread
-        pool = QThreadPool.globalInstance()
-        inference = CameraThread2()
-        pool.start(inference)
-        inference.signal.inference.connect(self.is_valid_plastic)
-        self.logger.info("Camera thread started for plastic inference")  # Log camera thread start
-        print("processing sup")
-    
+            pool = QThreadPool.globalInstance()
+            inference = CameraThread2()
+            pool.start(inference)
+            inference.signal.inference.connect(self.is_valid_plastic)
+            self.logger.info("Camera thread started for plastic inference")  # Log camera thread start
+            print("processing sup")
+        else:
+            self.is_valid_plastic(True)
+
+        
     def is_valid_plastic(self, inference):
         """
         Check if the detected item is a valid plastic and process accordingly.
@@ -106,7 +114,7 @@ class InsertScreenSup(BaseScreen):
         
         if inference:
             # Simulating weight processing
-            weight_change = round(random.uniform(0.001, 0.300), 5)
+            weight_change = round(random.uniform(0.001, 0.100), 5)
             print("value from arduino" , weight_change)
             self.ser_weight= (weight_change * 1000)
             self.weight = self.weight + self.ser_weight   # Simulating weight change

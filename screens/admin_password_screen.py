@@ -42,7 +42,7 @@ class AdminPasswordScreen(BaseScreen):
             parent = self.parent()
             if parent:
                 admin_control_screen = self.parent().widget(8)
-                admin_control_screen.laod_values_from_json()
+                admin_control_screen.load_values_from_json()
                 admin_control_screen.values_refresh()
                 parent.setCurrentIndex(8)  # For example, admin dashboard
                 

@@ -17,7 +17,7 @@ def setup_ui(self):
     bottle_div = QHBoxLayout()
     bottle = QLabel("Bottle")
     bottle.setAlignment( Qt.AlignCenter)
-    bottle.setFont(QFont(self.ff_poppins, 35))
+    bottle.setFont(QFont(self.ff_poppins, 20))
     self.is_bottle_existent_label = QLabel("___")
     self.is_bottle_existent_label.setAlignment( Qt.AlignCenter)
     self.pet_toggle = BtnAdmin("toggle", bt_w = 207, bt_h = 93, padding_size = 0, parent=self)
@@ -30,12 +30,30 @@ def setup_ui(self):
     bottle_div.addWidget(self.pet_toggle)
     bottle_div.addStretch()
     main_div.addLayout(bottle_div,  Qt.AlignHCenter)
-    
+
+
+    # Sup camera turn off
+    sup_cam_div = QHBoxLayout()
+    sup_cam = QLabel("SUP cam")
+    sup_cam.setAlignment( Qt.AlignCenter)
+    sup_cam.setFont(QFont(self.ff_poppins, 20))
+    self.is_camera_HIGH_label = QLabel("___")
+    self.is_camera_HIGH_label.setAlignment( Qt.AlignCenter)
+    self.cam_toggle = BtnAdmin("toggle", bt_w = 207, bt_h = 93, padding_size = 0, parent=self)
+    self.cam_toggle.clicked.connect(self._on_click_SupCam_toggle)
+    sup_cam_div.addStretch()
+    sup_cam_div.addWidget(sup_cam)
+    sup_cam_div.addStretch()
+    sup_cam_div.addWidget(self.is_camera_HIGH_label)
+    sup_cam_div.addStretch()
+    sup_cam_div.addWidget(self.cam_toggle)
+    sup_cam_div.addStretch()
+    main_div.addLayout(sup_cam_div,  Qt.AlignHCenter)
     # sup div states
     sup_div = QHBoxLayout()
     sup = QLabel("SUP")
     sup.setAlignment( Qt.AlignCenter)
-    sup.setFont(QFont(self.ff_poppins, 35))
+    sup.setFont(QFont(self.ff_poppins, 20))
     self.sup_count_label = QLabel("___")
     self.sup_count_label.setAlignment( Qt.AlignCenter)
     # zero button
@@ -71,6 +89,7 @@ def setup_ui(self):
     ecobrick_div.addWidget(self.brick_reset)
     ecobrick_div.addStretch()
     main_div.addLayout(ecobrick_div)
+    
    
     self.setLayout(main_div)
     

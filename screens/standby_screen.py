@@ -41,12 +41,17 @@ class StandbyScreen(BaseScreen):
         if self.parent():
             self.update_state(1)
             self.parent().setCurrentIndex(3)  # Go to Insert Screen SUP 
+            admin_control_screen = self.parent().widget(8)
+            use_camera = admin_control_screen.get_SupCam_state()
             is_sup = self.parent().widget(3)
-            pool = QThreadPool.globalInstance()
-            camWorker = CamInitThread2()
-            pool.start(camWorker)
-            camWorker.signal.initDone.connect(is_sup.done_clickability)
-            is_sup.done_clickability(False)
+            if use_camera: 
+                pool = QThreadPool.globalInstance()
+                camWorker = CamInitThread2()
+                pool.start(camWorker)
+                camWorker.signal.initDone.connect(is_sup.done_clickability)
+                is_sup.done_clickability(False)
+            else:
+                is_sup.done_clickability(True)
             self.logger.info("Transitioning to IS SUP.")  # Log the transition to the is_sup screen
         else:
             self.logger.warning("No parent QStackedWidget found.")

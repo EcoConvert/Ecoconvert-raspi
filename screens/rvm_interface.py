@@ -27,7 +27,6 @@ class RVMInterface(QWidget):
     def __init__(self, config):
         """
         Initialize the RVM interface.
-
         Args:
             config (dict): Application configuration dictionary.
         """
@@ -115,10 +114,6 @@ class RVMInterface(QWidget):
             admin_pw_screen = AdminPasswordScreen(self.config, self.stacked_widget)
             self.stacked_widget.addWidget(admin_pw_screen)
             
-            # Admin Override Screen (index 10)
-            # override_screen = OverrideScreen(self.config, self.stacked_widget)
-            # self.stacked_widget.addWidget(override_screen)
-            # Set the initial screen
             self.stacked_widget.setCurrentIndex(0)
 
             self.logger.info("Screens initialized successfully.")
