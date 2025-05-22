@@ -69,7 +69,7 @@ class InsertScreenSup(BaseScreen):
         """
         self.logger.debug("Performing last process step")  # Log last process
         print("SUPS deposited")
-        self.weight = self.weight + self.ser_weight
+        self.weight = self.weight + round(self.ser_weight)
         self.logger.debug(f"Weight difference: {self.ser_weight}")  # Log weight difference
         print("serial weight on generate points ",  str(self.ser_weight))   
         self._generate_points(self.ser_weight)

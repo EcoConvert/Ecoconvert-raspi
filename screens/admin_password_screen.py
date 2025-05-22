@@ -41,7 +41,11 @@ class AdminPasswordScreen(BaseScreen):
             self.logger.info("Access Granted")
             parent = self.parent()
             if parent:
+                admin_control_screen = self.parent().widget(8)
+                admin_control_screen.laod_values_from_json()
+                admin_control_screen.values_refresh()
                 parent.setCurrentIndex(8)  # For example, admin dashboard
+                
         else:
             self.tries += 1
             self.logger.warning(f"Incorrect admin password attempt {self.tries}/3")

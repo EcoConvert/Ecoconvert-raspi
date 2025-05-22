@@ -32,6 +32,34 @@ class Btn(QPushButton):
         layout.addWidget(self.label)
 
 
+class BtnAdmin(QPushButton):
+    """
+    Creates the generic Button
+    """
+    def __init__(self, text="click", bt_w = 642, bt_h = 202, padding_size = 10, font_size = 20, disabled = False, parent=None):
+        super().__init__(parent)
+        self.label = QLabel(text, self)
+        self.label.setWordWrap(True)
+        self.label.setAlignment(Qt.AlignCenter)
+        self.label.setFont(QFont(parent.ff_inter, font_size)) 
+        self.label.setStyleSheet(f"padding: {str(padding_size)}px; border: none;")
+        self.label.setAttribute(Qt.WA_TransparentForMouseEvents)  
+        shadow = Drop_Shadow()
+        self.setGraphicsEffect(shadow)
+        
+        # change color based on disable
+        if disabled: 
+            self.setStyleSheet("margin-bottom:30px; background-color:#D9D9D9; border: 3px solid #50000000; border-radius: 20%")
+            self.setEnabled(False)
+        else:
+            self.setStyleSheet("margin-bottom:30px; background-color:#F9FF89; border: 3px solid black; border-radius: 20%")
+            self.setEnabled(True)
+        self.setFixedSize(bt_w, bt_h)
+
+
+        layout = QVBoxLayout(self)
+        layout.addWidget(self.label)
+
 class BtnDone(QPushButton):
     """
     Creates the generic Button
