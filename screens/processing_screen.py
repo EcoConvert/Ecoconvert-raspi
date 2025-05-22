@@ -63,14 +63,14 @@ class ProcessingScreen(BaseScreen):
         """
         self.logger.debug("Simulating serial reads")  # Log when serial reads are being simulated
         TimeDict = {
-            500: 50,
-            1000: 100,
-            1500: 150,
-            2000: 200,
-            2500: 525
+            2000: 50,
+            4000: 100,
+            6000: 150,
+            8000: 200,
+            10000: 525
         }
         self.timer = QTimer()
         for key, val in TimeDict.items(): 
             self.timer.singleShot(key, partial(self.update_progress_bar, val))
-        self.timer.singleShot(3000, self._on_serial_done)
+        self.timer.singleShot(5000, self._on_serial_done)
         self.logger.debug("Scheduled simulated serial reads and progress updates")  # Log scheduling of serial reads and ung progress bar
