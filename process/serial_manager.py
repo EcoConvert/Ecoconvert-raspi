@@ -23,7 +23,7 @@ class SerialManager:
             if not self.ser.is_open:
                 raise IOError("Serial port failed to open")
         except IOError as e: 
-            print("failed daw to open beh")
+            print("failed daw to open serial")
         except ValueError as e:
             print(e)
 
