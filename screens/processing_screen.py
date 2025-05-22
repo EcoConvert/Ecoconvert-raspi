@@ -72,5 +72,5 @@ class ProcessingScreen(BaseScreen):
         self.timer = QTimer()
         for key, val in TimeDict.items(): 
             self.timer.singleShot(key, partial(self.update_progress_bar, val))
-        self.timer.singleShot(5000, self._on_serial_done)
+        self.timer.singleShot(15000, self._on_serial_done)
         self.logger.debug("Scheduled simulated serial reads and progress updates")  # Log scheduling of serial reads and ung progress bar
