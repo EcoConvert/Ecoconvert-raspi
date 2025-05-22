@@ -95,7 +95,7 @@ class StandbyScreen(BaseScreen):
             if curIndex == 1:
                 self.pet_clickability(False)
 
-        if (isinstance(sup, (int, float))) and (sup >= 525.00):
+        if (isinstance(sup, (int, float))) and (sup >= 575.00):
             print(f"SUP action triggered: {sup}")
             curIndex = self.parent().currentIndex()
             print(f"Switched to index {curIndex}")

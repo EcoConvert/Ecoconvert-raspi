@@ -40,7 +40,7 @@ class EcoScreen(BaseScreen):
         self.values_refresh()
 
     def _on_click_sup_full(self):
-        self.sup_count = 525 # or 1 depending on threshold
+        self.sup_count = 575 # or 1 depending on threshold
         self.logger.info(f"SUP: {self.sup_count}")
         self.update_state_var("weight", self.sup_count)
         self.values_refresh()
