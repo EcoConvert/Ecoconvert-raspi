@@ -15,7 +15,6 @@ class CamInitThread(QRunnable):
     """Thread to initialize and open the camera"""
     def __init__(self):
         super().__init__()
-        self.signal = p_inference_signal()
         self.signal = i_signal()
     def run(self):
         print("Camera init")

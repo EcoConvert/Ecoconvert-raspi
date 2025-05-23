@@ -65,7 +65,7 @@ class InsertScreenBottle(BaseScreen):
             inference (bool, optional): Whether the inference was successful. Defaults to None.
         """
         self.logger.debug(f"Processing bottle: {inference}")  # Log inference result
-        inference = False
+        
         if inference:
             self.logger.info("Valid bottle detected")  # Log valid bottle detection
             save_state_variables("bottle_exist", inference)
