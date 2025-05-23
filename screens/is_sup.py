@@ -114,7 +114,7 @@ class InsertScreenSup(BaseScreen):
         
         if inference:
             # Simulating weight processing
-            weight_change = round(random.uniform(0.001, 0.100), 5)
+            weight_change = round(random.uniform(0.001, 0.005), 5)
             print("value from arduino" , weight_change)
             self.ser_weight= (weight_change * 1000)
             self.weight = self.weight + self.ser_weight   # Simulating weight change
