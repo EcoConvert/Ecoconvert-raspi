@@ -173,7 +173,7 @@ class CameraPet(CameraBase):
         return roi_mask, total_area     
     
     # Temporay value:
-    def infer(self, timeout=10.0, display=True):
+    def infer(self, timeout=10.0, display=False):
         """Main method to detect and classify pet bottle"""
 
         logging.info("Starting PET bottle detection and classification")

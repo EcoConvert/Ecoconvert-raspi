@@ -145,7 +145,7 @@ class CameraSup(CameraBase):
             return "No high confidence object detected.", frame
         return self.detection_result[0], frame
 
-    def infer(self, display=True):
+    def infer(self, display=False):
         frame, input_data = self.take_photo()
         if frame is None or input_data is None:
             return "No frame captured for inference."
