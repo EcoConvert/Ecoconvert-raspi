@@ -57,9 +57,9 @@ class CameraPet(CameraBase):
         
         # Configure ROI and thresholds
         self.roi_config = {
-            "x1": 230, "y1": 40,
-            "x2": 370, "y2": 100,
-            "area_threshold": 500,
+            "x1": 250, "y1": 15,
+            "x2": 390, "y2": 285,
+            "area_threshold": 200,
             "time_threshold": 1.0
         }
 
@@ -168,7 +168,7 @@ class CameraPet(CameraBase):
                 
         return roi_mask, total_area 
 
-    def infer(self, timeout=10.0, display=False):
+    def infer(self, timeout=10.0, display=True):
         """
         Detect and classify PET bottles.
         
